@@ -1,0 +1,1427 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>resPrepend · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.1">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="reqBody.html" />
+    
+    
+    <link rel="prev" href="reqPrepend.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    实现原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../install.html">
+            
+                <a href="../install.html">
+            
+                    
+                    安装启动
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../update.html">
+            
+                <a href="../update.html">
+            
+                    
+                    手动更新
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../quickstart.html">
+            
+                <a href="../quickstart.html">
+            
+                    
+                    快速上手
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../mode.html">
+            
+                <a href="../mode.html">
+            
+                    
+                    配置模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../pattern.html">
+            
+                <a href="../pattern.html">
+            
+                    
+                    匹配方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../data.html">
+            
+                <a href="../data.html">
+            
+                    
+                    数据格式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../plugins.html">
+            
+                <a href="../plugins.html">
+            
+                    
+                    插件开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../attention.html">
+            
+                <a href="../attention.html">
+            
+                    
+                    注意事项
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../webui/">
+            
+                <a href="../webui/">
+            
+                    
+                    界面功能
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../webui/network.html">
+            
+                <a href="../webui/network.html">
+            
+                    
+                    Network
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../webui/composer.html">
+            
+                <a href="../webui/composer.html">
+            
+                    
+                    Composer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../webui/log.html">
+            
+                <a href="../webui/log.html">
+            
+                    
+                    Log
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../webui/rules.html">
+            
+                <a href="../webui/rules.html">
+            
+                    
+                    Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../webui/values.html">
+            
+                <a href="../webui/values.html">
+            
+                    
+                    Values
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="../webui/plugins.html">
+            
+                <a href="../webui/plugins.html">
+            
+                    
+                    Plugins
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.7" data-path="../webui/weinre.html">
+            
+                <a href="../webui/weinre.html">
+            
+                    
+                    Weinre
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.8" data-path="../webui/https.html">
+            
+                <a href="../webui/https.html">
+            
+                    
+                    Https
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.9" data-path="../webui/online.html">
+            
+                <a href="../webui/online.html">
+            
+                    
+                    Online
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    协议列表
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="host.html">
+            
+                <a href="host.html">
+            
+                    
+                    host
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="rule/">
+            
+                <a href="rule/">
+            
+                    
+                    rule
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.2.1" data-path="rule/replace.html">
+            
+                <a href="rule/replace.html">
+            
+                    
+                    请求替换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2.2" data-path="rule/file.html">
+            
+                <a href="rule/file.html">
+            
+                    
+                    file
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2.3" data-path="rule/xfile.html">
+            
+                <a href="rule/xfile.html">
+            
+                    
+                    xfile
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2.4" data-path="rule/tpl.html">
+            
+                <a href="rule/tpl.html">
+            
+                    
+                    tpl
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2.5" data-path="rule/xtpl.html">
+            
+                <a href="rule/xtpl.html">
+            
+                    
+                    xtpl
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2.6" data-path="rule/rawfile.html">
+            
+                <a href="rule/rawfile.html">
+            
+                    
+                    rawfile
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2.7" data-path="rule/xrawfile.html">
+            
+                <a href="rule/xrawfile.html">
+            
+                    
+                    xrawfile
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2.8" data-path="rule/proxy.html">
+            
+                <a href="rule/proxy.html">
+            
+                    
+                    proxy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2.9" data-path="rule/socks.html">
+            
+                <a href="rule/socks.html">
+            
+                    
+                    socks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2.10" data-path="rule/custom.html">
+            
+                <a href="rule/custom.html">
+            
+                    
+                    自定义
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="weinre.html">
+            
+                <a href="weinre.html">
+            
+                    
+                    weinre
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="log.html">
+            
+                <a href="log.html">
+            
+                    
+                    log
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="pac.html">
+            
+                <a href="pac.html">
+            
+                    
+                    pac
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.6" data-path="filter.html">
+            
+                <a href="filter.html">
+            
+                    
+                    filter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.7" data-path="disable.html">
+            
+                <a href="disable.html">
+            
+                    
+                    disable
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.8" data-path="delete.html">
+            
+                <a href="delete.html">
+            
+                    
+                    delete
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.9" data-path="plugin.html">
+            
+                <span>
+            
+                    
+                    plugin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.10" data-path="dispatch.html">
+            
+                <a href="dispatch.html">
+            
+                    
+                    dispatch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.11" data-path="urlParams.html">
+            
+                <a href="urlParams.html">
+            
+                    
+                    urlParams
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.12" data-path="urlReplace.html">
+            
+                <a href="urlReplace.html">
+            
+                    
+                    urlReplace
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.13" data-path="method.html">
+            
+                <a href="method.html">
+            
+                    
+                    method
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.14" data-path="statusCode.html">
+            
+                <a href="statusCode.html">
+            
+                    
+                    statusCode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.15" data-path="replaceStatus.html">
+            
+                <a href="replaceStatus.html">
+            
+                    
+                    replaceStatus
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.16" data-path="hostname.html">
+            
+                <a href="hostname.html">
+            
+                    
+                    hostname
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.17" data-path="referer.html">
+            
+                <a href="referer.html">
+            
+                    
+                    referer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.18" data-path="accept.html">
+            
+                <a href="accept.html">
+            
+                    
+                    accept
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.19" data-path="auth.html">
+            
+                <a href="auth.html">
+            
+                    
+                    auth
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.20" data-path="etag.html">
+            
+                <a href="etag.html">
+            
+                    
+                    etag
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.21" data-path="ua.html">
+            
+                <a href="ua.html">
+            
+                    
+                    ua
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.22" data-path="cache.html">
+            
+                <a href="cache.html">
+            
+                    
+                    cache
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.23" data-path="redirect.html">
+            
+                <a href="redirect.html">
+            
+                    
+                    redirect
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.24" data-path="location.md">
+            
+                <span>
+            
+                    
+                    location
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.25" data-path="attachment.html">
+            
+                <a href="attachment.html">
+            
+                    
+                    attachment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.26" data-path="params.html">
+            
+                <a href="params.html">
+            
+                    
+                    params
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.26.1" data-path="html.html">
+            
+                <a href="html.html">
+            
+                    
+                    html
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.26.2" data-path="css.html">
+            
+                <a href="css.html">
+            
+                    
+                    css
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.26.3" data-path="js.html">
+            
+                <a href="js.html">
+            
+                    
+                    js
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.26.4" data-path="req.html">
+            
+                <a href="req.html">
+            
+                    
+                    req
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.27" data-path="res.html">
+            
+                <a href="res.html">
+            
+                    
+                    res
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.28" data-path="reqDelay.html">
+            
+                <a href="reqDelay.html">
+            
+                    
+                    reqDelay
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.29" data-path="resDelay.html">
+            
+                <a href="resDelay.html">
+            
+                    
+                    resDelay
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.30" data-path="reqSpeed.html">
+            
+                <a href="reqSpeed.html">
+            
+                    
+                    reqSpeed
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.31" data-path="resSpeed.html">
+            
+                <a href="resSpeed.html">
+            
+                    
+                    resSpeed
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.32" data-path="reqType.html">
+            
+                <a href="reqType.html">
+            
+                    
+                    reqType
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.33" data-path="resType.html">
+            
+                <a href="resType.html">
+            
+                    
+                    resType
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.34" data-path="reqCharset.html">
+            
+                <a href="reqCharset.html">
+            
+                    
+                    reqCharset
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.35" data-path="resCharset.html">
+            
+                <a href="resCharset.html">
+            
+                    
+                    resCharset
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.36" data-path="reqCookies.html">
+            
+                <a href="reqCookies.html">
+            
+                    
+                    reqCookies
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.37" data-path="resCookies.html">
+            
+                <a href="resCookies.html">
+            
+                    
+                    resCookies
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.38" data-path="reqCors.html">
+            
+                <a href="reqCors.html">
+            
+                    
+                    reqCors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.39" data-path="resCors.html">
+            
+                <a href="resCors.html">
+            
+                    
+                    resCors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.40" data-path="reqHeaders.html">
+            
+                <a href="reqHeaders.html">
+            
+                    
+                    reqHeaders
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.41" data-path="resHeaders.html">
+            
+                <a href="resHeaders.html">
+            
+                    
+                    resHeaders
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.42" data-path="reqPrepend.html">
+            
+                <a href="reqPrepend.html">
+            
+                    
+                    reqPrepend
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.11.43" data-path="resPrepend.html">
+            
+                <a href="resPrepend.html">
+            
+                    
+                    resPrepend
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.44" data-path="reqBody.html">
+            
+                <a href="reqBody.html">
+            
+                    
+                    reqBody
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.45" data-path="resBody.html">
+            
+                <a href="resBody.html">
+            
+                    
+                    resBody
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.46" data-path="reqAppend.html">
+            
+                <a href="reqAppend.html">
+            
+                    
+                    reqAppend
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.47" data-path="resAppend.html">
+            
+                <a href="resAppend.html">
+            
+                    
+                    resAppend
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.48" data-path="reqReplace.html">
+            
+                <a href="reqReplace.html">
+            
+                    
+                    reqReplace
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.49" data-path="resReplace.html">
+            
+                <a href="resReplace.html">
+            
+                    
+                    resReplace
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.50" data-path="reqWrite.html">
+            
+                <a href="reqWrite.html">
+            
+                    
+                    reqWrite
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.51" data-path="resWrite.html">
+            
+                <a href="resWrite.html">
+            
+                    
+                    resWrite
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.52" data-path="reqWriteRaw.html">
+            
+                <a href="reqWriteRaw.html">
+            
+                    
+                    reqWriteRaw
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.53" data-path="resWriteRaw.html">
+            
+                <a href="resWriteRaw.html">
+            
+                    
+                    resWriteRaw
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.54" data-path="exportsUrl.html">
+            
+                <a href="exportsUrl.html">
+            
+                    
+                    exportsUrl
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.55" data-path="exports.html">
+            
+                <a href="exports.html">
+            
+                    
+                    exports
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../questions.html">
+            
+                <a href="../questions.html">
+            
+                    
+                    常见问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../feedback.html">
+            
+                <a href="../feedback.html">
+            
+                    
+                    用户反馈
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >resPrepend</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="resprepend">resPrepend</h1><p>&#x628A;&#x6307;&#x5B9A;&#x7684;&#x5185;&#x5BB9;&#x6DFB;&#x52A0;&#x5230;&#x54CD;&#x5E94;&#x5185;&#x5BB9;&#x524D;&#x9762;(304&#x7B49;&#x54CD;&#x5E94;&#x6CA1;&#x6709;&#x5185;&#x5BB9;&#x65E0;&#x6CD5;&#x6DFB;&#x52A0;)&#xFF0C;&#x914D;&#x7F6E;&#x6A21;&#x5F0F;&#xFF1A;</p><pre><code>pattern resPrepend://filepath</code></pre>
+<p>filepath&#x4E3A;<a href="http://local.whistlejs.com/#values" target="_blank">Values</a>&#x91CC;&#x9762;&#x7684;{key}&#x6216;&#x8005;&#x672C;&#x5730;&#x6587;&#x4EF6;:</p><pre><code>Prepend body</code></pre>
+<p>pattern&#x53C2;&#x89C1;<a href="../pattern.html">&#x5339;&#x914D;&#x65B9;&#x5F0F;</a>&#xFF0C;&#x66F4;&#x591A;&#x6A21;&#x5F0F;&#x8BF7;&#x53C2;&#x8003;<a href="../mode.html">&#x914D;&#x7F6E;&#x6A21;&#x5F0F;</a>&#x3002;</p><p>&#x4F8B;&#x5B50;&#xFF1A;</p><pre><code>www.ifeng.com resPrepend://{test-resPrepend.html}</code></pre>
+<p>test-resPrepend.html:</p><pre><code>Prepend body</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="reqPrepend.html" class="navigation navigation-prev " aria-label="Previous page: reqPrepend">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="reqBody.html" class="navigation navigation-next " aria-label="Next page: reqBody">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"resPrepend","level":"1.11.43","depth":2,"next":{"title":"reqBody","level":"1.11.44","depth":2,"path":"rules/reqBody.md","ref":"rules/reqBody.md","articles":[]},"previous":{"title":"reqPrepend","level":"1.11.42","depth":2,"path":"rules/reqPrepend.md","ref":"rules/reqPrepend.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"rules/resPrepend.md","mtime":"2016-09-05T07:59:50.042Z","type":"markdown"},"gitbook":{"version":"3.2.1","time":"2016-10-13T16:01:14.398Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
