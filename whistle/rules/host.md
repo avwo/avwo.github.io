@@ -31,11 +31,25 @@ host的配置模式：
 		
 **例子：**
 	
-指定[www.ifeng.com](http://www.ifeng.com/)的ip:
+	# 传统hosts配置
+	127.0.0.1 www.example.com # 等价于： www.example.com  127.0.0.1
+	127.0.0.1 a.example.com b.example.com c.example.com
+
+	# 支持带端口
+	127.0.0.1:8080 www.example.com # 等价于： www.example.com  127.0.0.1：8080
+	127.0.0.1:8080 a.example.com b.example.com c.example.com
+
+	# 支持通过域名获取host，类似DNS的cname
+	host://www.qq.com:8080 www.example.com # 等价于： www.example.com  host://www.qq.com:8080
+	host://www.qq.com:8080 a.example.com b.example.com c.example.com
+
+	# 支持通过正则表达式匹配
+	127.0.0.1:8080 /example\.com/i # 等价于： /example\.com/i  127.0.0.1：8080
+	127.0.0.1:8080 /example\.com/ /test\.com/
+
+	# 支持路径匹配
+	127.0.0.1:8080 example.com/test # 等价于： example.com/test 127.0.0.1：8080
+	127.0.0.1:8080 http://example.com:5555/index.html www.example.com:6666 https://www.test.com/test
 	
-	www.ifeng.com 127.0.0.1
-		
-指定[www.ifeng.com](http://www.ifeng.com/)的ip和端口，把请求转发到本地8080端口:
 	
-	# www.ifeng.com 127.0.0.1
-	www.ifeng.com host://127.0.0.1:8080
+	
