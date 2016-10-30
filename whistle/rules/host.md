@@ -52,6 +52,9 @@ whistle不仅完全兼容操作系统的hosts配置模式，也支持域名、�
 	# 支持路径匹配
 	127.0.0.1:8080 example.com/test # 等价于： example.com/test 127.0.0.1：8080
 	127.0.0.1:8080 http://example.com:5555/index.html www.example.com:6666 https://www.test.com/test
-	
+
+	# 支持精确匹配
+	127.0.0.1:8080 $example.com/test # 等价于： $example.com/test 127.0.0.1：8080
+	127.0.0.1:8080 $http://example.com:5555/index.html $www.example.com:6666 $https://www.test.com/test
 	
 	
