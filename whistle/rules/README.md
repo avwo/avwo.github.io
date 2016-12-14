@@ -3,11 +3,8 @@
 2. [**rule** (设置响应规则)](rule/index.html)
   - [**请求替换**](rule/replace.html)
   - [**file** (替换本地文件)](rule/file.html)
-  - [**xfile** (替换本地文件，如果本地文件不存在，则请求线上)](rule/file.html)
   - [**rawfile** (替换本地http响应内容格式的文件)](rule/rawfile.html)
-  - [**xrawfile** (替换本地http响应内容格式的文件，如果本地文件不存在，则请求线上)](rule/rawfile.html)
   - [**tpl** (替换本地目标文件，可用于模拟jsonp请求)](rule/tpl.html)
-  - [**xtpl** (替换本地目标文件，可用于模拟jsonp请求，则请求线上)](rule/tpl.html)
   - [**自定义**](rule/custom.html)
 
 2. [**rulesFile** (批量设置规则或通过脚本动态获取规则)](rulesFile.html)
