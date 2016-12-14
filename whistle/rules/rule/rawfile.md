@@ -1,4 +1,7 @@
-# rawfile
+# rawfile (xrawfile)
+
+__xrawfile功能同rawfile一样，和rawfile的唯一区别是rawfile找不到对应文件返回404，而xrawfile则是继续请求线上资源。__
+
 替换本地(目录下)的http格式的文件(可以与[resWriteRaw](resWriteRaw.html)配合使用)，请求会自动补全路径，配置模式：
 
 	pattern rawfile://filepath

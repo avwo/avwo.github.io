@@ -9,9 +9,6 @@
 
 	pattern filter://https
 
-	# 或
-	pattern filter://tunnel
-
 也可以用来隐藏请求：
 
 	pattern filter://hide
