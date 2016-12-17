@@ -38,7 +38,7 @@ pattern参见[匹配方式](../pattern.html)，更多模式请参考[配置模�
 	# 把301转成302，防止cache
 	wwww.test.com disable://301
 
-	# 禁用https拦截，与filter://intercept相同
+	# 禁用https拦截
 	wwww.test.com disable://intercept
 
 	# 不缓存远程的dns(通过whistle配置的host是不会缓存)，主要用于测试网页的极端情况的加载速度

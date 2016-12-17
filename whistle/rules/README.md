@@ -14,6 +14,8 @@
 5. [**socks** (代理到其它socks代理服务器)](socks.html)
 5. [**pac** (设置pac脚本)](pac.md)
 6. [**filter** (过滤规则，隐藏请求等)](filter.html)
+6. [**ignore** (忽略规则)](ignore.html)
+6. [**enable** (设置intercept，隐藏请求等)](enable.html)
 7. [**disable** (禁用缓存、cookie等)](disable.html)
 8. [**delete** (删除指定的字段)](delete.html)
 9. [**plugin** (通过插件获取请求状态及设置新规则)](plugin.html)

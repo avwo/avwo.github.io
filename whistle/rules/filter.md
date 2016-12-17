@@ -1,4 +1,4 @@
-# filter
+# filter(=[ignore](ignore.html) + [enable](enable.html))
 用于忽略指定配置的规则：
 
 	pattern filter://rule|proxy|pac
