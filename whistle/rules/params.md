@@ -37,6 +37,6 @@ params的作用分三种情况：
 
 例子：
 
-	www.ifeng.com params://test=123
+	www.ifeng.com params://(test=123)，括号的写法见：[Rules的特殊操作符({}、()、<>)](../webui/rules.html)
 
 
