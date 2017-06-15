@@ -3,6 +3,9 @@
 设置http代理，配置模式：
 
 	pattern proxy://ip:port
+
+	# 加用户名密码
+	pattern proxy://username:password@ip:port
 	
 pattern参见[匹配方式](../pattern.html)，更多模式请参考[配置模式](../mode.html)。
 
