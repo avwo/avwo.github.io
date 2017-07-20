@@ -1,5 +1,5 @@
 # Rules
-> 所有规则参考：[规则列表](../rules/)
+> 所有规则参考：[规则列表](../rules/index.html)、[多种匹配方式](../pattern.html)
 
 规则配置界面：
 
