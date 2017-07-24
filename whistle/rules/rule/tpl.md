@@ -21,3 +21,5 @@ filepath为[Values](http://local.whistlejs.com/#values)里面的{key}或者本�
 test.json:
 
 		{callback}({ec: 0})
+
+请求 `http://www.test.com/test/xxx.jsonp?callback=imcallbackfn` 会返回 `imcallbackfn({ec: 0})`
