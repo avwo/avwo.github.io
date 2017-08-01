@@ -23,6 +23,8 @@ pattern参见[匹配方式](../pattern.html)，更多模式请参考[配置模�
 	# 及access-control-allow-credentials: true
 	# 可用于script标签上设置为 `crossorigin=use-credentials`的情形
 	www.example.com resCors://enable
+	# 或
+	www.example.com resCors://use-credentials
 
 例子：
 
