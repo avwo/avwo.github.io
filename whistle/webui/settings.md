@@ -1,6 +1,8 @@
+# Settings
+
 在whistle的界面中，分别有 **Network**、**Rules**、**Values**三个页面有 **Settings** 菜单，其中，**Rules** 和 **Values** 的 **Settings** 主要用于设置编辑器样式及是否允许多选Rules，具体分别参见：[Rules界面说明](rules.html) 和 [Values界面说明](rules.html)。
 
-### Network
+#### Network
 
 1. Filter：用来设置过滤请求的关键字，Networt的Settings按钮上的Filter和请求列表下方的Filter的区别是，前者会把不匹配的请求直接过滤掉，无法再找回来，而后后者只是把列表中的Dom节点隐藏了，且Settings按钮上的Filter功能更强大，可以同时匹配url、请求响应头、请求方法、响应状态码、ClientIP及ServerIP、请求响应内容(以上匹配都不区分大小写)。
 
