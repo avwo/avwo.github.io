@@ -7,7 +7,7 @@
         <title>dispatch · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="generator" content="GitBook 3.2.1">
         
         
         
@@ -1387,39 +1387,31 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="dispatch">dispatch</h1>
-<p>&#x6709;&#x65F6;&#x9700;&#x8981;&#x6839;&#x636E;UA&#x6216;&#x5176;&#x5B83;&#x8BF7;&#x6C42;&#x5934;&#x4FE1;&#x606F;&#x8FD4;&#x56DE;&#x4E0D;&#x540C;&#x7684;&#x6570;&#x636E;&#xFF0C;whistle&#x7528;sandbox&#x6267;&#x884C;<code>dispatch</code>&#x4F20;&#x4EBA;&#x8FDB;&#x6765;&#x7684;&#x811A;&#x672C;&#xFF0C;<code>dispatch</code>&#x5173;&#x8054;&#x7684;&#x811A;&#x672C;&#x5728;&#x5168;&#x5C40;&#x5C5E;&#x6027;&#x53EF;&#x4EE5;&#x83B7;&#x53D6;&#x4EE5;&#x4E0B;&#x4FE1;&#x606F;&#xFF1A;</p>
-<pre><code>url: //&#x8BF7;&#x6C42;url
+                                <h1 id="dispatch">dispatch</h1><p>&#x6709;&#x65F6;&#x9700;&#x8981;&#x6839;&#x636E;UA&#x6216;&#x5176;&#x5B83;&#x8BF7;&#x6C42;&#x5934;&#x4FE1;&#x606F;&#x8FD4;&#x56DE;&#x4E0D;&#x540C;&#x7684;&#x6570;&#x636E;&#xFF0C;whistle&#x7528;sandbox&#x6267;&#x884C;<code>dispatch</code>&#x4F20;&#x4EBA;&#x8FDB;&#x6765;&#x7684;&#x811A;&#x672C;&#xFF0C;<code>dispatch</code>&#x5173;&#x8054;&#x7684;&#x811A;&#x672C;&#x5728;&#x5168;&#x5C40;&#x5C5E;&#x6027;&#x53EF;&#x4EE5;&#x83B7;&#x53D6;&#x4EE5;&#x4E0B;&#x4FE1;&#x606F;&#xFF1A;</p><pre><code>url: //&#x8BF7;&#x6C42;url
 method: //&#x8BF7;&#x6C42;&#x65B9;&#x6CD5;
 httpVersion: //&#x8BF7;&#x6C42;http&#x7248;&#x672C;
 ip: //&#x8BF7;&#x6C42;&#x5BA2;&#x6237;&#x7AEF;&#x7684;ip
 headers: //&#x8BF7;&#x6C42;&#x7684;&#x5934;&#x90E8;
-params: //&#x8BF7;&#x6C42;&#x53C2;&#x6570;&#xFF0C;&#x53EF;&#x4EE5;&#x52A8;&#x6001;&#x4FEE;&#x6539;
-</code></pre><p>&#x5E76;&#x901A;&#x8FC7;<code>params</code>&#x8FD9;&#x4E2A;&#x8BF7;&#x6C42;&#x53C2;&#x6570;&#x5BF9;&#x8C61;&#x4FEE;&#x6539;&#x6216;&#x6DFB;&#x52A0;&#x8BF7;&#x6C42;&#x53C2;&#x6570;&#xFF0C;&#x6539;&#x53D8;url&#x8FBE;&#x5230;&#x5339;&#x914D;&#x4E0D;&#x540C;&#x89C4;&#x5219;&#x7684;&#x6548;&#x679C;&#xFF1A;</p>
-<pre><code>var ua = headers[&apos;user-agent&apos;];
+params: //&#x8BF7;&#x6C42;&#x53C2;&#x6570;&#xFF0C;&#x53EF;&#x4EE5;&#x52A8;&#x6001;&#x4FEE;&#x6539;</code></pre>
+<p>&#x5E76;&#x901A;&#x8FC7;<code>params</code>&#x8FD9;&#x4E2A;&#x8BF7;&#x6C42;&#x53C2;&#x6570;&#x5BF9;&#x8C61;&#x4FEE;&#x6539;&#x6216;&#x6DFB;&#x52A0;&#x8BF7;&#x6C42;&#x53C2;&#x6570;&#xFF0C;&#x6539;&#x53D8;url&#x8FBE;&#x5230;&#x5339;&#x914D;&#x4E0D;&#x540C;&#x89C4;&#x5219;&#x7684;&#x6548;&#x679C;&#xFF1A;</p><pre><code>var ua = headers[&apos;user-agent&apos;];
 if (/iphone/i.test(ua)) {
     params.test=1;
 } else if (/android/i.test(ua)) {
     params.test=2;
 } else {
     params.test=3;
-}
-</code></pre><p>&#x914D;&#x7F6E;&#x6A21;&#x5F0F;&#xFF1A;</p>
-<pre><code>pattern dispatch://filepath
-</code></pre><p>filepath&#x4E3A;<a href="http://local.whistlejs.com/#values" target="_blank">Values</a>&#x91CC;&#x9762;&#x7684;{key}&#x6216;&#x8005;&#x672C;&#x5730;js&#x6587;&#x4EF6;(&#x5982;&#xFF1A;<code>e:\test\xxx</code>&#x3001;<code>e:/test/xxx</code>&#x3001;<code>/User/username/test/xxx</code>&#x7B49;)&#xFF0C;pattern&#x53C2;&#x89C1;<a href="../pattern.html">&#x5339;&#x914D;&#x65B9;&#x5F0F;</a>&#xFF0C;&#x66F4;&#x591A;&#x6A21;&#x5F0F;&#x8BF7;&#x53C2;&#x8003;<a href="../mode.html">&#x914D;&#x7F6E;&#x6A21;&#x5F0F;</a>&#x3002;</p>
-<p>&#x4F8B;&#x5B50;&#xFF1A;</p>
-<pre><code>www.ifeng.com dispatch://{dispatch.js}
-</code></pre><p>dispatch.js:</p>
-<pre><code>var ua = headers[&apos;user-agent&apos;];
+}</code></pre>
+<p>&#x914D;&#x7F6E;&#x6A21;&#x5F0F;&#xFF1A;</p><pre><code>pattern dispatch://filepath</code></pre>
+<p>filepath&#x4E3A;<a href="http://local.whistlejs.com/#values" target="_blank">Values</a>&#x91CC;&#x9762;&#x7684;{key}&#x6216;&#x8005;&#x672C;&#x5730;js&#x6587;&#x4EF6;(&#x5982;&#xFF1A;<code>e:\test\xxx</code>&#x3001;<code>e:/test/xxx</code>&#x3001;<code>/User/username/test/xxx</code>&#x7B49;)&#xFF0C;pattern&#x53C2;&#x89C1;<a href="../pattern.html">&#x5339;&#x914D;&#x65B9;&#x5F0F;</a>&#xFF0C;&#x66F4;&#x591A;&#x6A21;&#x5F0F;&#x8BF7;&#x53C2;&#x8003;<a href="../mode.html">&#x914D;&#x7F6E;&#x6A21;&#x5F0F;</a>&#x3002;</p><p>&#x4F8B;&#x5B50;&#xFF1A;</p><pre><code>www.ifeng.com dispatch://{dispatch.js}</code></pre>
+<p>dispatch.js:</p><pre><code>var ua = headers[&apos;user-agent&apos;];
 if (/iphone/i.test(ua)) {
     params.test=1;
 } else if (/android/i.test(ua)) {
     params.test=2;
 } else {
     params.test=3;
-}
-</code></pre><p><a href="http://www.ifeng.com/" target="_blank">www.ifeng.com</a>&#x7684;&#x8BF7;&#x6C42;&#x90FD;&#x4F1A;&#x5728;url&#x52A0;&#x4E0A;&#x8BF7;&#x6C42;&#x53C2;&#x6570;<code>test=xxx</code></p>
-
+}</code></pre>
+<p><a href="http://www.ifeng.com/" target="_blank">www.ifeng.com</a>&#x7684;&#x8BF7;&#x6C42;&#x90FD;&#x4F1A;&#x5728;url&#x52A0;&#x4E0A;&#x8BF7;&#x6C42;&#x53C2;&#x6570;<code>test=xxx</code></p>
                                 
                                 </section>
                             
@@ -1462,7 +1454,7 @@ if (/iphone/i.test(ua)) {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"dispatch","level":"1.13.15","depth":2,"next":{"title":"urlParams","level":"1.13.16","depth":2,"path":"rules/urlParams.md","ref":"rules/urlParams.md","articles":[]},"previous":{"title":"plugin","level":"1.13.14","depth":2,"path":"rules/plugin.html","ref":"rules/plugin.html","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"rules/dispatch.md","mtime":"2017-09-15T05:09:10.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-15T05:55:34.900Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"dispatch","level":"1.13.15","depth":2,"next":{"title":"urlParams","level":"1.13.16","depth":2,"path":"rules/urlParams.md","ref":"rules/urlParams.md","articles":[]},"previous":{"title":"plugin","level":"1.13.14","depth":2,"path":"rules/plugin.html","ref":"rules/plugin.html","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"rules/dispatch.md","mtime":"2016-12-22T14:40:30.158Z","type":"markdown"},"gitbook":{"version":"3.2.1","time":"2017-10-11T11:29:25.769Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

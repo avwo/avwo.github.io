@@ -8,7 +8,6 @@
 params为[Values](http://local.whistlejs.com/#values)里面的{key}或者本地文件(如：`e:\test\xxx`、`e:/test/xxx`、`/User/username/test/xxx`等)，内容为:
 
 	{
-	    "statusCode": "500", //修改响应状态码，设置该字段后，whistle会按该状态码立即返回
 	    "headers": { //修改响应头部
 	        "content-type": "text/plain; charset=utf8"
 	    },
