@@ -14,4 +14,4 @@
 	www.google.com enable://intercept|hide
 
 	# abort掉请求(v1.5.17+)
-	pattern enable://abort
+	www.xiaoying.com enable://abort
