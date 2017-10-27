@@ -1,6 +1,6 @@
 # resCors
 
-修改请求的[cors](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Access_control_CORS)，配置模式：
+修改响应的[cors](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Access_control_CORS)，配置模式：
 
 	pattern resCors://filepath
 	
