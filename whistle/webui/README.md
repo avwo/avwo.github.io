@@ -6,6 +6,7 @@
 - [Rules(操作规则配置界面)](rules.md)
 - [Values(存放KeyValue的系统)](values.md)
 - [Plugins(插件列表页面)](plugins.md)
+- [WebSocket(设置对话框)](websocket.md)
 - [Settings(设置对话框)](settings.md)
 - [Weinre(weinre列表)](weinre.md)
 - [Https(设置Https及根证书)](https.md)
