@@ -31,4 +31,4 @@ PS：通过Composer构造的请求Frames多了一个Composer选项，可以通�
 
 
 
-如果对一般的请求也要像构造的请求一样可以自定义发送或接收数据，需要借助插件[whistle.script](https://github.com/whistle-plugins/whistle.script)，后续我会发一篇文章专门介绍如何通过[whistle.script](https://github.com/whistle-plugins/whistle.script)操作WebSocket请求
+如果对一般的请求也要像构造的请求一样可以自定义发送或接收数据，需要借助插件[whistle.script](https://github.com/whistle-plugins/whistle.script)，具体参见文章：[利用whistle调试WebSocket和Socket请求](http://imweb.io/topic/5a11b1b8ef79bc941c30d91a)
