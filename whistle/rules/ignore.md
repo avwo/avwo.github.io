@@ -15,3 +15,7 @@
 	/google/ proxy://127.0.0.1:8888 implugin://xxx
 	www.google.com enable://intercept
 	www.google.com ignore://proxy|implugin|enable
+
+	#　忽略配置的host
+	www.qq.com 127.0.0.1
+	www.qq.com ignore://host
