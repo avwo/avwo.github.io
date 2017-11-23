@@ -35,6 +35,7 @@
 23. [**redirect** (302重定向)](redirect.html)
 24. [**location** (设置响应头部的location字段)](location.html)
 25. [**attachment** (设置下载头部)](attachment.html)
+26. [**forwardedFor** (修改请求头x-forwarded-for)](forwardedFor.html)
 26. [**params** (修改请求参数)](params.html)
 27. [**html** (往响应为html的内容后面追加数据)](html.html)
 28. [**css** (往响应为html或css的内容后面追加数据)](css.html)
