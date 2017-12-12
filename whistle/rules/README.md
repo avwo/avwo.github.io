@@ -7,7 +7,6 @@
   - [**tpl** (替换本地目标文件，可用于模拟jsonp请求)](rule/tpl.html)
   - [**自定义**](rule/custom.html)
 
-2. [**rulesFile** (批量设置规则或通过脚本动态获取规则)](rulesFile.html)
 3. [**weinre** (设置weinre，调试手机页面)](weinre.html)
 4. [**log** (打印网页js错误或者调试信息)](log.html)
 5. [**proxy** (代理到其它http代理服务器)](proxy.html)
@@ -40,6 +39,8 @@
 27. [**html** (往响应为html的内容后面追加数据)](html.html)
 28. [**css** (往响应为html或css的内容后面追加数据)](css.html)
 29. [**js** (往响应为html或js的内容后面追加数据)](js.html)
+30. [**reqScript** (批量设置请求规则或通过脚本动态获取规则)](rules/reqScript.md)
+31. [**resScript** (批量设置响应规则或通过脚本动态获取规则)](rules/resScript.md)
 32. [**reqDelay** (延迟请求)](reqDelay.html)
 33. [**resDelay** (延迟响应)](resDelay.html)
 34. [**reqSpeed** (限制请求速度)](reqSpeed.html)

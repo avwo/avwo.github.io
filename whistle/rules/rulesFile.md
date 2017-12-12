@@ -1,5 +1,7 @@
 # rulesFile(ruleFile, rulesScript, ruleScript)
 
+> 该协议 `v1.7.0` 开始已经废弃，请使用[reqScript](./reqScript.html)代替
+
 给匹配的请求批量设置规则，或者通过脚本动态设置规则，配置模式：
 
 	pattern rulesFile://filepath
