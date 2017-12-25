@@ -1,4 +1,5 @@
 # html
+> `v1.8.0` 及以后使用[jsAppend](./jsAppend.html)代替
 
 往content-type为html的响应内容后面追加数据，这个与[resAppend](resAppend.html)的区别是[resAppend](resAppend.html)不区分类型，对所有匹配的响应都会追加指定的数据，配置模式：
 
