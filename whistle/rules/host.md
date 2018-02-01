@@ -26,7 +26,7 @@ whistle不仅完全兼容操作系统的hosts配置方式，也支持域名、�
 		host://hostname:port pattern
 		
 		# 组合模式
-		pattern ip1 operator-uri1 operator-uriN
+		pattern ip1 operatorURI1 operatorURIN
 		host://ip:port pattern1 pattern2 patternN
 		
 	*其中，pattern可以为域名、路径、正则，具体参考[匹配模式](pattern.html)*

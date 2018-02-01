@@ -14,9 +14,9 @@ filepath指定的文本可以为一组规则列表，也可以一个js脚本通�
 whistle判断如果文件的第一行为规则的注释，即`#`开头，则任务filepath指定的是规则列表，会加载该列表，并进行二次匹配获取规则：
 
 	# rules
-	pattern1 operator-uri1
-	pattern2 operator-uri2
-	patternN operator-uriN
+	pattern1 operatorURI1
+	pattern2 operatorURI2
+	patternN operatorURIN
 	
 ### 通过脚本动态设置规则
 rulesFile可以指定一个脚本，whistle在执行脚本时会自动在全局传人：
