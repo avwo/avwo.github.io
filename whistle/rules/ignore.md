@@ -1,5 +1,5 @@
 # ignore
-忽略(过滤)指定的规则设置，配置模式(v1.2.5及以上版本支持)：
+忽略(过滤)指定的规则设置，配置方式(v1.2.5及以上版本支持)：
 
 	pattern ignore://protocol1|protocol2|protocolN
 

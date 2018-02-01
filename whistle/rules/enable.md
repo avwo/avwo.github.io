@@ -1,5 +1,5 @@
 # enable
-通过配置开启指定的设置(https拦截、隐藏请求)，配置模式(v1.2.5及以上版本支持)：
+通过配置开启指定的设置(https拦截、隐藏请求)，配置方式(v1.2.5及以上版本支持)：
 
 	pattern enable://https|intercept|hide|abort
 

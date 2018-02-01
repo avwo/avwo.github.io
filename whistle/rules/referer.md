@@ -1,10 +1,11 @@
+
 # referer
 
-修改请求头的referer字段，有些服务器会校验请求头的referer字段，这个协议可以用来绕过这个检测或者测试后台的功能，配置模式：
+修改请求头的referer字段，有些服务器会校验请求头的referer字段，这个协议可以用来绕过这个检测或者测试后台的功能，配置方式：
 
 	pattern referer://url
 	
-pattern参见[匹配方式](../pattern.html)，更多模式请参考[配置模式](../mode.html)。
+pattern参见[匹配模式](../pattern.html)，更多模式请参考[配置方式](../mode.html)。
 
 例子：
 

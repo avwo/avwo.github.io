@@ -11,4 +11,4 @@
 	pattern plugin://name(value)
 	pattern plugin://name://value
 
-plugin支持上述3种配置模式(位置可以调换)，匹配规则的请求默认只会请求`statusServer`，`rulesServer`，`resRulesServer`，用户可以在这3个server里面获取请求响应信息或动态设置新规则等等。
+plugin支持上述3种配置方式(位置可以调换)，匹配规则的请求默认只会请求`statusServer`，`rulesServer`，`resRulesServer`，用户可以在这3个server里面获取请求响应信息或动态设置新规则等等。

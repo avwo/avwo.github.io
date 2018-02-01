@@ -3,13 +3,13 @@
 
 __xfile功能同file一样，xfile和file的唯一区别是file找不到对应文件返回404，而xfile则是继续请求线上资源。__
 
-替换本地目录或文件，配置模式：
+替换本地目录或文件，配置方式：
 
 	pattern file://filepath
 	# 也可以匹配一个文件或目录路径列表，whistle会依次查找直到找到存在的文件
 	pattern file://path1|path2|pathN
 	
-filepath为[Values](http://local.whistlejs.com/#values)里面的{key}或者本地文件，pattern参见[匹配方式](../../pattern.html)，更多模式请参考[配置模式](../../mode.html)。
+filepath为[Values](http://local.whistlejs.com/#values)里面的{key}或者本地文件，pattern参见[匹配模式](../../pattern.html)，更多模式请参考[配置方式](../../mode.html)。
 
 如果pattern为域名或路径，whistle会自动根据请求url后面剩余的路径跟filepath自动补全，即：
 

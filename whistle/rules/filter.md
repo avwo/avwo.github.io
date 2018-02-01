@@ -13,11 +13,11 @@
 
 	pattern filter://hide
 
-同时配置多种过滤规则的配置模式：
+同时配置多种过滤规则的配置方式：
 
 	pattern filetr://operator1|operator2|operatorN
 	
-pattern参见[匹配方式](../pattern.html)，更多模式请参考[配置模式](../mode.html)。
+pattern参见[匹配模式](../pattern.html)，更多模式请参考[配置方式](../mode.html)。
 
 例子：
 

@@ -1,10 +1,10 @@
 # etag
 
-修改请求头的etag字段，配置模式：
+修改请求头的etag字段，配置方式：
 
 	pattern etag://etagValue
 	
-pattern参见[匹配方式](../pattern.html)，更多模式请参考[配置模式](../mode.html)。
+pattern参见[匹配模式](../pattern.html)，更多模式请参考[配置方式](../mode.html)。
 
 例子：
 

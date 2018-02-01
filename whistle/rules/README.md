@@ -69,7 +69,7 @@
 59. [**jsBody** (替换响应为html或js的内容)](jsBody.md)
 60. [**htmlAppend**(往响应为html的内容前面数据)](htmlAppend.md)
 61. [**cssAppend** (往响应为html或css的内容后面追加数据)](cssAppend.md)
-62. [jsAppend** (往响应为html或js的内容后面追加数据)](jsAppend.md)
+62. [**jsAppend** (往响应为html或js的内容后面追加数据)](jsAppend.md)
 30. [**req** (修改请求属性)](req.html)
 31. [**res** (修改响应属性)](res.html)
 54. [**reqWrite** (将请求内容写入指定的文件)](reqWrite.html)

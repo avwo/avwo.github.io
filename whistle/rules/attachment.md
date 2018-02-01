@@ -1,6 +1,6 @@
 # attachment
 
-设置响应头字段，让响应变成可以直接下载，配置模式：
+设置响应头字段，让响应变成可以直接下载，配置方式：
 
 	pattern attachment://filename
 	

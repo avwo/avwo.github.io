@@ -1,10 +1,10 @@
 # weinre
 
-weinre可以用于调试远程页面特别是移动端的网页，配置模式：
+weinre可以用于调试远程页面特别是移动端的网页，配置方式：
 
 	pattern weinre://key
 	
-key为任意的字符串，主要用于区分页面，pattern参见[匹配方式](../pattern.html)，更多模式请参考[配置模式](../mode.html)。
+key为任意的字符串，主要用于区分页面，pattern参见[匹配模式](../pattern.html)，更多模式请参考[配置方式](../mode.html)。
 
 如何使用weinre：
 

@@ -1,6 +1,6 @@
 # ua
 
-修改请求头的`user-agent`字段，可用于模拟各种机器访问，配置模式：
+修改请求头的`user-agent`字段，可用于模拟各种机器访问，配置方式：
 
 	pattern ua://newUA
 	

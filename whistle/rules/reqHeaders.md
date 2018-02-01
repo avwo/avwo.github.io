@@ -1,6 +1,6 @@
 # reqHeaders
 
-修改请求头，配置模式：
+修改请求头，配置方式：
 
 	pattern reqHeaders://filepath
 	
@@ -10,7 +10,7 @@ filepath为[Values](http://local.whistlejs.com/#values)里面的{key}或者本�
 	x-test2: value2
 	x-testN: valueN
 
-pattern参见[匹配方式](../pattern.html)，更多模式请参考[配置模式](../mode.html)，json格式参考[数据格式](../data.html)。
+pattern参见[匹配模式](../pattern.html)，更多模式请参考[配置方式](../mode.html)，json格式参考[数据格式](../data.html)。
 
 例子：
 

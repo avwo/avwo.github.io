@@ -1,6 +1,6 @@
 # urlReplace
 
-类似js字符串的replace方法，利用正则或字符串来匹配替换请求url的path部分(如`http://www.test.com/xxx?xxx`，只能替换url中`xxx?xxx`这部分的内容)，配置模式：
+类似js字符串的replace方法，利用正则或字符串来匹配替换请求url的path部分(如`http://www.test.com/xxx?xxx`，只能替换url中`xxx?xxx`这部分的内容)，配置方式：
 
 	pattern urlReplace://filepath
 	
@@ -9,7 +9,7 @@ filepath为[Values](http://local.whistlejs.com/#values)里面的{key}或者本�
 	/user=([^&])/ig: user=$1$1
 	str: replacement
 
-pattern参见[匹配方式](../pattern.html)，更多模式请参考[配置模式](../mode.html)，json格式参考[数据格式](../data.html)。
+pattern参见[匹配模式](../pattern.html)，更多模式请参考[配置方式](../mode.html)，json格式参考[数据格式](../data.html)。
 
 例子：
 

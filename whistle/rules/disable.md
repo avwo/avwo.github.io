@@ -1,11 +1,11 @@
 # disable
 用来禁用cache、cookie、ua、referer、csp、timeout、301、intercept、dnsCache、keepAlive等HTTP(s)请求的一些基本功能，也可以用来阻止通过HTTPS代理的请求 `filter://tunnel`。
 
-配置模式：
+配置方式：
 
 	pattern disable://operator1|operator2|operatorN
 	
-pattern参见[匹配方式](../pattern.html)，更多模式请参考[配置模式](../mode.html)。
+pattern参见[匹配模式](../pattern.html)，更多模式请参考[配置方式](../mode.html)。
 
 例子：
 

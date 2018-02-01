@@ -1,7 +1,8 @@
+
 # req
 > 不推荐使用该协议，为方便使用，whistle已将此协议的功能拆分成多个协议，具体参见其它协议
 
-修改请求的方法、请求头、请求内容、请求速度等等，配置模式：
+修改请求的方法、请求头、请求内容、请求速度等等，配置方式：
 
 	pattern req://params
 	
@@ -24,7 +25,7 @@ params为[Values](http://local.whistlejs.com/#values)里面的{key}或者本地�
 	    "charset": "utf8" //请求内容编码
 	}
 	
-pattern参见[匹配方式](../pattern.html)，更多模式请参考[配置模式](../mode.html)。
+pattern参见[匹配模式](../pattern.html)，更多模式请参考[配置方式](../mode.html)。
 
 例子：
 
