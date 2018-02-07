@@ -3,8 +3,11 @@
 2. [**rule** (设置响应规则)](rule/index.html)
   - [**请求替换**](rule/replace.html)
   - [**file** (替换本地文件)](rule/file.html)
-  - [**rawfile** (替换本地http响应内容格式的文件)](rule/rawfile.html)
+  - [**xfile** (替换本地文件，如果本地文件找不到会继续请求线上)](rule/xfile.html)
   - [**tpl** (替换本地目标文件，可用于模拟jsonp请求)](rule/tpl.html)
+  - [**xtpl** (替换本地目标文件，如果本地文件找不到会继续请求线上，可用于模拟jsonp请求)](rule/xtpl.html)
+  - [**rawfile** (替换本地http响应内容格式的文件)](rule/rawfile.html)
+  - [**xrawfile** (替换本地http响应内容格式的文件，如果本地文件找不到会继续请求线上)](rule/xrawfile.html)
   - [**自定义**](rule/custom.html)
 
 3. [**weinre** (设置weinre，调试手机页面)](weinre.html)
