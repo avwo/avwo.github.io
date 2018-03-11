@@ -1,22 +1,21 @@
 # Https
 
-> 建议使用 `Node v6` 或以上版本，否则性能及在Chrome或APP上[抓包HTTPS请求](https://avwo.github.io/whistle/webui/https.html)会有问题。
+> 建议使用 `Node v6` 或以上版本，否则会存在性能问题，及在Chrome或APP上抓包HTTPS请求会有问题。
 
-> 如果出现HTTPS的问题([#44](https://github.com/avwo/whistle/issues/44))，升级Node到 `v6` 及以上版本，[更新whistle](https://avwo.github.io/whistle/update.html)到最新版本，通过 `w2 restart -A` (注意后面加 `-A`)启动生成新的更证书，再[安装下根证书](https://avwo.github.io/whistle/webui/https.html)即可。
+> 如果出现HTTPS的问题([#44](https://github.com/avwo/whistle/issues/44))，升级Node到 `v6` 及以上版本，[更新whistle](https://avwo.github.io/whistle/update.html)到最新版本，通过 `w2 restart -A` (注意后面加 `-A`)启动生成新的更证书，再安装下根证书即可。
 
-> **在iOS上安装根证书时，需要先关闭[https拦截](https://avwo.github.io/whistle/webui/https.html)，否则将显示安装失败。**
+> **在iOS上安装根证书时，需要先关闭`HTTPS拦截`，否则将显示安装失败。**
 
-用来下载根证书、隐藏`connect`类型的请求、开启Https拦截功能。
+用来下载根证书、隐藏`connect`类型的请求、开启HTTPS拦截功能。
 
 ![Https](../img/https.gif)
 
-
-### 安装根证书
+## 安装根证书
 
 如上图下载完根证书后点击rootCA.crt文件，弹出根证书安装对话框。
 
-1. Windows：[http://program.most.gov.cn/cert/ca.htm](http://program.most.gov.cn/cert/ca.htm)
-2. Mac：[mac根证书怎么安装](http://zhidao.baidu.com/link?url=bQ8ZnDTxUIlqruQ56NYjBmwztWPlZtv9AIRazkoKeMsdpAq7mcwXOHQduRwmHV1M2hf143vqBxHzKb1tg0L03DJoj6XS109P8zBNF1E9uU_)
+1. Windows: [http://program.most.gov.cn/cert/ca.htm](http://program.most.gov.cn/cert/ca.htm)
+2. Mac: [Mac根证书怎么安装](http://zhidao.baidu.com/link?url=bQ8ZnDTxUIlqruQ56NYjBmwztWPlZtv9AIRazkoKeMsdpAq7mcwXOHQduRwmHV1M2hf143vqBxHzKb1tg0L03DJoj6XS109P8zBNF1E9uU_)
 
   Mac 安装证书后，需要手动信任证书，步骤如下：
 
@@ -24,11 +23,13 @@
 
   ![img](https://ae01.alicdn.com/kf/HTB1ZtoBdYsTMeJjSszh763GCFXai.png)
 
-  双击证书后，点击 `Trust` 左边展开选项，红色部分选择 `Always Trust` （总是信任），点击左上角关闭当前界面会要求输入密码；输入密码后可以看到证书上面红色的图标 `x` 不见了，到这一步说明完成证书安装。
+  双击证书后，点击 `Trust` 左边展开选项，红色部分选择 `Always Trust` （总是信任），点击左上角关闭当前界面会要求输入密码；输入密码后可
+  以看到证书上面红色的图标 `x` 不见了，到这一步说明完成证书安装。
 
   ![img](https://ae01.alicdn.com/kf/HTB1UWItd8USMeJjy1zk761WmpXaT.png)
+3. Firefox:
 
-3. **Firefox：菜单 > 首选项 > 高级 > 证书 > 证书机构 > 导入 -> 选中所有checkbox -> 确定**
+  菜单 > 首选项 > 高级 > 证书 > 证书机构 > 导入 -> 选中所有checkbox -> 确定
 4. Linux Chrome(Chromium): 参照这个[教程](http://www.richud.com/wiki/Ubuntu_chrome_browser_import_self_signed_certificate)
   * 地址栏输入`chrome://chrome/settings/`
   * Show advanced Settings > Manage certificates > Authorities > Import
@@ -50,24 +51,24 @@
   * `whistle` 控制台二维码扫码安装，或者浏览器地址栏 `rootca.pro` 按提示安装
   * 部分浏览器不会自动识别 ca 证书，可以通过 Android Chrome 来完成安装
 
-### 开启拦截Https
+## 开启拦截HTTPS
 
-图中的打开的对话框有两个checkbox(**在iOS安装根证书的时候，记得不要开启` Intercept HTTPS CONNECTs`，否则将无法安装成功**)：
+图中的打开的对话框有两个checkbox(**在iOS安装根证书的时候，记得不要开启`Intercept HTTPS CONNECTs`，否则将无法安装成功**)：
 
-1. ` Hide HTTPS CONNECTs`：隐藏`connect`类型的请求
-2. ` Intercept HTTPS CONNECTs`：开启Https拦截功能，只有勾上这个checkbox及装好根证书，whistle才能看到HTTPS、Websocket的请求
+1. `Hide HTTPS CONNECTs`：隐藏`connect`类型的请求
+2. `Intercept HTTPS CONNECTs`：开启Https拦截功能，只有勾上这个checkbox及装好根证书，whistle才能看到HTTPS、Websocket的请求
 3. 也可以通过配置来开启对部分请求的Https拦截功能
-
-   www.test.com filter://intercept
-	/alibaba-inc/ filter://intercept
-   ​
-
+  ```plain
+  www.test.com filter://intercept
+  /alibaba-inc/ filter://intercept
+  ```
 4. 如果想过滤部分请求不启用Https拦截功能
+  ```plain
+  # 指定域名
+  www.baidu.com  disable://intercept
 
-   # 指定域名
-	www.baidu.com  disable://intercept
+  # 通过正则
+  /baidu/ disable://intercept
 
-	# 通过正则
-	/baidu/ disable://intercept
-
-	# 不支持通过路径的方式设置
+  # 不支持通过路径的方式设置
+  ```
