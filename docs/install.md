@@ -107,26 +107,45 @@ $ w2 run
 
 ##### 配置信息
 
-1. 代理服务器：127.0.0.1(如果部署在远程服务器或虚拟机上，改成对应服务器或虚拟机的ip即可)
-2. 默认端口：8899(如果端口被占用，可以在启动是通过 `-p` 来指定新的端口，更多信息可以通过执行命令行 `w2 help` (`v0.7.0`及以上版本也可以使用`w2 help`) 查看)
+1. 代理服务器：127.0.0.1 (如果部署在远程服务器或虚拟机上，改成对应服务器或虚拟机的ip即可)
+2. 默认端口：8899 (如果端口被占用，可以在启动是通过 `-p` 来指定新的端口，更多信息可以通过执行命令行 `w2 help` (`v0.7.0`及以上版本也可以使用`w2 help`) 查看)
 
 > 勾选上 **对所有协议均使用相同的代理服务器**
 
 ##### 代理配置方式(把上面配置信息配置上即可)
 
-1. 直接配置系统代理：　
-  * [Windows](http://jingyan.baidu.com/article/0aa22375866c8988cc0d648c.html)
-  * [Mac](http://jingyan.baidu.com/article/a378c960849144b3282830dc.html)
+1. 全局代理：直接配置系统代理：
+  * [Windows](http://jingyan.baidu.com/article/0aa22375866c8988cc0d648c.html) 
+  * [Mac](http://jingyan.baidu.com/article/a378c960849144b3282830dc.html): System Preferences > Network > Advanced > Proxies > HTTP or HTTPS
+    <div>
+      <img src='./img/mac-proxy-1.jpg' width='48%' />
+      <img src='./img/mac-proxy-2.jpg' width='48%' />
+    </div>
+  * Linux: Settings > Network > VPN > Network Proxy > Manual
 
-2. 安装浏览器代理插件 (**推荐**)
+    <div>
+      <img src='./img/linux-proxy-1.jpg' width='48%' />
+      <img src='./img/linux-proxy-2.jpg' width='48%' />
+    </div>
 
-	* 安装Chrome代理插件： 推荐安装[SwitchyOmega](https://chrome.google.com/webstore/detail/padekgcemlokbadohgkifijomclgjgif)
+2. 浏览器代理：安装浏览器代理插件 (**推荐**)
 
-	* 安装Firefox代理插件： [Proxy Selector](https://addons.mozilla.org/zh-cn/firefox/addon/proxy-selector/)
+	* 安装Chrome代理插件：推荐安装[SwitchyOmega](https://chrome.google.com/webstore/detail/padekgcemlokbadohgkifijomclgjgif)
 
-3. 移动端需要在`设置`中配置当前Wi-Fi的代理
+    <div><img src='./img/switchyomega.jpg' /></div>
+	* Firefox: 地址栏输入访问 `about:preferences`，找到 `Network Proxy`，选择 `手动代理配置(Manual proxy configuration)`，输入代理服务器地址、端口，保存
 
-PS: 如果配置完代理，手机无法访问，可能是whistle所在的电脑防火墙限制了远程访问whistle的端口，关闭防火墙或者设置白名单：[ http://jingyan.baidu.com/article/870c6fc317cae7b03ee4be48.html]( http://jingyan.baidu.com/article/870c6fc317cae7b03ee4be48.html)
+    <div>
+      <img src='./img/firefox-proxy-1.jpg' width='48%' />
+      <img src='./img/firefox-proxy-2.jpg' width='48%' />
+    </div>
+
+3. 移动端需要在`设置`中配置当前Wi-Fi的代理，以 iOS 为例：
+
+  <div><img src='./img/iOS-proxy-all.jpg' /></div>
+
+
+PS: 如果配置完代理，手机无法访问，可能是whistle所在的电脑防火墙限制了远程访问whistle的端口，关闭防火墙或者设置白名单：[http://jingyan.baidu.com/article/870c6fc317cae7b03ee4be48.html](http://jingyan.baidu.com/article/870c6fc317cae7b03ee4be48.html)
 
 
 ### 访问配置页面
