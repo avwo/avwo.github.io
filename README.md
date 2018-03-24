@@ -8,6 +8,10 @@
 ```sh
 # install gitbook
 npm install -g gitbook-cli
+
+# localhost docs
+gitbook serve docs
+
 # build
 gitbook build docs whistle
 ```
