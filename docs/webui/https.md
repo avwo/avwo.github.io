@@ -16,11 +16,11 @@
 
 1. Windows:
 
-  [根证书导入IE](http://program.most.gov.cn/cert/ca.htm)
-
   [Installing a root certificate on Windows](https://msdn.microsoft.com/zh-cn/library/cc750534.aspx)
 
-  证书安装过程，要确保证书存储到`受信任的根证书颁发机构`下。
+  ![img](../img/windows_rootca.jpeg)
+
+  下载证书后，双击证书，根据指引安装证书。证书安装过程，要确保证书存储到`受信任的根证书颁发机构`下。
 2. Mac: [Mac根证书怎么安装](http://zhidao.baidu.com/link?url=bQ8ZnDTxUIlqruQ56NYjBmwztWPlZtv9AIRazkoKeMsdpAq7mcwXOHQduRwmHV1M2hf143vqBxHzKb1tg0L03DJoj6XS109P8zBNF1E9uU_)
 
   Mac 安装证书后，需要手动信任证书，步骤如下：
