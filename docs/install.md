@@ -1,4 +1,5 @@
 # 安装启动
+
 安装启动whistle，需要以下四个步骤： **安装Node**、**安装whistle**、**启动whistle**、**配置代理**。
 
 ### 1. 安装Node
@@ -18,7 +19,6 @@ v4.4.0
 ```
 如果能正常输出Node的版本号，表示Node已安装成功(Windows系统可能需要重新打开cmd)。
 
-
 ### 2. 安装whistle
 
 Node安装成功后，执行如下npm命令安装whistle （**Mac或Linux的非root用户需要在命令行前面加`sudo`，如：`sudo npm install -g whistle`**）
@@ -26,7 +26,6 @@ Node安装成功后，执行如下npm命令安装whistle （**Mac或Linux的非r
 ```sh
 $ npm install -g whistle
 ```
-
 
 npm默认镜像是在国外，有时候安装速度很慢或者出现安装不了的情况，如果无法安装或者安装很慢，可以使用taobao的镜像安装：
 

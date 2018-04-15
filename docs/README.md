@@ -10,7 +10,6 @@ whistle的所有操作都可以通过类似如下配置方式实现：
 
 	pattern operatorURI
 
-
 其中：
 
 1. **pattern** 为匹配请求url的表达式，可以为：域名，路径，正则及通配符等等多种匹配方式：
@@ -57,6 +56,7 @@ whistle的所有操作都可以通过类似如下配置方式实现：
 3. **pattern** 和 **operatorURI** 在多数情况下位置可以调换，且支持组合模式，具体参见：[配置方式](./mode.html)
 
 # 帮助文档
+
 1. [安装启动](install.md)
 * [手动更新](update.md)
 * [快速上手](quickstart.md)
@@ -73,4 +73,5 @@ whistle的所有操作都可以通过类似如下配置方式实现：
 * [用户反馈](feedback.md)
 
 # License
+
 [MIT](https://github.com/avwo/whistle/blob/master/LICENSE)
