@@ -7,7 +7,7 @@
         <title>resScript · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.1">
+        <meta name="generator" content="GitBook 3.2.3">
         
         
         
@@ -1530,52 +1530,54 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="resscript">resScript</h1><p>&#x7ED9;&#x5339;&#x914D;&#x7684;&#x54CD;&#x5E94;&#x6279;&#x91CF;&#x8BBE;&#x7F6E;&#x89C4;&#x5219;&#xFF0C;&#x6216;&#x8005;&#x901A;&#x8FC7;&#x811A;&#x672C;&#x52A8;&#x6001;&#x8BBE;&#x7F6E;&#x89C4;&#x5219;&#xFF0C;&#x914D;&#x7F6E;&#x65B9;&#x5F0F;&#xFF1A;</p><pre><code>pattern resScript://filepath</code></pre>
-<p>filepath&#x4E3A;<a href="http://local.whistlejs.com/#values" target="_blank">Values</a>&#x91CC;&#x9762;&#x7684;{key}&#x6216;&#x8005;&#x672C;&#x5730;js&#x6587;&#x4EF6;(&#x5982;&#xFF1A;<code>e:\test\xxx</code>&#x3001;<code>e:/test/xxx</code>&#x3001;<code>/User/username/test/xxx</code>&#x7B49;)&#xFF0C;pattern&#x53C2;&#x89C1;<a href="../pattern.html">&#x5339;&#x914D;&#x6A21;&#x5F0F;</a>&#xFF0C;&#x66F4;&#x591A;&#x6A21;&#x5F0F;&#x8BF7;&#x53C2;&#x8003;<a href="../mode.html">&#x914D;&#x7F6E;&#x65B9;&#x5F0F;</a>&#x3002;</p><p>filepath&#x6307;&#x5B9A;&#x7684;&#x6587;&#x672C;&#x53EF;&#x4EE5;&#x4E3A;&#x4E00;&#x7EC4;&#x89C4;&#x5219;&#x5217;&#x8868;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4E00;&#x4E2A;js&#x811A;&#x672C;&#x901A;&#x8FC7;&#x5224;&#x65AD;url&#x3001;method&#x3001;clientIp&#x3001;headers, body&#x52A8;&#x6001;&#x8BBE;&#x7F6E;&#x89C4;&#x5219;&#xFF1A;</p><h3 id="&#x9759;&#x6001;&#x89C4;&#x5219;&#x5217;&#x8868;">&#x9759;&#x6001;&#x89C4;&#x5219;&#x5217;&#x8868;</h3><p>whistle&#x5224;&#x65AD;&#x5982;&#x679C;&#x6587;&#x4EF6;&#x7684;&#x7B2C;&#x4E00;&#x884C;&#x4E3A;&#x89C4;&#x5219;&#x7684;&#x6CE8;&#x91CA;&#xFF0C;&#x5373;<code>#</code>&#x5F00;&#x5934;&#xFF0C;&#x5219;&#x4EFB;&#x52A1;filepath&#x6307;&#x5B9A;&#x7684;&#x662F;&#x89C4;&#x5219;&#x5217;&#x8868;&#xFF0C;&#x4F1A;&#x52A0;&#x8F7D;&#x8BE5;&#x5217;&#x8868;&#xFF0C;&#x5E76;&#x8FDB;&#x884C;&#x4E8C;&#x6B21;&#x5339;&#x914D;&#x83B7;&#x53D6;&#x89C4;&#x5219;&#xFF1A;</p><pre><code># rules
+                                <h1 id="resscript">resScript</h1>
+<p>&#x7ED9;&#x5339;&#x914D;&#x7684;&#x54CD;&#x5E94;&#x6279;&#x91CF;&#x8BBE;&#x7F6E;&#x89C4;&#x5219;&#xFF0C;&#x6216;&#x8005;&#x901A;&#x8FC7;&#x811A;&#x672C;&#x52A8;&#x6001;&#x8BBE;&#x7F6E;&#x89C4;&#x5219;&#xFF0C;&#x914D;&#x7F6E;&#x65B9;&#x5F0F;&#xFF1A;</p>
+<pre><code>pattern resScript://filepath
+</code></pre><p>filepath&#x4E3A;<a href="http://local.whistlejs.com/#values" target="_blank">Values</a>&#x91CC;&#x9762;&#x7684;{key}&#x6216;&#x8005;&#x672C;&#x5730;js&#x6587;&#x4EF6;(&#x5982;&#xFF1A;<code>e:\test\xxx</code>&#x3001;<code>e:/test/xxx</code>&#x3001;<code>/User/username/test/xxx</code>&#x7B49;)&#xFF0C;pattern&#x53C2;&#x89C1;<a href="../pattern.html">&#x5339;&#x914D;&#x6A21;&#x5F0F;</a>&#xFF0C;&#x66F4;&#x591A;&#x6A21;&#x5F0F;&#x8BF7;&#x53C2;&#x8003;<a href="../mode.html">&#x914D;&#x7F6E;&#x65B9;&#x5F0F;</a>&#x3002;</p>
+<p>filepath&#x6307;&#x5B9A;&#x7684;&#x6587;&#x672C;&#x53EF;&#x4EE5;&#x4E3A;&#x4E00;&#x7EC4;&#x89C4;&#x5219;&#x5217;&#x8868;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4E00;&#x4E2A;js&#x811A;&#x672C;&#x901A;&#x8FC7;&#x5224;&#x65AD;url&#x3001;method&#x3001;clientIp&#x3001;headers, body&#x52A8;&#x6001;&#x8BBE;&#x7F6E;&#x89C4;&#x5219;&#xFF1A;</p>
+<h3 id="&#x9759;&#x6001;&#x89C4;&#x5219;&#x5217;&#x8868;">&#x9759;&#x6001;&#x89C4;&#x5219;&#x5217;&#x8868;</h3>
+<p>whistle&#x5224;&#x65AD;&#x5982;&#x679C;&#x6587;&#x4EF6;&#x7684;&#x7B2C;&#x4E00;&#x884C;&#x4E3A;&#x89C4;&#x5219;&#x7684;&#x6CE8;&#x91CA;&#xFF0C;&#x5373;<code>#</code>&#x5F00;&#x5934;&#xFF0C;&#x5219;&#x4EFB;&#x52A1;filepath&#x6307;&#x5B9A;&#x7684;&#x662F;&#x89C4;&#x5219;&#x5217;&#x8868;&#xFF0C;&#x4F1A;&#x52A0;&#x8F7D;&#x8BE5;&#x5217;&#x8868;&#xFF0C;&#x5E76;&#x8FDB;&#x884C;&#x4E8C;&#x6B21;&#x5339;&#x914D;&#x83B7;&#x53D6;&#x89C4;&#x5219;&#xFF1A;</p>
+<pre><code># rules
 pattern1 operatorURI1
 pattern2 operatorURI2
-patternN operatorURIN</code></pre>
-<h3 id="&#x901A;&#x8FC7;&#x811A;&#x672C;&#x52A8;&#x6001;&#x8BBE;&#x7F6E;&#x89C4;&#x5219;">&#x901A;&#x8FC7;&#x811A;&#x672C;&#x52A8;&#x6001;&#x8BBE;&#x7F6E;&#x89C4;&#x5219;</h3><p>rulesFile&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x811A;&#x672C;&#xFF0C;whistle&#x5728;&#x6267;&#x884C;&#x811A;&#x672C;&#x65F6;&#x4F1A;&#x81EA;&#x52A8;&#x5728;&#x5168;&#x5C40;&#x4F20;&#x4EBA;&#xFF1A;</p><ol><li><code>url</code>: &#x8BF7;&#x6C42;&#x7684;&#x5B8C;&#x6574;&#x8DEF;&#x5F84;
-</li>
-<li><code>method</code>: &#x8BF7;&#x6C42;&#x65B9;&#x6CD5;
-</li>
-<li><code>ip(clientIp)</code>: &#x5BA2;&#x6237;&#x7AEF;ip
-</li>
-<li><code>headers</code>: &#x8BF7;&#x6C42;&#x5934;&#x90E8;
-</li>
-<li><code>body</code>: &#x8BF7;&#x6C42;&#x5185;&#x5BB9;(&#x53EA;&#x6709;&#x5339;&#x914D;&#x4E86;<a href="reqScript.html">reqScript</a>&#x624D;&#x4F1A;&#x6709;&#x8BE5;&#x5B57;&#x6BB5;)&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x8BF7;&#x6C42;&#x5185;&#x5BB9;&#x4E3A;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;(<code>&apos;&apos;</code>)&#xFF0C;&#x5982;&#x679C;&#x8BF7;&#x6C42;&#x5185;&#x5BB9;&#x5927;&#x4E8E;16k&#xFF0C;&#x53EF;&#x80FD;&#x53EA;&#x80FD;&#x83B7;&#x53D6;&#x8BF7;&#x6C42;&#x524D;&#x9762;16k&#x957F;&#x5EA6;&#x7684;&#x5185;&#x5BB9;(whistle &gt;= v1.5.18)
-</li>
-<li><code>rules</code>: &#x5B58;&#x653E;&#x65B0;&#x89C4;&#x5219;&#x7684;&#x6570;&#x7EC4;
-</li>
-<li><code>values</code>: &#x5B58;&#x653E;&#x4E34;&#x65F6;values&#x7684;&#x5BF9;&#x8C61;(v1.7.1&#x5F00;&#x59CB;&#x652F;&#x6301;)
-</li>
-<li><code>render(tplStr, data)</code>: &#x5185;&#x7F6E;<a href="https://johnresig.com/blog/javascript-micro-templating/" target="_blank">microTemplate</a>&#xFF0C;&#x65B9;&#x4FBF;&#x901A;&#x8FC7;&#x6A21;&#x677F;&#x6E32;&#x67D3;&#x6570;&#x636E;(v1.7.1&#x5F00;&#x59CB;&#x652F;&#x6301;)
-</li>
-<li><code>getValue(key)</code>: &#x83B7;&#x53D6;Values&#x4E2D;&#x5BF9;&#x5E94;key&#x7684;&#x503C;(v1.7.1&#x5F00;&#x59CB;&#x652F;&#x6301;)
-</li>
-<li><code>parseUrl</code>: &#x540C; <code>url.parse</code>(v1.7.1&#x5F00;&#x59CB;&#x652F;&#x6301;)
-</li>
-<li><code>parseQuery</code>: &#x540C; <code>querystring.parse</code>(v1.7.1&#x5F00;&#x59CB;&#x652F;&#x6301;)
-</li>
-<li><code>statusCode</code>: &#x54CD;&#x5E94;&#x72B6;&#x6001;&#x7801;(v1.7.1&#x5F00;&#x59CB;&#x652F;&#x6301;)
-</li>
-<li><code>resHeaders</code>: &#x54CD;&#x5E94;&#x5934;(v1.7.1&#x5F00;&#x59CB;&#x652F;&#x6301;)
-</li>
-<li><code>serverIp</code>: &#x670D;&#x52A1;&#x5668;ip(v1.7.1&#x5F00;&#x59CB;&#x652F;&#x6301;)
-</li></ol>
-<p>&#x7528;&#x8BE5;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x89E3;&#x51B3;&#x6B64;&#x95EE;&#x9898;<a href="https://github.com/avwo/whistle/issues/19" target="_blank">#19</a>&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x505A;ip_hash&#x7B49;&#xFF0C;&#x5177;&#x4F53;&#x7528;&#x6CD5;&#x770B;&#x4E0B;&#x9762;&#x7684;&#x4F8B;&#x5B50;</p><p>&#x4F8B;&#x5B50;&#xFF1A;</p><p>&#x8BBE;&#x7F6E;&#x9759;&#x6001;&#x89C4;&#x5219;&#x5217;&#x8868;</p><pre><code>www.ifeng.com resScript://{resScript.txt}</code></pre>
-<p>resScript.txt:</p><pre><code># &#x7B2C;&#x4E00;&#x884C;&#x6CA1;&#x6709;&#x8FD9;&#x4E2A;&#x6CE8;&#x91CA;&#x7B26;&#x53F7;&#xFF0C;whistle&#x4F1A;&#x8BA4;&#x4E3A;&#x662F;&#x4E00;&#x4E2A;&#x811A;&#x672C;
+patternN operatorURIN
+</code></pre><h3 id="&#x901A;&#x8FC7;&#x811A;&#x672C;&#x52A8;&#x6001;&#x8BBE;&#x7F6E;&#x89C4;&#x5219;">&#x901A;&#x8FC7;&#x811A;&#x672C;&#x52A8;&#x6001;&#x8BBE;&#x7F6E;&#x89C4;&#x5219;</h3>
+<p>rulesFile&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x811A;&#x672C;&#xFF0C;whistle&#x5728;&#x6267;&#x884C;&#x811A;&#x672C;&#x65F6;&#x4F1A;&#x81EA;&#x52A8;&#x5728;&#x5168;&#x5C40;&#x4F20;&#x4EBA;&#xFF1A;</p>
+<ol>
+<li><code>url</code>: &#x8BF7;&#x6C42;&#x7684;&#x5B8C;&#x6574;&#x8DEF;&#x5F84;</li>
+<li><code>method</code>: &#x8BF7;&#x6C42;&#x65B9;&#x6CD5;</li>
+<li><code>ip(clientIp)</code>: &#x5BA2;&#x6237;&#x7AEF;ip</li>
+<li><code>headers</code>: &#x8BF7;&#x6C42;&#x5934;&#x90E8;</li>
+<li><code>body</code>: &#x8BF7;&#x6C42;&#x5185;&#x5BB9;(&#x53EA;&#x6709;&#x5339;&#x914D;&#x4E86;<a href="reqScript.html">reqScript</a>&#x624D;&#x4F1A;&#x6709;&#x8BE5;&#x5B57;&#x6BB5;)&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x8BF7;&#x6C42;&#x5185;&#x5BB9;&#x4E3A;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;(<code>&apos;&apos;</code>)&#xFF0C;&#x5982;&#x679C;&#x8BF7;&#x6C42;&#x5185;&#x5BB9;&#x5927;&#x4E8E;16k&#xFF0C;&#x53EF;&#x80FD;&#x53EA;&#x80FD;&#x83B7;&#x53D6;&#x8BF7;&#x6C42;&#x524D;&#x9762;16k&#x957F;&#x5EA6;&#x7684;&#x5185;&#x5BB9;(whistle &gt;= v1.5.18)</li>
+<li><code>rules</code>: &#x5B58;&#x653E;&#x65B0;&#x89C4;&#x5219;&#x7684;&#x6570;&#x7EC4;</li>
+<li><code>values</code>: &#x5B58;&#x653E;&#x4E34;&#x65F6;values&#x7684;&#x5BF9;&#x8C61;(v1.7.1&#x5F00;&#x59CB;&#x652F;&#x6301;)</li>
+<li><code>render(tplStr, data)</code>: &#x5185;&#x7F6E;<a href="https://johnresig.com/blog/javascript-micro-templating/" target="_blank">microTemplate</a>&#xFF0C;&#x65B9;&#x4FBF;&#x901A;&#x8FC7;&#x6A21;&#x677F;&#x6E32;&#x67D3;&#x6570;&#x636E;(v1.7.1&#x5F00;&#x59CB;&#x652F;&#x6301;)</li>
+<li><code>getValue(key)</code>: &#x83B7;&#x53D6;Values&#x4E2D;&#x5BF9;&#x5E94;key&#x7684;&#x503C;(v1.7.1&#x5F00;&#x59CB;&#x652F;&#x6301;)</li>
+<li><code>parseUrl</code>: &#x540C; <code>url.parse</code>(v1.7.1&#x5F00;&#x59CB;&#x652F;&#x6301;)</li>
+<li><code>parseQuery</code>: &#x540C; <code>querystring.parse</code>(v1.7.1&#x5F00;&#x59CB;&#x652F;&#x6301;)</li>
+<li><code>statusCode</code>: &#x54CD;&#x5E94;&#x72B6;&#x6001;&#x7801;(v1.7.1&#x5F00;&#x59CB;&#x652F;&#x6301;)</li>
+<li><code>resHeaders</code>: &#x54CD;&#x5E94;&#x5934;(v1.7.1&#x5F00;&#x59CB;&#x652F;&#x6301;)</li>
+<li><code>serverIp</code>: &#x670D;&#x52A1;&#x5668;ip(v1.7.1&#x5F00;&#x59CB;&#x652F;&#x6301;)</li>
+</ol>
+<p>&#x7528;&#x8BE5;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x89E3;&#x51B3;&#x6B64;&#x95EE;&#x9898;<a href="https://github.com/avwo/whistle/issues/19" target="_blank">#19</a>&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x505A;ip_hash&#x7B49;&#xFF0C;&#x5177;&#x4F53;&#x7528;&#x6CD5;&#x770B;&#x4E0B;&#x9762;&#x7684;&#x4F8B;&#x5B50;</p>
+<p>&#x4F8B;&#x5B50;&#xFF1A;</p>
+<p>&#x8BBE;&#x7F6E;&#x9759;&#x6001;&#x89C4;&#x5219;&#x5217;&#x8868;</p>
+<pre><code>www.ifeng.com resScript://{resScript.txt}
+</code></pre><p>resScript.txt:</p>
+<pre><code># &#x7B2C;&#x4E00;&#x884C;&#x6CA1;&#x6709;&#x8FD9;&#x4E2A;&#x6CE8;&#x91CA;&#x7B26;&#x53F7;&#xFF0C;whistle&#x4F1A;&#x8BA4;&#x4E3A;&#x662F;&#x4E00;&#x4E2A;&#x811A;&#x672C;
 http://www.ifeng.com/index.html redirect://http://www.ifeng.com/?test
-www.ifeng.com resType://text</code></pre>
-<p>&#x901A;&#x8FC7;&#x811A;&#x672C;&#x8BBE;&#x7F6E;&#x89C4;&#x5219;&#x5217;&#x8868;</p><pre><code>www.ifeng.com resScript://{resScript.js}</code></pre>
-<p>resScript.js:</p><pre><code>const options = parseUrl(url);
+www.ifeng.com resType://text
+</code></pre><p>&#x901A;&#x8FC7;&#x811A;&#x672C;&#x8BBE;&#x7F6E;&#x89C4;&#x5219;&#x5217;&#x8868;</p>
+<pre><code>www.ifeng.com resScript://{resScript.js}
+</code></pre><p>resScript.js:</p>
+<pre><code>const options = parseUrl(url);
 rules.push(`${options.host} resCookies://{cookies.json}`);
 values[&apos;cookies.json&apos;] = {
     serverIp,
     clientIp,
     from: &apos;resScript&apos;
-};</code></pre>
-
+};
+</code></pre>
                                 
                                 </section>
                             
@@ -1618,7 +1620,7 @@ values[&apos;cookies.json&apos;] = {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"resScript","level":"1.13.34","depth":2,"next":{"title":"reqDelay","level":"1.13.35","depth":2,"path":"rules/reqDelay.md","ref":"rules/reqDelay.md","articles":[]},"previous":{"title":"reqScript","level":"1.13.33","depth":2,"path":"rules/reqScript.md","ref":"rules/reqScript.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"rules/resScript.md","mtime":"2018-04-23T11:58:24.302Z","type":"markdown"},"gitbook":{"version":"3.2.1","time":"2018-05-14T15:13:30.251Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"resScript","level":"1.13.34","depth":2,"next":{"title":"reqDelay","level":"1.13.35","depth":2,"path":"rules/reqDelay.md","ref":"rules/reqDelay.md","articles":[]},"previous":{"title":"reqScript","level":"1.13.33","depth":2,"path":"rules/reqScript.md","ref":"rules/reqScript.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"rules/resScript.md","mtime":"2018-05-29T12:20:13.353Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-25T01:25:49.320Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
