@@ -7,7 +7,7 @@
         <title>filter · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="generator" content="GitBook 3.2.1">
         
         
         
@@ -1517,20 +1517,10 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="filter">filter</h1>
-<blockquote>
-<p>&#x53EF;&#x7528;&#x4E8E;&#x8FC7;&#x6EE4;pattern&#xFF0C;&#x8981;&#x6C42; <code>whistle&gt;=v1.10.x</code></p>
-</blockquote>
-<p>&#x5982;&#x914D;&#x7F6E;&#xFF1A;</p>
-<pre><code>www.test.com/cgi-bin/ file:///home/test/
-</code></pre><p>&#x8BE5;&#x914D;&#x7F6E;&#x5BF9; <code>www.test.com/cgi-bin/</code> &#x7684;&#x6240;&#x6709;&#x534F;&#x8BAE;&#x53CA;&#x5176;&#x5B50;&#x8DEF;&#x5F84;&#x7684;&#x8BF7;&#x6C42;&#x90FD;&#x751F;&#x6548;&#xFF0C;&#x60F3;&#x8BA9;&#x5176;&#x4E2D;&#x5305;&#x542B;<code>/test/</code>&#x8DEF;&#x6BB5;&#x7684;&#x8BF7;&#x6C42;&#x4E0D;&#x5339;&#x914D;&#x8BE5;&#x89C4;&#x5219;(&#x4E14;&#x5FFD;&#x7565;&#x5927;&#x5C0F;&#x5199;)&#xFF1A;</p>
-<pre><code>www.test.com/cgi-bin/ file:///home/test/ filter:///\/test\//i
-</code></pre><p>filter&#x914D;&#x7F6E;&#x65B9;&#x5F0F;&#xFF1A;</p>
-<pre><code>pattern operator1 operator2 ignore://reg1 ignore://!reg2 ignore://!reg3 ignore://reg4
-</code></pre><blockquote>
-<p>&#x5176;&#x4E2D; <code>reg1~reg4</code> &#x4E3A;&#x5F62;&#x5982; <code>/xxx/</code> &#x6216; <code>/xxx/i</code> &#x7684;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;<code>!reg</code> &#x8868;&#x793A; <code>reg</code> &#x53D6;&#x975E;&#xFF0C; &#x8BE5;&#x914D;&#x7F6E;&#x8868;&#x793A;&#x8BF7;&#x6C42;&#x8981;&#x5339;&#x914D;<code>pattern</code>&#xFF0C;&#x4F46;&#x8981;&#x8FC7;&#x6EE4;&#x6389;&#x5339;&#x914D; <code>reg1</code> &#x6216; <code>reg4</code>&#xFF0C;&#x6216;&#x4E0D;&#x5339;&#x914D;<code>reg2</code> &#x6216; <code>reg3</code></p>
-</blockquote>
-
+                                <h1 id="filter">filter</h1><blockquote><p>&#x53EF;&#x7528;&#x4E8E;&#x8FC7;&#x6EE4;pattern&#xFF0C;&#x8981;&#x6C42; <code>whistle&gt;=v1.10.x</code></p></blockquote><p>&#x5982;&#x914D;&#x7F6E;&#xFF1A;</p><pre><code>www.test.com/cgi-bin/ file:///home/test/</code></pre>
+<p>&#x8BE5;&#x914D;&#x7F6E;&#x5BF9; <code>www.test.com/cgi-bin/</code> &#x7684;&#x6240;&#x6709;&#x534F;&#x8BAE;&#x53CA;&#x5176;&#x5B50;&#x8DEF;&#x5F84;&#x7684;&#x8BF7;&#x6C42;&#x90FD;&#x751F;&#x6548;&#xFF0C;&#x60F3;&#x8BA9;&#x5176;&#x4E2D;&#x5305;&#x542B;<code>/test/</code>&#x8DEF;&#x6BB5;&#x7684;&#x8BF7;&#x6C42;&#x4E0D;&#x5339;&#x914D;&#x8BE5;&#x89C4;&#x5219;(&#x4E14;&#x5FFD;&#x7565;&#x5927;&#x5C0F;&#x5199;)&#xFF1A;</p><pre><code>www.test.com/cgi-bin/ file:///home/test/ filter:///\/test\//i</code></pre>
+<p>filter&#x914D;&#x7F6E;&#x65B9;&#x5F0F;&#xFF1A;</p><pre><code>pattern operator1 operator2 ignore://reg1 ignore://!reg2 ignore://!reg3 ignore://reg4</code></pre>
+<blockquote><p>&#x5176;&#x4E2D; <code>reg1~reg4</code> &#x4E3A;&#x5F62;&#x5982; <code>/xxx/</code> &#x6216; <code>/xxx/i</code> &#x7684;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;<code>!reg</code> &#x8868;&#x793A; <code>reg</code> &#x53D6;&#x975E;&#xFF0C; &#x8BE5;&#x914D;&#x7F6E;&#x8868;&#x793A;&#x8BF7;&#x6C42;&#x8981;&#x5339;&#x914D;<code>pattern</code>&#xFF0C;&#x4F46;&#x8981;&#x8FC7;&#x6EE4;&#x6389;&#x5339;&#x914D; <code>reg1</code> &#x6216; <code>reg4</code>&#xFF0C;&#x6216;&#x4E0D;&#x5339;&#x914D;<code>reg2</code> &#x6216; <code>reg3</code></p></blockquote>
                                 
                                 </section>
                             
@@ -1573,7 +1563,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"filter","level":"1.14.8","depth":2,"next":{"title":"ignore","level":"1.14.9","depth":2,"path":"rules/ignore.md","ref":"rules/ignore.md","articles":[]},"previous":{"title":"pac","level":"1.14.7","depth":2,"path":"rules/pac.md","ref":"rules/pac.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"rules/filter.md","mtime":"2018-05-29T12:20:13.341Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-08-20T05:17:47.003Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"filter","level":"1.14.8","depth":2,"next":{"title":"ignore","level":"1.14.9","depth":2,"path":"rules/ignore.md","ref":"rules/ignore.md","articles":[]},"previous":{"title":"pac","level":"1.14.7","depth":2,"path":"rules/pac.md","ref":"rules/pac.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"rules/filter.md","mtime":"2018-05-14T15:12:35.069Z","type":"markdown"},"gitbook":{"version":"3.2.1","time":"2018-08-21T12:11:22.427Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
