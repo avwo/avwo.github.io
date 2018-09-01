@@ -1,39 +1,42 @@
 # res
-> 不推荐使用该协议，为方便使用，whistle已将此协议的功能拆分成多个协议，具体参见其它协议
+为尽可能缩减协议，减少复杂度，该协议已在最新版本的 whistle (`>=v1.12.3`) 中删除，请及时[更新whistle](../update.html)，并用如下方式代替：
 
-修改响应头、响应内容、响应速度等等，配置方式：
+#### 修改响应状态码
+1. 直接响应设置的状态码（请求不会到后台）：[statusCode](./statusCode.html)
+2. 修改后台返回的状态码：[replaceStatus](./replaceStatus.html)
 
-	pattern res://params
+#### 修改响应头
+修改任意响应头的协议：[reqHeaders](./resHeaders.html)
+对一些需要特殊处理或可能修改比较多的响应头提供了简便的配置方式：
+1. 设置缓存头：[cache](./cache.html)
+2. 302重定向：[redirect](./redirect.html)
+3. 设置下载：[attachment](./attachment.html)
+4. 修改响应cookie：[resCookies](./resCookies.html)
+5. 修改响应编码：[resCharset](./resCharset.html)
+6. 修改响应头的类型：[resType](./resType.html)
+7. 设置响应头的cors：[resCors](./resCors.html)
 
-params为[Values](http://local.whistlejs.com/#values)里面的{key}或者本地文件(如：`e:\test\xxx`、`e:/test/xxx`、`/User/username/test/xxx`等)，内容为:
+#### 修改响应内容
+whistle可以修改任意响应内容，同时也对一些特殊的响应类型提供了简便的配置方式：
+1. 本地替换：[file](./rule/file.html)
+2. 响应类型为`json`或`html`、`js`，且内容为json或jsonp对象：[resMerge](./resMerge.html)
+2. 响应类型为文本：[resReplace](./resReplace.html)
+3. 替换html类型的内容：[htmlBody](./htmlBody.html)
+4. 在html类型的内容前面注入html：[htmlPrepend](./htmlPrepend.html)
+5. 在html类型的内容后面注入html：[htmlAppend](./htmlAppend.html)
+6. 替换css类型的内容：[cssBody](./cssBody.html)
+7. 在css类型的内容前面注入css：[cssPrepend](./cssPrepend.html)
+8. 在css类型的内容后面注入css：[cssAppend](./cssAppend.html)
+9. 替换js类型的内容：[jsBody](./jsBody.html)
+10. 在js类型的内容前面注入js：[jsPrepend](./jsPrepend.html)
+11. 在js类型的内容后面注入js：[jsAppend](./jsAppend.html)
+12. 替换响应内容：[reqBody](./reqBody.html)
+13. 在响应内容前面注入内容：[reqPrepend](./reqPrepend.html)
+14. 在响应内容后面注入内容：[resAppend](resAppend.html)
 
-	{
-	    "headers": { //修改响应头部
-	        "content-type": "text/plain; charset=utf8"
-	    },
-	    "top": "preappend body", //在响应内容前面添加文本
-	    "prepend": "/User/xxx/top.txt", //在响应内容前面添加的文件路径
-	    "body": "request body", //替换响应内容的文本
-	    "replace": "/User/xxx/body.txt", //替换响应内容的文件路径
-	    "bottom": "append body", //追加响应内容的文本
-	    "append": "/User/xxx/bottom.txt", //追加响应内容的文件路径
-	    "delay": 6000, //延迟响应的毫秒数
-	    "speed": 20 //设置响应速度(单位：kb/s，千比特/每秒)
-	}
 
-pattern参见[匹配模式](../pattern.html)，更多模式请参考[配置方式](../mode.html)。
+#### 延迟响应
+参见协议：[resDelay](./resDelay.html)
 
-例子：
-
-把[www.ifeng.com](http://www.ifeng.com/)后面添加文本及修改`content-type`为`text/plain`
-
-	www.ifeng.com req://{test-res}
-
-Values的`test-res`:
-
-	{
-	    "bottom": "\ntest",
-	    "headers": {
-	        "Content-type": "text/plain"
-	    }
-    }
+#### 限制响应速度
+参见协议：[resSpeed](./resSpeed.html)

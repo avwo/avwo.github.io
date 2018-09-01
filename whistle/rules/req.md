@@ -1,43 +1,37 @@
 
 # req
-> 不推荐使用该协议，为方便使用，whistle已将此协议的功能拆分成多个协议，具体参见其它协议
+为尽可能缩减协议，减少复杂度，该协议已在最新版本的 whistle (`>=v1.12.3`) 中删除，请及时[更新whistle](../update.html)，并用如下方式代替：
 
-修改请求的方法、请求头、请求内容、请求速度等等，配置方式：
+#### 修改请求URL
+1. 修改请求参数：[urlParams](./urlPrams.html)、[reqMerge](./reqMerge.html)(这个协议主要用替换表单数据，如果 `GET` 等没有请求 `body` 请求则会修改请求参数，否则修改请求 `body`)
+2. 正则或关键字路径替换：[pathReplace](./pathReplace.html)
+3. 替换整个url：[请求替换](./rule/replace.html)
 
-	pattern req://params
+#### 修改请求方法
+参见协议：[method](./method.html)
 
-params为[Values](http://local.whistlejs.com/#values)里面的{key}或者本地文件(如：`e:\test\xxx`、`e:/test/xxx`、`/User/username/test/xxx`等)，内容为:
+#### 修改请求头
+修改任意请求头的协议：[reqHeaders](./reqHeaders.html)
+对一些需要特殊处理或可能修改比较多的请求头提供了简便的配置方式：
+1. 设置鉴权头：[auth](./auth.html)
+2. 修改referer：[修改referer：](./修改referer：.html)
+3. 修改请求`User-Agent`：[ua](./ua.html)
+4. 修改请求cookie：[reqCookies](./reqCookies.html)
+5. 修改请求类型：[reqType](./reqType.html)
+6. 修改请求编码：[reqCharset](./reqCharset.html)
+7. 修改请求的cors：[reqCors](./reqCors.html)
+8. 设置 `x-forwarded-for`：[forwardedFor](./forwardedFor.html)
 
-	{
-	    "method": "post", //修改请求方法
-	    "headers": { //修改请求头
-	        "referer": "http://www.example.com/xxx"
-	    },
-	    "top": "preappend body", //请求内容前面添加的文本
-	    "prepend": "/User/xxx/top.txt", //请求内容前面添加的文件路径
-	    "body": "request body", //替换请求内容的文本
-	    "replace": "/User/xxx/body.txt", //替换请求内容的文件路径
-	    "bottom": "append body", //追加到请求内容后面的文本
-	    "append": "/User/xxx/bottom.txt", //追加到请求内容后面的文件路径
-	    "delay": 6000, //延迟请求的毫秒数
-	    "speed": 20, //请求速度(单位：kb/s，千比特/每秒)
-	    "timeout": 36000, //超时时间
-	    "charset": "utf8" //请求内容编码
-	}
+#### 修改请求内容
+whistle可以修改任意请求内容，同时也对一些特殊的请求类型提供了简便的配置方式：
+1. 请求类型为json或表单、上传表单：[reqMerge](./reqMerge.html)(如果是`GET`请求，则修改请求参数)
+2. 请求类型为文本：[reqReplace](./reqReplace.html)
+3. 替换请求内容：[reqBody](./reqBody.html)
+4. 在请求内容前面注入内容：[reqPrepend](./reqPrepend.html)
+5. 在请求内容后面注入内容：[resAppend](resAppend.html)
 
-pattern参见[匹配模式](../pattern.html)，更多模式请参考[配置方式](../mode.html)。
+#### 延迟请求
+参见协议：[reqDelay](./reqDelay.html)
 
-例子：
-
-把[www.ifeng.com](http://www.ifeng.com/)改成post请求，及referer改成`http://wproxy.org`
-
-	www.ifeng.com req://{test-req}
-
-Values的`test-req`:
-
-	{
-	    "method": "post",
-	    "headers": {
-	        "referer": "http://wproxy.org"
-	    }
-    }
+#### 限制请求速度
+参见协议：[reqSpeed](./reqSpeed.html)
