@@ -363,7 +363,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.14.8" data-path="../webui/settings.html">
+        <li class="chapter " data-level="1.14.8" data-path="../webui/filter.html">
+            
+                <a href="../webui/filter.html">
+            
+                    
+                    Filter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.9" data-path="../webui/settings.html">
             
                 <a href="../webui/settings.html">
             
@@ -376,7 +389,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.14.9" data-path="../webui/weinre.html">
+        <li class="chapter " data-level="1.14.10" data-path="../webui/weinre.html">
             
                 <a href="../webui/weinre.html">
             
@@ -389,7 +402,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.14.10" data-path="../webui/https.html">
+        <li class="chapter " data-level="1.14.11" data-path="../webui/https.html">
             
                 <a href="../webui/https.html">
             
@@ -402,7 +415,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.14.11" data-path="../webui/online.html">
+        <li class="chapter " data-level="1.14.12" data-path="../webui/online.html">
             
                 <a href="../webui/online.html">
             
@@ -679,7 +692,7 @@
                 <a href="filter.html">
             
                     
-                    filter
+                    filter(excludeFilter|includeFilter)
             
                 </a>
             
@@ -1505,10 +1518,10 @@ maxAge: 300000</code></pre>
 </li></ol>
 <p>&#x4F8B;&#x5B50;&#xFF1A;</p><pre><code># &#x4E0B;&#x9762;&#x8868;&#x793A;&#x5339;&#x914D;pattern&#x7684;&#x540C;&#x65F6;&#x4E0D;&#x80FD;&#x4E3A;post&#x8BF7;&#x6C42;&#x4E14;&#x8BF7;&#x6C42;&#x5934;&#x91CC;&#x9762;&#x7684;cookie&#x5B57;&#x6BB5;&#x5FC5;&#x987B;&#x5305;&#x542B;test(&#x5FFD;&#x7565;&#x5927;&#x5C0F;&#x5199;)&#x3001;url&#x91CC;&#x9762;&#x5FC5;&#x987B;&#x5305;&#x542B; cgi-bin &#x7684;&#x8BF7;&#x6C42;
 # &#x5373;&#xFF1A;&#x8FC7;&#x6EE4;&#x6389;&#x5339;&#x914D;filter&#x91CC;&#x9762;&#x7684;&#x8BF7;&#x6C42;
-pattern operator1 operator2 filter://m:post filter://h:cookie!=test filter://!/cgi-bin/i
+pattern operator1 operator2 excludeFilter://m:post includeFilter://h:cookie=test includeFilter:///cgi-bin/i
 
 # &#x4E0B;&#x9762;&#x8868;&#x793A;&#x5339;&#x914D;pattern1&#x3001;pattern2&#x7684;&#x540C;&#x65F6;&#x5FC5;&#x987B;&#x4E3A;post&#x8BF7;&#x6C42;&#x4E14;&#x8BF7;&#x6C42;&#x5934;&#x91CC;&#x9762;&#x7684;cookie&#x5B57;&#x6BB5;&#x4E0D;&#x80FD;&#x5305;&#x542B;&#x7C7B;&#x4F3C; `uin=123123`&#x3001;&#x4E14;url&#x91CC;&#x9762;&#x4E0D;&#x80FD;&#x5305;&#x542B; cgi-bin &#x7684;&#x8BF7;&#x6C42;
-operator pattern1 pattern2 filter://m:!post filter://h:cookie=/uin=o\d+/i filter:///cgi-bin/i
+operator pattern1 pattern2 includeFilter://m:post excludeFilter://h:cookie=/uin=o\d+/i excludeFilter:///cgi-bin/i
 
 # &#x4E0B;&#x9762;&#x8868;&#x793A;&#x5339;&#x914D;pattern&#x7684;&#x8BF7;&#x6C42;&#x5FFD;&#x7565;&#x9664;&#x4E86;host&#x4EE5;&#x5916;&#x7684;&#x6240;&#x6709;&#x89C4;&#x5219;
 pattern ignore://*|!host
@@ -1558,7 +1571,7 @@ pattern ignore://file|host</code></pre>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"resCors","level":"1.15.44","depth":2,"next":{"title":"reqHeaders","level":"1.15.45","depth":2,"path":"rules/reqHeaders.md","ref":"rules/reqHeaders.md","articles":[]},"previous":{"title":"reqCors","level":"1.15.43","depth":2,"path":"rules/reqCors.md","ref":"rules/reqCors.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"rules/resCors.md","mtime":"2018-09-27T11:12:51.192Z","type":"markdown"},"gitbook":{"version":"3.2.1","time":"2018-12-03T12:42:01.584Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"resCors","level":"1.15.44","depth":2,"next":{"title":"reqHeaders","level":"1.15.45","depth":2,"path":"rules/reqHeaders.md","ref":"rules/reqHeaders.md","articles":[]},"previous":{"title":"reqCors","level":"1.15.43","depth":2,"path":"rules/reqCors.md","ref":"rules/reqCors.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"rules/resCors.md","mtime":"2018-12-09T10:28:12.496Z","type":"markdown"},"gitbook":{"version":"3.2.1","time":"2018-12-09T10:28:28.665Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

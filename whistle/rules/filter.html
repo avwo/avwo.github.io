@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>filter · GitBook</title>
+        <title>filter(excludeFilter|includeFilter) · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.1">
@@ -363,7 +363,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.14.8" data-path="../webui/settings.html">
+        <li class="chapter " data-level="1.14.8" data-path="../webui/filter.html">
+            
+                <a href="../webui/filter.html">
+            
+                    
+                    Filter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.9" data-path="../webui/settings.html">
             
                 <a href="../webui/settings.html">
             
@@ -376,7 +389,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.14.9" data-path="../webui/weinre.html">
+        <li class="chapter " data-level="1.14.10" data-path="../webui/weinre.html">
             
                 <a href="../webui/weinre.html">
             
@@ -389,7 +402,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.14.10" data-path="../webui/https.html">
+        <li class="chapter " data-level="1.14.11" data-path="../webui/https.html">
             
                 <a href="../webui/https.html">
             
@@ -402,7 +415,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.14.11" data-path="../webui/online.html">
+        <li class="chapter " data-level="1.14.12" data-path="../webui/online.html">
             
                 <a href="../webui/online.html">
             
@@ -679,7 +692,7 @@
                 <a href="filter.html">
             
                     
-                    filter
+                    filter(excludeFilter|includeFilter)
             
                 </a>
             
@@ -1463,7 +1476,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >filter</a>
+        <a href=".." >filter(excludeFilter|includeFilter)</a>
     </h1>
 </div>
 
@@ -1478,12 +1491,41 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="filter">filter</h1><p>&#x529F;&#x80FD;&#x4E0E;<a href="ignore.html">ignore</a>&#x7C7B;&#x4F3C;&#xFF0C;&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x8FC7;&#x6EE4;&#x5F53;&#x524D;&#x884C;&#x914D;&#x7F6E;&#x7684;&#x89C4;&#x5219;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x8BF7;&#x6C42;&#x5934;&#x3001;&#x8BF7;&#x6C42;&#x65B9;&#x6CD5;&#x3001;&#x8BF7;&#x6C42;IP&#x8FC7;&#x6EE4;&#x89C4;&#x5219;(&#x540E;&#x9762;&#x8FD9;&#x4E2A;&#x8981;<a href="../update.html">&#x6700;&#x65B0;&#x7248;&#x672C;&#x7684;whistle &gt;= v1.12.6</a>&#x624D;&#x80FD;&#x652F;&#x6301;)</p><p>&#x914D;&#x7F6E;&#x65B9;&#x5F0F;&#xFF1A;</p><pre><code>pattern operatorURI1  operatorURIx filter://regExp1 filter://!regExp1 filter://m:method1 filter://m:!method2 filter://m:!regExp3 filter://m:regExp4 filter://h:cookie=test filter://i:127.0.0.1</code></pre>
+                                <h1 id="filterexcludefilterincludefilter">filter(excludeFilter|includeFilter)</h1><blockquote><p>&#x4EE5;&#x4E0B;&#x529F;&#x80FD;&#x9700;&#x8981;&#x628A;whistle<a href="../update.html">&#x5347;&#x7EA7;&#x5230;&#x6700;&#x65B0;&#x7248;&#x672C;</a></p></blockquote><p>excludeFilter&#x548C;includeFilter&#x662F;&#x4F5C;&#x4E3A;&#x4E8C;&#x7EA7;&#x6761;&#x4EF6;&#xFF0C;&#x7528;&#x6765;&#x8FC7;&#x6EE4;&#x5339;&#x914D;&#x5DF2;&#x5339;&#x914D;&#x7684;&#x89C4;&#x5219;,&#xFF1A;
+1. <code>excludeFilter</code>&#xFF1A;&#x8868;&#x793A;&#x6392;&#x9664;&#x5339;&#x914D;&#x7684;&#x8BF7;&#x6C42;
+2. <code>includeFilter</code>&#xFF1A;&#x53EA;&#x4FDD;&#x7559;&#x5339;&#x914D;&#x7684;&#x8BF7;&#x6C42;</p><pre><code>pattern operatorURI excludeFilter://p1 includeFilter://p2 includeFilter://p3</code></pre>
+<p>&#x5176;&#x4E2D;&#xFF1A;p1&#x3001;p2&#x3001;... &#x53EF;&#x4EE5;&#x4E3A;&#x5339;&#x914D;&#x6A21;&#x5F0F;&#x91CC;&#x9762;&#x7684;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x3001;&#x901A;&#x914D;&#x7B26;&#x3001;&#x901A;&#x914D;&#x8DEF;&#x5F84;&#xFF0C;&#x5177;&#x4F53;&#x53C2;&#x89C1;&#xFF1A;<a href="../pattern.html">&#x5339;&#x914D;&#x6A21;&#x5F0F;</a>&#xFF0C;&#x4E14;&#x652F;&#x6301;&#x5339;&#x914D;&#x8BF7;&#x6C42;&#x5934;&#x3001;&#x8BF7;&#x6C42;&#x65B9;&#x6CD5;&#x3001;&#x8BF7;&#x6C42;IP&#x7B49;</p><pre><code>pattern operatorURI excludeFilter://p1 includeFilter://p2 includeFilter://!p3</code></pre>
+<p>&#x4E0A;&#x8FF0;&#x8868;&#x793A;&#xFF1A;</p><pre><code>if (pattern.test(req.url) &amp;&amp; (!p1.test(req) || p2.test(req) || !p3.test(req))) {
+  // do operatorURI
+}
+</code></pre>
+<p>&#x5373;&#xFF1A;&#x901A;&#x8FC7;url&#x5339;&#x914D; <code>pattern</code> &#x7684;&#x8BF7;&#x6C42;&#xFF0C;&#x8981;&#x4E0D;&#x80FD;&#x5339;&#x914D;<code>p1</code>&#x3001;&#x6216;&#x5339;&#x914D; <code>p2</code>&#x3001;&#x6216;&#x4E0D;&#x5339;&#x914D; <code>p3</code>&#xFF0C;&#x540E;&#x9762;&#x8FC7;&#x6EE4;&#x6761;&#x4EF6;&#x53EF;&#x4EE5;&#x4EFB;&#x610F;&#x4E2A;&#x3002;</p><p>&#x5982;&#xFF1A;</p><pre><code>pattern operatorURI1  operatorURIx excludeFilter://*/cgi-bin includeFilter:///test/i excludeFilter://m:options includeFilter://m:get includeFilter://m:/^p/i excludeFilter://m:/^c/ excludeFilter://h:cookie=test excludeFilter://i:127.0.0.1</code></pre>
+<p>&#x4E0A;&#x8FF0;&#x8868;&#x793A;&#xFF1A;</p><pre><code>if (pattern.test(req.url) &amp;&amp; (
+  !/^\/cgi-bin(?:[\/?]|$)/.test(req.pathname)
+  || /test/i.test(req.url) || req.method.toUpperCase() !== &apos;OPTIONS&apos;
+  || req.method.toUpperCase() === &apos;GET&apos; || /^p/.test(req.method) ||
+  !/^c/.test(req.method) || req.headers.cookie.indexOf(&apos;test&apos;) !== -1 ||
+  req.clientIp !== &apos;127.0.0.1
+)) {
+ // do operatorURI1 &amp; operatorURIx
+}</code></pre>
+<p>&#x5B8C;&#x6574;&#x5339;&#x914D;&#x6761;&#xFF1A;
+1. <code>m:name</code>&#xFF1A;name&#x4E3A;&#x65B9;&#x6CD5;&#x540D;&#x79F0;&#x6216;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x8868;&#x793A;&#x5339;&#x914D;&#x5BF9;&#x5E94;&#x65B9;&#x6CD5;
+2. <code>i:ip</code>&#xFF1A;ip&#x8868;&#x793A;&#x5177;&#x4F53;&#x5BA2;&#x6237;(&#x670D;&#x52A1;)&#x7AEF;ip&#x6216;&#x5339;&#x914D;ip&#x7684;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;
+3. <code>clientIp:ip</code>&#xFF1A;ip&#x8868;&#x793A;&#x5177;&#x4F53;&#x5BA2;&#x6237;&#x7AEF;ip&#x6216;&#x5339;&#x914D;ip&#x7684;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;
+4. <code>serverIp:ip</code>&#xFF1A;ip&#x8868;&#x793A;&#x5177;&#x4F53;&#x670D;&#x52A1;&#x7AEF;ip&#x6216;&#x5339;&#x914D;ip&#x7684;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;
+5. <code>s:code</code>&#xFF1A;code&#x8868;&#x793A;&#x54CD;&#x5E94;&#x72B6;&#x6001;&#x7801;&#xFF0C;&#x6216;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;
+6. <code>h:name=pattern</code>&#xFF1A;&#x5339;&#x914D;&#x8BF7;&#x6C42;&#x6216;&#x54CD;&#x5E94;&#x5934;&#x5B57;&#x6BB5; <code>name</code>&#xFF0C;pattern&#x4E3A;&#x8BE5;&#x5B57;&#x6BB5;&#x5BF9;&#x5E94;&#x503C;&#x91CC;&#x9762;&#x7684;&#x5173;&#x952E;&#x5B57;&#x6216;&#x6B63;&#x5219;&#x8868;&#x793A;
+7. <code>reqH:name=pattern</code>&#xFF1A;&#x540C;&#x4E0A;&#xFF0C;&#x4F46;&#x53EA;&#x4F1A;&#x5339;&#x914D;&#x8BF7;&#x6C42;&#x5934;
+8. <code>resH:name=pattern</code>&#xFF1A;&#x540C;&#x4E0A;&#xFF0C;&#x4F46;&#x53EA;&#x4F1A;&#x5339;&#x914D;&#x54CD;&#x5E94;&#x5934;
+9. <code>*/cgi-*</code>&#xFF1A;&#x8868;&#x793A;&#x5339;&#x914D; <code>xxx://x.y.z/cgi-.../...</code>&#xFF0C;&#x5177;&#x4F53;&#x53EF;&#x4EE5;&#x53C2;&#x89C1;<a href="../pattern.html">pattern</a>&#x91CC;&#x9762;&#x7684;&#x901A;&#x914D;&#x8DEF;&#x5F84;
+9. <code>&#x5176;&#x5B83;&#x5B57;&#x7B26;&#x4E32;</code>&#xFF1A;&#x8868;&#x793A;<a href="../pattern.html">pattern</a>&#x91CC;&#x9762;&#x7684;&#x901A;&#x914D;&#x7B26;&#x5339;&#x914D;</p><h4 id="&#x4E0B;&#x9762;&#x7684;&#x529F;&#x80FD;&#x5728;&#x6700;&#x65B0;&#x7248;&#x672C;-v1136&#x91CC;&#x9762;&#x5DF2;&#x4E0D;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;">&#x4E0B;&#x9762;&#x7684;&#x529F;&#x80FD;&#x5728;&#x6700;&#x65B0;&#x7248;&#x672C;(&gt;= v1.13.6)&#x91CC;&#x9762;&#x5DF2;&#x4E0D;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;</h4><p><del>
+&#x529F;&#x80FD;&#x4E0E;<a href="ignore.html">ignore</a>&#x7C7B;&#x4F3C;&#xFF0C;&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x8FC7;&#x6EE4;&#x5F53;&#x524D;&#x884C;&#x914D;&#x7F6E;&#x7684;&#x89C4;&#x5219;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x8BF7;&#x6C42;&#x5934;&#x3001;&#x8BF7;&#x6C42;&#x65B9;&#x6CD5;&#x3001;&#x8BF7;&#x6C42;IP&#x8FC7;&#x6EE4;&#x89C4;&#x5219;(&#x540E;&#x9762;&#x8FD9;&#x4E2A;&#x8981;<a href="../update.html">&#x6700;&#x65B0;&#x7248;&#x672C;&#x7684;whistle &gt;= v1.12.6</a>&#x624D;&#x80FD;&#x652F;&#x6301;)</del></p><p>&#x914D;&#x7F6E;&#x65B9;&#x5F0F;&#xFF1A;</p><pre><code>pattern operatorURI1  operatorURIx filter://regExp1 filter://!regExp1 filter://m:method1 filter://m:!method2 filter://m:!regExp3 filter://m:regExp4 filter://h:cookie=test filter://i:127.0.0.1</code></pre>
 <p>&#x4E0A;&#x8FF0; operatorUI&#x540E;&#x9762;&#x7684;filter&#x8868;&#x793A;&#x8FC7;&#x6EE4;&#x5339;&#x914D;&#x7684;&#x8BF7;&#x6C42;&#xFF0C;&#x53EA;&#x8981;&#x6EE1;&#x8DB3;&#x5176;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x5C31;&#x4E0D;&#x4F1A;&#x5339;&#x914D;&#x8BE5;&#x884C;&#x7684;&#x89C4;&#x5219;&#xFF0C;&#x8FD9;&#x4E9B;&#x8FC7;&#x6EE4;&#x5F53;&#x524D;&#x884C;&#x914D;&#x7684;&#x8FC7;&#x6EE4;&#x5668;&#x90FD;&#x652F;&#x6301;<code>&#x53D6;&#x975E; !=</code>&#x3001;&#x4EE5;&#x53CA;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x5176;&#x4E2D; <code>m:xxx</code> &#x8868;&#x793A;&#x65B9;&#x6CD5;&#x4E3A; <code>xxx</code>(&#x81EA;&#x52A8;&#x5FFD;&#x7565;&#x5927;&#x5C0F;&#x5199;)&#x7684;&#x8BF7;&#x6C42;&#x5C06;&#x4E0D;&#x5339;&#x914D;&#x6539;&#x884C;&#x89C4;&#x5219;&#xFF0C;&#x5982;&#x679C; <code>xxx</code> &#x4E3A;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x4E5F;&#x53EF;&#x4EE5;&#xFF1B;<code>h:key=value</code> &#x8868;&#x793A;&#x540D;&#x4E3A;<code>key</code>&#x7684;&#x8BF7;&#x6C42;&#x5934;&#x91CC;&#x9762;&#x5305;&#x542B; <code>value</code>(&#x81EA;&#x52A8;&#x5FFD;&#x7565;&#x5927;&#x5C0F;&#x5199;)&#xFF0C;&#x5982;&#x679C; <code>xxx</code> &#x4E3A;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x4E5F;&#x53EF;&#x4EE5;&#xFF1B;<code>i:xxx</code> &#x8868;&#x793A;&#x5339;&#x914D;clientIp&#xFF0C;&#x5177;&#x4F53;&#x529F;&#x80FD;&#x540C;&#x4E0A;&#x3002;</p><p>&#x5982;&#x914D;&#x7F6E;&#xFF1A;</p><pre><code>www.test.com/cgi-bin/ file:///home/test/ filter://m:options filter://h:!cookie=5454545  filter:///\/test\//i
 www.test.com/cgi-bin/ filter:///home/test/</code></pre>
 <p>&#x4E0A;&#x8FF0;<code>www.test.com/cgi-bin/xxx</code> &#x8BF7;&#x6C42;&#x7684;&#x65B9;&#x6CD5;&#x5982;&#x679C;&#x4E3A; <code>OPTIONS</code> &#x6216; cookie&#x91CC;&#x9762;&#x5305;&#x542B; <code>5454545</code>&#x3001;&#x6216;url&#x91CC;&#x9762;&#x5305;&#x542B; <code>test</code>&#xFF0C;&#x5219;&#x8BE5;&#x8BF7;&#x6C42;&#x53EA;&#x4F1A;&#x5339;&#x914D;&#x7B2C;&#x4E8C;&#x6761;&#x3002;</p><p>&#x652F;&#x6301;&#x8FC7;&#x6EE4;&#x8DEF;&#x5F84;&#xFF1A;</p><pre><code># &#x9488;&#x5BF9;&#x8DEF;&#x5F84; http://www.test.com/xxx/yyy/...
 www.test.com/xxx file:///hostm/test/ file://*/xxx/yyy</code></pre>
-
+<p>&lt;/del&gt;</p>
                                 
                                 </section>
                             
@@ -1526,7 +1568,7 @@ www.test.com/xxx file:///hostm/test/ file://*/xxx/yyy</code></pre>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"filter","level":"1.15.11","depth":2,"next":{"title":"ignore","level":"1.15.12","depth":2,"path":"rules/ignore.md","ref":"rules/ignore.md","articles":[]},"previous":{"title":"pac","level":"1.15.10","depth":2,"path":"rules/pac.md","ref":"rules/pac.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"rules/filter.md","mtime":"2018-12-03T12:41:36.985Z","type":"markdown"},"gitbook":{"version":"3.2.1","time":"2018-12-03T12:42:01.584Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"filter(excludeFilter|includeFilter)","level":"1.15.11","depth":2,"next":{"title":"ignore","level":"1.15.12","depth":2,"path":"rules/ignore.md","ref":"rules/ignore.md","articles":[]},"previous":{"title":"pac","level":"1.15.10","depth":2,"path":"rules/pac.md","ref":"rules/pac.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"rules/filter.md","mtime":"2018-12-09T10:06:07.059Z","type":"markdown"},"gitbook":{"version":"3.2.1","time":"2018-12-09T10:28:28.665Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
