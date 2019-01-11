@@ -11,17 +11,17 @@ pattern operatorURI excludeFilter://p1 includeFilter://p2 includeFilter://p3
 其中：p1、p2、... 可以为匹配模式里面的正则表达式、通配符、通配路径，具体参见：[匹配模式](../pattern.html)，且支持匹配请求头、请求方法、请求IP等
 
 ```
-pattern operatorURI excludeFilter://p1 includeFilter://p2 includeFilter://!p3
+pattern operatorURI excludeFilter://p0 excludeFilter://p1 includeFilter://p2 includeFilter://p3
 ```
 
 上述表示：
 ```
-if (pattern.test(req.url) && (!p1.test(req) || p2.test(req) || !p3.test(req))) {
+if (pattern.test(req.url) && ((!p0.test(req) || !p1.test(req)) && p2.test(req) && !p3.test(req))) {
   // do operatorURI
 }
 
 ```
-即：通过url匹配 `pattern` 的请求，要不能匹配`p1`、或匹配 `p2`、或不匹配 `p3`，后面过滤条件可以任意个。
+即：通过url匹配 `pattern` 的请求，要不能匹配`p0` 或 `p1`、或匹配 `p2` 和 `p3`，后面过滤条件可以任意个。
 
 如：
 ```
@@ -31,12 +31,10 @@ pattern operatorURI1  operatorURIx excludeFilter://*/cgi-bin includeFilter:///te
 上述表示：
 ```
 if (pattern.test(req.url) && (
-  !/^\/cgi-bin(?:[\/?]|$)/.test(req.pathname)
-  || /test/i.test(req.url) || req.method.toUpperCase() !== 'OPTIONS'
-  || req.method.toUpperCase() === 'GET' || /^p/.test(req.method) ||
-  !/^c/.test(req.method) || req.headers.cookie.indexOf('test') !== -1 ||
-  req.clientIp !== '127.0.0.1
-)) {
+  (!/^\/cgi-bin(?:[\/?]|$)/.test(req.path) ||
+   !/^c/.test(req.method) || req.headers.cookie.indexOf('test') !== -1 || req.clientIp !== '127.0.0.1)
+  && /test/i.test(req.url) && req.method.toUpperCase() !== 'OPTIONS'
+  && req.method.toUpperCase() === 'GET' && /^p/.test(req.method)) {
  // do operatorURI1 & operatorURIx
 }
 ```
