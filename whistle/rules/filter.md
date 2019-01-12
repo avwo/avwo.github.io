@@ -49,8 +49,9 @@ if (pattern.test(req.url) && (
 6. `h:name=pattern`：匹配请求或响应头字段 `name`，pattern为该字段对应值里面的关键字或正则表示
 7. `reqH:name=pattern`：同上，但只会匹配请求头
 8. `resH:name=pattern`：同上，但只会匹配响应头
+9. `b:pattern`: 匹配请求内容，pattern为内容的子字符串(不区分大小写)，或正则表达式(v1.13.12+)
 9. `*/cgi-*`：表示匹配 `xxx://x.y.z/cgi-.../...`，具体可以参见[pattern](../pattern.html)里面的通配路径
-9. `其它字符串`：表示[pattern](../pattern.html)里面的通配符匹配
+10. `其它字符串`：表示[pattern](../pattern.html)里面的通配符匹配
 
 
 
