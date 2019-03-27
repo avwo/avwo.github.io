@@ -692,7 +692,7 @@
                 <a href="rules/filter.html">
             
                     
-                    filter(excludeFilter|includeFilter)
+                    filter (excludeFilter | includeFilter)
             
                 </a>
             
@@ -1538,7 +1538,6 @@ $ npm install whistle -g --registry=https://registry.npm.taobao.org</code></pre>
     -P, --uiport [uiport]                           set the listening port of whistle (8900 by default)
     -m, --middlewares [script path or module name]  set the express middlewares loaded at startup (as: xx,yy/zz.js)
     -M, --mode [mode]                               set the way of starting the whistle mode (as: pureProxy|debug|multiEnv)
-    -u, --uipath [script path]                      set the path of custom web ui
     -t, --timeout [ms]                              set the request timeout (66000ms by default)
     -e, --extra [extraData]                         set the extra parameters for plugin
     -f, --secureFilter [secureFilter]               set the path of secure filter
@@ -1588,6 +1587,8 @@ $ npm install whistle -g --registry=https://registry.npm.taobao.org</code></pre>
 <p>PS: &#x5982;&#x679C;&#x914D;&#x7F6E;&#x5B8C;&#x4EE3;&#x7406;&#xFF0C;&#x624B;&#x673A;&#x65E0;&#x6CD5;&#x8BBF;&#x95EE;&#xFF0C;&#x53EF;&#x80FD;&#x662F;whistle&#x6240;&#x5728;&#x7684;&#x7535;&#x8111;&#x9632;&#x706B;&#x5899;&#x9650;&#x5236;&#x4E86;&#x8FDC;&#x7A0B;&#x8BBF;&#x95EE;whistle&#x7684;&#x7AEF;&#x53E3;&#xFF0C;&#x5173;&#x95ED;&#x9632;&#x706B;&#x5899;&#x6216;&#x8005;&#x8BBE;&#x7F6E;&#x767D;&#x540D;&#x5355;&#xFF1A;<a href="http://jingyan.baidu.com/article/870c6fc317cae7b03ee4be48.html" target="_blank">http://jingyan.baidu.com/article/870c6fc317cae7b03ee4be48.html</a></p><h3 id="&#x8BBF;&#x95EE;&#x914D;&#x7F6E;&#x9875;&#x9762;">&#x8BBF;&#x95EE;&#x914D;&#x7F6E;&#x9875;&#x9762;</h3><p>&#x542F;&#x52A8;whistle&#x53CA;&#x914D;&#x7F6E;&#x5B8C;&#x4EE3;&#x7406;&#x540E;&#xFF0C;&#x7528;<strong>Chrome&#x6D4F;&#x89C8;&#x5668;(&#x7531;&#x4E8E;css&#x517C;&#x5BB9;&#x6027;&#x95EE;&#x9898;&#x754C;&#x9762;&#x53EA;&#x652F;&#x6301;Chrome&#x6D4F;&#x89C8;&#x5668;)</strong>&#x8BBF;&#x95EE;&#x914D;&#x7F6E;&#x9875;&#x9762;&#xFF0C;&#x5982;&#x679C;&#x80FD;&#x6B63;&#x5E38;&#x6253;&#x5F00;&#x9875;&#x9762;&#xFF0C;whistle&#x5B89;&#x88C5;&#x542F;&#x52A8;&#x5B8C;&#x6BD5;&#xFF0C;&#x53EF;&#x4EE5;&#x5F00;&#x59CB;&#x4F7F;&#x7528;&#x3002;</p><p>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4EE5;&#x4E0B;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#x6765;&#x8BBF;&#x95EE;&#x914D;&#x7F6E;&#x9875;&#x9762;&#xFF1A;</p><ul><li>&#x65B9;&#x5F0F;1&#xFF1A;&#x57DF;&#x540D;&#x8BBF;&#x95EE; <a href="http://local.whistlejs.com/" target="_blank">http://local.whistlejs.com/</a>
 </li>
 <li>&#x65B9;&#x5F0F;2&#xFF1A;&#x901A;&#x8FC7;ip+&#x7AEF;&#x53E3;&#x6765;&#x8BBF;&#x95EE;&#xFF0C;&#x5F62;&#x5F0F;&#x5982; <code>http://whistleServerIP:whistlePort/</code> e.g. <a href="http://127.0.0.1:8899" target="_blank">http://127.0.0.1:8899</a>
+</li>
+<li>&#x65B9;&#x5F0F;2&#xFF1A;&#x901A;&#x8FC7;&#x547D;&#x4EE4;&#x884C;&#x53C2;&#x6570; <code>-P xxxx</code> &#x81EA;&#x5B9A;&#x4E49;webui&#x7684;&#x7AEF;&#x53E3;(<code>xxxx</code>&#x8868;&#x793A;&#x8981;&#x8BBE;&#x7F6E;&#x7684;&#x7AEF;&#x53E3;&#x53F7;)&#xFF0C;&#x81EA;&#x5B9A;&#x4E49;&#x7AEF;&#x53E3;&#x652F;&#x6301;&#x4E0A;&#x8FF0;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#x8BBF;&#x95EE;&#xFF0C;&#x4E5F;&#x652F;&#x6301; <a href="http://127.0.0.1:xxxx" target="_blank">http://127.0.0.1:xxxx</a>
 </li></ul>
 
                                 
@@ -1632,7 +1633,7 @@ $ npm install whistle -g --registry=https://registry.npm.taobao.org</code></pre>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"安装启动","level":"1.2","depth":1,"next":{"title":"命令行操作","level":"1.3","depth":1,"path":"cli.md","ref":"cli.md","articles":[]},"previous":{"title":"关于whistle","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"install.md","mtime":"2019-01-11T01:49:00.111Z","type":"markdown"},"gitbook":{"version":"3.2.1","time":"2019-01-11T02:05:23.763Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"安装启动","level":"1.2","depth":1,"next":{"title":"命令行操作","level":"1.3","depth":1,"path":"cli.md","ref":"cli.md","articles":[]},"previous":{"title":"关于whistle","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"install.md","mtime":"2019-03-08T08:06:06.832Z","type":"markdown"},"gitbook":{"version":"3.2.1","time":"2019-03-18T14:58:39.357Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
