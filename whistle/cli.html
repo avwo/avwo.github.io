@@ -7,7 +7,7 @@
         <title>命令行操作 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.1">
+        <meta name="generator" content="GitBook 3.2.3">
         
         
         
@@ -1530,35 +1530,46 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="&#x542F;&#x52A8;&#x591A;&#x4E2A;whistle">&#x542F;&#x52A8;&#x591A;&#x4E2A;whistle</h3><p>&#x5982;&#x679C;&#x4F60;&#x60F3;&#x5728;&#x540C;&#x4E00;&#x53F0;&#x673A;&#x5668;&#x542F;&#x52A8;&#x591A;&#x4E2A;whistle&#xFF0C;&#x65B9;&#x4FBF;&#x591A;&#x4E2A;&#x6D4F;&#x89C8;&#x5668;&#x6216;&#x8005;&#x4F9B;&#x591A;&#x4EBA;&#x4F7F;&#x7528;&#xFF0C;&#x6709;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#xFF1A;</p><ol><li>&#x5207;&#x6362;&#x5230;&#x4E0D;&#x540C;&#x7684;&#x7CFB;&#x7EDF;&#x7528;&#x6237;&#xFF0C;&#x5728;&#x6BCF;&#x4E2A;&#x7CFB;&#x7EDF;&#x7528;&#x6237;&#x542F;&#x52A8;&#x4E00;&#x4E2A;whistle&#x4EE3;&#x7406;&#x670D;&#x52A1;(&#x6BCF;&#x4E2A;&#x670D;&#x52A1;&#x7684;&#x7AEF;&#x53E3;&#x53F7;&#x53EF;&#x4EE5;&#x7528;&#x547D;&#x4EE4;&#x884C;&#x53C2;&#x6570;<code>w2 start -p xxxx</code>&#x6765;&#x6307;&#x5B9A;)
-</li>
-<li>&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5207;&#x6362;&#x89C4;&#x5219;&#x76EE;&#x5F55;&#x548C;&#x7AEF;&#x53E3;&#x53F7;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x89E3;&#x51B3;(&#x6CE8;&#x610F;<code>S</code>&#x3001;<code>C</code>&#x90FD;&#x662F;&#x5927;&#x5199;, newStorageDir&#x4E3A;&#x7A7A;&#x8868;&#x793A;&#x4F7F;&#x7528;&#x5F53;&#x524D;&#x914D;&#x7F6E;)
-</li></ol>
+                                <h3 id="&#x542F;&#x52A8;&#x591A;&#x4E2A;whistle">&#x542F;&#x52A8;&#x591A;&#x4E2A;whistle</h3>
+<p>&#x5982;&#x679C;&#x4F60;&#x60F3;&#x5728;&#x540C;&#x4E00;&#x53F0;&#x673A;&#x5668;&#x542F;&#x52A8;&#x591A;&#x4E2A;whistle&#xFF0C;&#x65B9;&#x4FBF;&#x591A;&#x4E2A;&#x6D4F;&#x89C8;&#x5668;&#x6216;&#x8005;&#x4F9B;&#x591A;&#x4EBA;&#x4F7F;&#x7528;&#xFF0C;&#x6709;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#xFF1A;</p>
+<ol>
+<li>&#x5207;&#x6362;&#x5230;&#x4E0D;&#x540C;&#x7684;&#x7CFB;&#x7EDF;&#x7528;&#x6237;&#xFF0C;&#x5728;&#x6BCF;&#x4E2A;&#x7CFB;&#x7EDF;&#x7528;&#x6237;&#x542F;&#x52A8;&#x4E00;&#x4E2A;whistle&#x4EE3;&#x7406;&#x670D;&#x52A1;(&#x6BCF;&#x4E2A;&#x670D;&#x52A1;&#x7684;&#x7AEF;&#x53E3;&#x53F7;&#x53EF;&#x4EE5;&#x7528;&#x547D;&#x4EE4;&#x884C;&#x53C2;&#x6570;<code>w2 start -p xxxx</code>&#x6765;&#x6307;&#x5B9A;)</li>
+<li>&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5207;&#x6362;&#x89C4;&#x5219;&#x76EE;&#x5F55;&#x548C;&#x7AEF;&#x53E3;&#x53F7;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x89E3;&#x51B3;(&#x6CE8;&#x610F;<code>S</code>&#x3001;<code>C</code>&#x90FD;&#x662F;&#x5927;&#x5199;, newStorageDir&#x4E3A;&#x7A7A;&#x8868;&#x793A;&#x4F7F;&#x7528;&#x5F53;&#x524D;&#x914D;&#x7F6E;)</li>
+</ol>
 <pre><code>w2 start -S newStorageDir -p newPort
 
 # &#x7CFB;&#x7EDF;&#x9ED8;&#x8BA4;&#x76EE;&#x5F55;&#x7684;&#x914D;&#x7F6E;&#x62F7;&#x8D1D;&#x5230;&#x65B0;&#x7684;&#x76EE;&#x5F55;
 w2 start -S newStorageDir -C -p newPort
 
 # &#x4E5F;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x8981;&#x62F7;&#x8D1D;&#x7684;&#x76EE;&#x5F55;
-w2 start -S newStorageDir -C storageDir -p newPort</code></pre>
-<p><em>Note: &#x8FD9;&#x79CD;&#x62F7;&#x8D1D;&#x662F;&#x8986;&#x76D6;&#x5F0F;&#x7684;&#xFF0C;&#x4F1A;&#x66FF;&#x6362;&#x76EE;&#x6807;&#x76EE;&#x5F55;&#x91CC;&#x9762;&#x539F;&#x6709;&#x6587;&#x4EF6;&#xFF0C;&#x542F;&#x52A8;&#x65F6;&#x8BBE;&#x7F6E;&#x4E86;&#x65B0;&#x7684;&#x5B58;&#x50A8;&#x76EE;&#x5F55;&#xFF0C;&#x5173;&#x95ED;&#x6216;&#x91CD;&#x542F;&#x65F6;&#x4E5F;&#x8981;&#x628A;&#x76EE;&#x5F55;&#x53C2;&#x6570;&#x5E26;&#x4E0A;(&#x7AEF;&#x53E3;&#x53F7;&#x4E0D;&#x8981;&#x5E26;&#x4E0A;)&#xFF1A;<code>w2 stop -S newStorageDir</code>&#x6216;<code>w2 restart -S newStorageDir</code></em></p><p>&#x6BD4;&#x5982;&#x5206;&#x522B;&#x5728;<code>8899</code>&#xFF0C;<code>8888</code>&#xFF0C;<code>7788</code>&#x7AEF;&#x53E3;&#x4E0A;&#x5F00;&#x542F;3&#x4E2A;&#x5B9E;&#x4F8B;&#xFF1A;</p><pre><code># &#x9ED8;&#x8BA4;&#x7AEF;&#x53E3;8899&#xFF0C;&#x7CFB;&#x7EDF;&#x9ED8;&#x8BA4;&#x5B58;&#x50A8;&#x76EE;&#x5F55;
+w2 start -S newStorageDir -C storageDir -p newPort
+</code></pre><p><em>Note: &#x8FD9;&#x79CD;&#x62F7;&#x8D1D;&#x662F;&#x8986;&#x76D6;&#x5F0F;&#x7684;&#xFF0C;&#x4F1A;&#x66FF;&#x6362;&#x76EE;&#x6807;&#x76EE;&#x5F55;&#x91CC;&#x9762;&#x539F;&#x6709;&#x6587;&#x4EF6;&#xFF0C;&#x542F;&#x52A8;&#x65F6;&#x8BBE;&#x7F6E;&#x4E86;&#x65B0;&#x7684;&#x5B58;&#x50A8;&#x76EE;&#x5F55;&#xFF0C;&#x5173;&#x95ED;&#x6216;&#x91CD;&#x542F;&#x65F6;&#x4E5F;&#x8981;&#x628A;&#x76EE;&#x5F55;&#x53C2;&#x6570;&#x5E26;&#x4E0A;(&#x7AEF;&#x53E3;&#x53F7;&#x4E0D;&#x8981;&#x5E26;&#x4E0A;)&#xFF1A;<code>w2 stop -S newStorageDir</code>&#x6216;<code>w2 restart -S newStorageDir</code></em></p>
+<p>&#x6BD4;&#x5982;&#x5206;&#x522B;&#x5728;<code>8899</code>&#xFF0C;<code>8888</code>&#xFF0C;<code>7788</code>&#x7AEF;&#x53E3;&#x4E0A;&#x5F00;&#x542F;3&#x4E2A;&#x5B9E;&#x4F8B;&#xFF1A;</p>
+<pre><code># &#x9ED8;&#x8BA4;&#x7AEF;&#x53E3;8899&#xFF0C;&#x7CFB;&#x7EDF;&#x9ED8;&#x8BA4;&#x5B58;&#x50A8;&#x76EE;&#x5F55;
 w2 start
 
 # &#x7AEF;&#x53E3;&#x53F7;&#x4E3A;8888&#xFF0C;&#x5B58;&#x50A8;&#x76EE;&#x5F55;&#x4E3A;8888&#xFF0C;&#x5E76;&#x628A;&#x7CFB;&#x7EDF;&#x9ED8;&#x8BA4;&#x76EE;&#x5F55;&#x7684;&#x914D;&#x7F6E;copy&#x5230;8888&#x76EE;&#x5F55;
 w2 start -S 8888 -C
 
 # &#x7AEF;&#x53E3;&#x53F7;&#x4E3A;7788&#xFF0C;&#x5B58;&#x50A8;&#x76EE;&#x5F55;&#x4E3A;7788&#xFF0C;&#x5E76;&#x628A;8888&#x76EE;&#x5F55;&#x7684;&#x914D;&#x7F6E;copy&#x5230;7788&#x76EE;&#x5F55;
-w2 start -S 7788 -C 8888</code></pre>
-<p><em>Note: &#x4E0D;&#x540C;&#x5B9E;&#x4F8B;&#x8981;&#x914D;&#x7F6E;&#x4E0D;&#x540C;&#x7684;&#x4EE3;&#x7406;</em></p><h3 id="w2-add-filepath"><code>w2 add [filepath]</code></h3><p>&#x4E5F;&#x53EF;&#x4EE5;&#x7528; <code>w2 use [filepath]</code>&#xFF0C;&#x901A;&#x8FC7;filepath&#x5BF9;&#x5E94;&#x7684;js&#x6587;&#x4EF6;&#x83B7;&#x53D6;&#x89C4;&#x5219;&#x914D;&#x7F6E;&#xFF0C;filepath&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x7684; <code>.whistle.js</code>&#x3002;</p><p>&#x5982;&#x9879;&#x76EE;&#x6839;&#x76EE;&#x5F55;&#x6587;&#x4EF6; <code>.whistle.js</code>&#xFF1A;</p><pre><code>const pkg = require(&apos;./package.json&apos;);
+w2 start -S 7788 -C 8888
+</code></pre><p><em>Note: &#x4E0D;&#x540C;&#x5B9E;&#x4F8B;&#x8981;&#x914D;&#x7F6E;&#x4E0D;&#x540C;&#x7684;&#x4EE3;&#x7406;</em></p>
+<h3 id="w2-add-filepath"><code>w2 add [filepath]</code></h3>
+<p>&#x4E5F;&#x53EF;&#x4EE5;&#x7528; <code>w2 use [filepath]</code>&#xFF0C;&#x901A;&#x8FC7;filepath&#x5BF9;&#x5E94;&#x7684;js&#x6587;&#x4EF6;&#x83B7;&#x53D6;&#x89C4;&#x5219;&#x914D;&#x7F6E;&#xFF0C;filepath&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x7684; <code>.whistle.js</code>&#x3002;</p>
+<p>&#x5982;&#x9879;&#x76EE;&#x6839;&#x76EE;&#x5F55;&#x6587;&#x4EF6; <code>.whistle.js</code>&#xFF1A;</p>
+<pre><code>const pkg = require(&apos;./package.json&apos;);
 
 exports.name = `[${pkg.name}]&#x672C;&#x5730;&#x73AF;&#x5883;&#x914D;&#x7F6E;`;
 exports.rules = `
 test.example.com http://127.0.0.1:5566
 # cgi&#x8D70;&#x73B0;&#x7F51;
 test.example.com/cgi-bin ignore://http
-`;</code></pre>
-<p>&#x5728;&#x8BE5;&#x76EE;&#x5F55;&#x4E0B;&#x652F;&#x6301; <code>w2 add</code> (&#x6216; <code>w2 use</code>)&#xFF0C;&#x8FD9;&#x65F6;&#x5982;&#x679C;&#x672C;&#x5730;whistle&#x91CC;&#x9762;&#x6CA1;&#x6709;&#x540C;&#x540D;&#x7684;&#x89C4;&#x5219;&#x4E14;&#x4E0D;&#x4E3A;&#x7A7A;&#xFF0C;&#x5219;&#x4F1A;&#x81EA;&#x52A8;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5E76;&#x81EA;&#x52A8;&#x542F;&#x7528;&#xFF0C;&#x5982;&#x679C;&#x5B58;&#x5728;&#x5219;&#x4F1A;&#x63D0;&#x9192;&#xFF1A;</p><pre><code>The rule already exists, to override it, you must add CLI option --force.</code></pre>
-<p>&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <code>w2 add --force</code> &#x5F3A;&#x5236;&#x8986;&#x76D6;&#x5F53;&#x524D;&#x540C;&#x540D;&#x89C4;&#x5219;&#x3002;</p><p>&#x4E5F;&#x53EF;&#x4EE5;&#x5F02;&#x6B65;&#x83B7;&#x53D6;&#x89C4;&#x5219; <code>.whistle.js</code>&#xFF1A;</p><pre><code>const assert = require(&apos;assert);
+`;
+</code></pre><p>&#x5728;&#x8BE5;&#x76EE;&#x5F55;&#x4E0B;&#x652F;&#x6301; <code>w2 add</code> (&#x6216; <code>w2 use</code>)&#xFF0C;&#x8FD9;&#x65F6;&#x5982;&#x679C;&#x672C;&#x5730;whistle&#x91CC;&#x9762;&#x6CA1;&#x6709;&#x540C;&#x540D;&#x7684;&#x89C4;&#x5219;&#x4E14;&#x4E0D;&#x4E3A;&#x7A7A;&#xFF0C;&#x5219;&#x4F1A;&#x81EA;&#x52A8;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5E76;&#x81EA;&#x52A8;&#x542F;&#x7528;&#xFF0C;&#x5982;&#x679C;&#x5B58;&#x5728;&#x5219;&#x4F1A;&#x63D0;&#x9192;&#xFF1A;</p>
+<pre><code>The rule already exists, to override it, you must add CLI option --force.
+</code></pre><p>&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <code>w2 add --force</code> &#x5F3A;&#x5236;&#x8986;&#x76D6;&#x5F53;&#x524D;&#x540C;&#x540D;&#x89C4;&#x5219;&#x3002;</p>
+<p>&#x4E5F;&#x53EF;&#x4EE5;&#x5F02;&#x6B65;&#x83B7;&#x53D6;&#x89C4;&#x5219; <code>.whistle.js</code>&#xFF1A;</p>
+<pre><code>const assert = require(&apos;assert);
 const path = require(&apos;path&apos;);
 const pkg = require(&apos;./package.json&apos;);
 
@@ -1577,8 +1588,8 @@ module.exports = (cb, util) =&gt; {
       test.example.com/cgi-bin ignore://http
       `
   });
-};</code></pre>
-
+};
+</code></pre>
                                 
                                 </section>
                             
@@ -1621,7 +1632,7 @@ module.exports = (cb, util) =&gt; {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"命令行操作","level":"1.3","depth":1,"next":{"title":"手动更新","level":"1.4","depth":1,"path":"update.md","ref":"update.md","articles":[]},"previous":{"title":"安装启动","level":"1.2","depth":1,"path":"install.md","ref":"install.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"cli.md","mtime":"2019-05-17T03:11:32.485Z","type":"markdown"},"gitbook":{"version":"3.2.1","time":"2019-06-03T01:59:18.428Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"命令行操作","level":"1.3","depth":1,"next":{"title":"手动更新","level":"1.4","depth":1,"path":"update.md","ref":"update.md","articles":[]},"previous":{"title":"安装启动","level":"1.2","depth":1,"path":"install.md","ref":"install.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"cli.md","mtime":"2019-06-12T08:43:12.585Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-18T01:59:13.988Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
