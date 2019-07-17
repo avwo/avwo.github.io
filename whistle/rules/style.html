@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>resCors · GitBook</title>
+        <title>style · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="reqHeaders.html" />
+    <link rel="next" href="pipe.html" />
     
     
-    <link rel="prev" href="reqCors.html" />
+    <link rel="prev" href="rule/custom.html" />
     
 
     </head>
@@ -609,7 +609,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.15.4" data-path="style.html">
+        <li class="chapter active" data-level="1.15.4" data-path="style.html">
             
                 <a href="style.html">
             
@@ -1155,7 +1155,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.15.46" data-path="resCors.html">
+        <li class="chapter " data-level="1.15.46" data-path="resCors.html">
             
                 <a href="resCors.html">
             
@@ -1528,7 +1528,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >resCors</a>
+        <a href=".." >style</a>
     </h1>
 </div>
 
@@ -1543,35 +1543,24 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="rescors">resCors</h1>
-<p>&#x4FEE;&#x6539;&#x54CD;&#x5E94;&#x7684;<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Access_control_CORS" target="_blank">cors</a>&#xFF0C;&#x914D;&#x7F6E;&#x65B9;&#x5F0F;&#xFF1A;</p>
-<pre><code>pattern resCors://filepath
-</code></pre><p>filepath&#x4E3A;<a href="http://local.whistlejs.com/#values" target="_blank">Values</a>&#x91CC;&#x9762;&#x7684;{key}&#x6216;&#x8005;&#x672C;&#x5730;&#x6587;&#x4EF6;(&#x5982;&#xFF1A;<code>e:\test\xxx</code>&#x3001;<code>e:/test/xxx</code>&#x3001;<code>/User/username/test/xxx</code>&#x7B49;):</p>
-<pre><code>origin: *
-methods: POST
-headers: x-test
-credentials: true
-maxAge: 300000
-</code></pre><p>pattern&#x53C2;&#x89C1;<a href="../pattern.html">&#x5339;&#x914D;&#x6A21;&#x5F0F;</a>&#xFF0C;&#x66F4;&#x591A;&#x6A21;&#x5F0F;&#x8BF7;&#x53C2;&#x8003;<a href="../mode.html">&#x914D;&#x7F6E;&#x65B9;&#x5F0F;</a>&#xFF0C;json&#x683C;&#x5F0F;&#x53C2;&#x8003;<a href="../data.html">&#x64CD;&#x4F5C;&#x503C;</a>&#x3002;</p>
-<p>&#x4E00;&#x4E9B;&#x7279;&#x6027;&#x4E14;&#x5E38;&#x7528;&#x7684;&#x60C5;&#x5F62;&#x53EF;&#x4EE5;&#x7528;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x914D;&#x7F6E;&#xFF1A;</p>
-<pre><code># `*` &#x8868;&#x793A;&#x8BBE;&#x7F6E; access-control-allow-origin: *
-www.example.com resCors://*
-
-#  `enable` &#x8868;&#x793A;&#x8BBE;&#x7F6E; access-control-allow-origin: http://originHost
-# &#x53CA;access-control-allow-credentials: true
-# &#x53EF;&#x7528;&#x4E8E;script&#x6807;&#x7B7E;&#x4E0A;&#x8BBE;&#x7F6E;&#x4E3A; `crossorigin=use-credentials`&#x7684;&#x60C5;&#x5F62;
-www.example.com resCors://enable
-# &#x6216;
-www.example.com resCors://use-credentials
-</code></pre><p>&#x4F8B;&#x5B50;&#xFF1A;</p>
-<pre><code>www.ifeng.com resCors://{test-resCors.json}
-</code></pre><p>test-resCors.json:</p>
-<pre><code>origin: *
-methods: POST
-headers: x-test
-credentials: true
-maxAge: 300000
-</code></pre><h4 id="&#x8FC7;&#x6EE4;&#x89C4;&#x5219;">&#x8FC7;&#x6EE4;&#x89C4;&#x5219;</h4>
+                                <h1 id="style">style</h1>
+<blockquote>
+<p>&#x8BE5;&#x534F;&#x8BAE; v1.15.11 &#x53CA;&#x4EE5;&#x4E0A;&#x7248;&#x672C;&#x624D;&#x652F;&#x6301;</p>
+</blockquote>
+<p>&#x8BBE;&#x7F6E;Network&#x5217;&#x8868;&#x884C;&#x6837;&#x5F0F;&#xFF1A;</p>
+<pre><code>pattern style://color=@fff&amp;fontStyle=italic&amp;bgColor=red
+</code></pre><p>pattern&#x53C2;&#x89C1;<a href="../pattern.html">&#x5339;&#x914D;&#x6A21;&#x5F0F;</a>&#xFF0C;&#x66F4;&#x591A;&#x6A21;&#x5F0F;&#x8BF7;&#x53C2;&#x8003;<a href="../mode.html">&#x914D;&#x7F6E;&#x65B9;&#x5F0F;</a>&#xFF1B;style&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#xFF1A;</p>
+<ol>
+<li>color: &#x5B57;&#x4F53;&#x989C;&#x8272;&#xFF0C;&#x8DDF;css&#x7684;color&#x5C5E;&#x6027;&#x4E00;&#x81F4;&#xFF0C;&#x4F46;&#x7531;&#x4E8E; <code>#</code> &#x4E3A;whistle&#x4F46;&#x6CE8;&#x91CA;&#x7B26;&#x53F7;&#xFF0C;&#x8FD9;&#x91CC;&#x53EF;&#x4EE5;&#x7528; <code>@</code> &#x4EE3;&#x66FF;</li>
+<li>fontStyle: &#x5B57;&#x4F53;&#x6837;&#x5F0F;&#xFF0C;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x4E3A; <code>normal</code>&#x3001;<code>italic</code>&#x3001;<code>oblique</code> &#x7B49; </li>
+<li>bgColor: &#x5BF9;&#x5E94;&#x5217;&#x8868;&#x884C;&#x7684;&#x80CC;&#x666F;&#x989C;&#x8272;&#xFF0C;&#x5177;&#x4F53;&#x8BBE;&#x7F6E;&#x540C; <code>color</code></li>
+</ol>
+<p>&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-txt">www.test.com style://color=@fff&amp;fontStyle=italic&amp;bgColor=red
+</code></pre>
+<p><img src="https://user-images.githubusercontent.com/11450939/61267997-a8e11100-a7cc-11e9-9c24-fbbba591ae9b.png" alt="&#x6548;&#x679C;"></p>
+<p>&#x53EF;&#x4EE5;&#x540C;&#x65F6;&#x8BBE;&#x7F6E;&#x591A;&#x4E2A; <code>style</code> &#xFF0C;&#x540E;&#x9762;&#x7684;&#x4F1A;&#x8986;&#x76D6;&#x524D;&#x9762;&#xFF0C;&#x5982;&#x679C;&#x5148;&#x628A;&#x524D;&#x9762;&#x7684;&#x5C5E;&#x6027;&#x8986;&#x76D6;&#x6389;&#xFF0C;&#x53EF;&#x4EE5;&#x7528; <code>style://color=</code>&#x3002;</p>
+<h4 id="&#x8FC7;&#x6EE4;&#x89C4;&#x5219;">&#x8FC7;&#x6EE4;&#x89C4;&#x5219;</h4>
 <p>&#x9700;&#x8981;&#x786E;&#x4FDD;whistle&#x662F;&#x6700;&#x65B0;&#x7248;&#x672C;&#xFF1A;<a href="../update.html">&#x66F4;&#x65B0;whistle</a></p>
 <p>&#x5982;&#x679C;&#x8981;&#x8FC7;&#x6EE4;&#x6307;&#x5B9A;&#x8BF7;&#x6C42;&#x6216;&#x6307;&#x5B9A;&#x534F;&#x8BAE;&#x7684;&#x89C4;&#x5219;&#x5339;&#x914D;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x5982;&#x4E0B;&#x534F;&#x8BAE;&#xFF1A;</p>
 <ol>
@@ -1618,12 +1607,12 @@ pattern ignore://file|host
 
             
                 
-                <a href="reqCors.html" class="navigation navigation-prev " aria-label="Previous page: reqCors">
+                <a href="rule/custom.html" class="navigation navigation-prev " aria-label="Previous page: 自定义">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="reqHeaders.html" class="navigation navigation-next " aria-label="Next page: reqHeaders">
+                <a href="pipe.html" class="navigation navigation-next " aria-label="Next page: pipe">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1634,7 +1623,7 @@ pattern ignore://file|host
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"resCors","level":"1.15.46","depth":2,"next":{"title":"reqHeaders","level":"1.15.47","depth":2,"path":"rules/reqHeaders.md","ref":"rules/reqHeaders.md","articles":[]},"previous":{"title":"reqCors","level":"1.15.45","depth":2,"path":"rules/reqCors.md","ref":"rules/reqCors.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"rules/resCors.md","mtime":"2019-06-12T08:43:12.660Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-17T08:53:43.998Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"style","level":"1.15.4","depth":2,"next":{"title":"pipe","level":"1.15.5","depth":2,"path":"rules/pipe.md","ref":"rules/pipe.md","articles":[]},"previous":{"title":"自定义","level":"1.15.3.8","depth":3,"path":"rules/rule/custom.md","ref":"rules/rule/custom.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"rules/style.md","mtime":"2019-07-17T08:52:35.345Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-17T08:53:43.998Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
