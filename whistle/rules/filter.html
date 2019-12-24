@@ -1545,7 +1545,7 @@
                                 
                                 <h1 id="filter-excludefilterincludefilter">filter (excludeFilter|includeFilter)</h1>
 <blockquote>
-<p>&#x4EE5;&#x4E0B;&#x529F;&#x80FD;&#x9700;&#x8981;&#x628A;whistle(<code>&gt;= v1.13.25</code>)<a href="../update.html">&#x5347;&#x7EA7;&#x5230;&#x6700;&#x65B0;&#x7248;&#x672C;</a></p>
+<p>&#x4EE5;&#x4E0B;&#x529F;&#x80FD;&#x9700;&#x8981;&#x628A;whistle(<code>&gt;= v2.4.3</code>)<a href="../update.html">&#x5347;&#x7EA7;&#x5230;&#x6700;&#x65B0;&#x7248;&#x672C;</a></p>
 </blockquote>
 <p>excludeFilter&#x548C;includeFilter&#x662F;&#x4F5C;&#x4E3A;&#x4E8C;&#x7EA7;&#x6761;&#x4EF6;&#xFF0C;&#x7528;&#x6765;&#x8FC7;&#x6EE4;&#x5339;&#x914D;&#x5DF2;&#x5339;&#x914D;&#x7684;&#x89C4;&#x5219;&#xFF1A;</p>
 <ol>
@@ -1554,19 +1554,9 @@
 </ol>
 <pre><code>pattern operatorURI excludeFilter://p1 includeFilter://p2 includeFilter://p3
 </code></pre><p>&#x5176;&#x4E2D;&#xFF1A;p1&#x3001;p2&#x3001;... &#x53EF;&#x4EE5;&#x4E3A;&#x5339;&#x914D;&#x6A21;&#x5F0F;&#x91CC;&#x9762;&#x7684;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x3001;&#x901A;&#x914D;&#x7B26;&#x3001;&#x901A;&#x914D;&#x8DEF;&#x5F84;&#xFF0C;&#x5177;&#x4F53;&#x53C2;&#x89C1;&#xFF1A;<a href="../pattern.html">&#x5339;&#x914D;&#x6A21;&#x5F0F;</a>&#xFF0C;&#x4E14;&#x652F;&#x6301;&#x5339;&#x914D;&#x8BF7;&#x6C42;&#x5934;&#x3001;&#x8BF7;&#x6C42;&#x65B9;&#x6CD5;&#x3001;&#x8BF7;&#x6C42;IP&#x7B49;</p>
-<pre><code>pattern operatorURI excludeFilter://p1 includeFilter://p2 includeFilter://!p3
+<pre><code>pattern operatorURI excludeFilter://p0 excludeFilter://p1 includeFilter://p2 includeFilter://p3
 </code></pre><p>&#x4E0A;&#x8FF0;&#x8868;&#x793A;&#xFF1A;</p>
-<pre><code class="lang-js"><span class="hljs-keyword">if</span> (p1) {
-  <span class="hljs-keyword">return</span>;
-}
-<span class="hljs-keyword">if</span> (p2) {
-  <span class="hljs-comment">// do operatorURI</span>
-  <span class="hljs-keyword">return</span>;
-}
-<span class="hljs-keyword">if</span> (!p3) {
-  <span class="hljs-comment">// do operatorURI</span>
-  <span class="hljs-keyword">return</span>;
-}
+<pre><code class="lang-js">&#x5339;&#x914D;&#xFF1A;!(p0 || p1) &amp;&amp; (p2 || p3)
 </code></pre>
 <p>&#x5373;&#xFF1A;&#x901A;&#x8FC7;url&#x5339;&#x914D; <code>pattern</code> &#x7684;&#x8BF7;&#x6C42;&#xFF0C;&#x8981;&#x4E0D;&#x80FD;&#x5339;&#x914D;<code>p1</code>&#x3001;&#x6216;&#x5339;&#x914D; <code>p2</code>&#x3001;&#x6216;&#x4E0D;&#x5339;&#x914D; <code>p3</code>&#xFF0C;&#x540E;&#x9762;&#x8FC7;&#x6EE4;&#x6761;&#x4EF6;&#x53EF;&#x4EE5;&#x4EFB;&#x610F;&#x4E2A;&#x3002;</p>
 <p>&#x5982;&#xFF1A;</p>
@@ -1630,7 +1620,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"filter (excludeFilter | includeFilter)","level":"1.15.13","depth":2,"next":{"title":"ignore","level":"1.15.14","depth":2,"path":"rules/ignore.md","ref":"rules/ignore.md","articles":[]},"previous":{"title":"pac","level":"1.15.12","depth":2,"path":"rules/pac.md","ref":"rules/pac.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"rules/filter.md","mtime":"2019-06-12T08:43:12.655Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-24T03:31:20.106Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"filter (excludeFilter | includeFilter)","level":"1.15.13","depth":2,"next":{"title":"ignore","level":"1.15.14","depth":2,"path":"rules/ignore.md","ref":"rules/ignore.md","articles":[]},"previous":{"title":"pac","level":"1.15.12","depth":2,"path":"rules/pac.md","ref":"rules/pac.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"rules/filter.md","mtime":"2019-12-24T14:28:11.903Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-24T14:49:51.288Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
