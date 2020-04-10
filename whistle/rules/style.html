@@ -1573,6 +1573,24 @@
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/11450939/61267997-a8e11100-a7cc-11e9-9c24-fbbba591ae9b.png" alt="&#x6548;&#x679C;"></p>
 <p>&#x53EF;&#x4EE5;&#x540C;&#x65F6;&#x8BBE;&#x7F6E;&#x591A;&#x4E2A; <code>style</code> &#xFF0C;&#x540E;&#x9762;&#x7684;&#x4F1A;&#x8986;&#x76D6;&#x524D;&#x9762;&#xFF0C;&#x5982;&#x679C;&#x5148;&#x628A;&#x524D;&#x9762;&#x7684;&#x5C5E;&#x6027;&#x8986;&#x76D6;&#x6389;&#xFF0C;&#x53EF;&#x4EE5;&#x7528; <code>style://color=</code>&#x3002;</p>
+<h1 id="&#x8BBE;&#x7F6E;&#x81EA;&#x5B9A;&#x4E49;&#x5217;&#x7684;&#x503C;">&#x8BBE;&#x7F6E;&#x81EA;&#x5B9A;&#x4E49;&#x5217;&#x7684;&#x503C;</h1>
+<blockquote>
+<p>&#x8BE5;&#x529F;&#x80FD;&#x9700;&#x8981; <code>v2.5.0</code> &#x53CA;&#x4EE5;&#x4E0A;&#x7248;&#x672C;&#x624D;&#x652F;&#x6301;&#xFF0C;&#x8BF7;&#x53CA;&#x65F6;&#x66F4;&#x65B0; whistle</p>
+</blockquote>
+<pre><code class="lang-txt">pattern style://custom1=value1&amp;custom2=value2
+
+# &#x4E5F;&#x652F;&#x6301;&#x6A21;&#x677F;&#x5B57;&#x7B26;&#x4E32;
+pattern style://`custom1=${reqHeaders.user-agent}&amp;custom2=${reqHeaders.cookie}`
+</code></pre>
+<p>&#x4F8B;&#x5B50;&#xFF1A;</p>
+<p>&#x5C06; <code>Custom1</code>&#x3001;<code>Custom2</code> &#x5206;&#x522B;&#x6539;&#x6210; <code>UA</code> &#x548C; <code>Cookie</code>&#xFF0C;&#x5E76;&#x914D;&#x7F6E;&#x5982;&#x4E0B;&#x89C4;&#x5219;&#xFF0C;&#x663E;&#x793A;&#x6240;&#x6709;&#x8BF7;&#x6C42;&#x7684; UA &#x548C; Cookie&#xFF1A;</p>
+<pre><code class="lang-txt">* style://`custom1=${reqHeaders.user-agent}&amp;custom2=${reqHeaders.cookie}`
+</code></pre>
+<blockquote>
+<p>&#x8BB0;&#x5F97;&#x52FE;&#x4E0A; <code>Custom1</code>&#x3001;<code>Custom2</code>&#xFF0C;&#x66F4;&#x7075;&#x6D3B;&#x7684;&#x89C4;&#x5219;&#x53EF;&#x4EE5;&#x7528;&#x63D2;&#x4EF6;</p>
+</blockquote>
+<p><img src="https://user-images.githubusercontent.com/11450939/78465561-b9099980-7729-11ea-8d02-be7baf5d34e6.png" alt="&#x4FEE;&#x6539;&#x5217;&#x540D;"></p>
+<p><img src="https://user-images.githubusercontent.com/11450939/78465552-a55e3300-7729-11ea-92b2-9b6a56217385.png" alt="&#x6548;&#x679C;"></p>
 <h4 id="&#x8FC7;&#x6EE4;&#x89C4;&#x5219;">&#x8FC7;&#x6EE4;&#x89C4;&#x5219;</h4>
 <p>&#x9700;&#x8981;&#x786E;&#x4FDD;whistle&#x662F;&#x6700;&#x65B0;&#x7248;&#x672C;&#xFF1A;<a href="../update.html">&#x66F4;&#x65B0;whistle</a></p>
 <p>&#x5982;&#x679C;&#x8981;&#x8FC7;&#x6EE4;&#x6307;&#x5B9A;&#x8BF7;&#x6C42;&#x6216;&#x6307;&#x5B9A;&#x534F;&#x8BAE;&#x7684;&#x89C4;&#x5219;&#x5339;&#x914D;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x5982;&#x4E0B;&#x534F;&#x8BAE;&#xFF1A;</p>
@@ -1636,7 +1654,7 @@ pattern ignore://file|host
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"style","level":"1.16.4","depth":2,"next":{"title":"pipe","level":"1.16.5","depth":2,"path":"rules/pipe.md","ref":"rules/pipe.md","articles":[]},"previous":{"title":"自定义","level":"1.16.3.8","depth":3,"path":"rules/rule/custom.md","ref":"rules/rule/custom.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"rules/style.md","mtime":"2019-10-12T02:33:47.742Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-14T09:07:38.763Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"style","level":"1.16.4","depth":2,"next":{"title":"pipe","level":"1.16.5","depth":2,"path":"rules/pipe.md","ref":"rules/pipe.md","articles":[]},"previous":{"title":"自定义","level":"1.16.3.8","depth":3,"path":"rules/rule/custom.md","ref":"rules/rule/custom.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"rules/style.md","mtime":"2020-04-06T00:20:45.959Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-10T13:54:15.754Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
