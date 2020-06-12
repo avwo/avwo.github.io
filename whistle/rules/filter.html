@@ -1589,6 +1589,7 @@
 <pre><code>pattern operatorURI1  operatorURIx excludeFilter://*/cgi-bin includeFilter:///test/i excludeFilter://m:options includeFilter://m:get includeFilter://m:/^p/i excludeFilter://m:/^c/ excludeFilter://h:cookie=test excludeFilter://i:127.0.0.1
 </code></pre><p>&#x5B8C;&#x6574;&#x5339;&#x914D;&#x6761;&#xFF1A;</p>
 <ol>
+<li><code>b:pattern</code>&#xFF1A;pattern&#x4E3A;&#x6B63;&#x5219;&#x6216;&#x5173;&#x952E;&#x5B57;&#xFF0C;&#x8868;&#x793A;&#x5339;&#x914D;&#x8BF7;&#x6C42;&#x5185;&#x5BB9;</li>
 <li><code>m:name</code>&#xFF1A;name&#x4E3A;&#x65B9;&#x6CD5;&#x540D;&#x79F0;&#x6216;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x8868;&#x793A;&#x5339;&#x914D;&#x5BF9;&#x5E94;&#x65B9;&#x6CD5;</li>
 <li><code>i:ip</code>&#xFF1A;ip&#x8868;&#x793A;&#x5177;&#x4F53;&#x5BA2;&#x6237;(&#x670D;&#x52A1;)&#x7AEF;ip&#x6216;&#x5339;&#x914D;ip&#x7684;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;</li>
 <li><code>clientIp:ip</code>&#xFF1A;ip&#x8868;&#x793A;&#x5177;&#x4F53;&#x5BA2;&#x6237;&#x7AEF;ip&#x6216;&#x5339;&#x914D;ip&#x7684;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;</li>
@@ -1601,7 +1602,7 @@
 <li><code>&#x5176;&#x5B83;&#x5B57;&#x7B26;&#x4E32;</code>&#xFF1A;&#x8868;&#x793A;<a href="../pattern.html">pattern</a>&#x91CC;&#x9762;&#x7684;&#x901A;&#x914D;&#x7B26;&#x5339;&#x914D;</li>
 </ol>
 <h3 id="&#x4F8B;&#x5B50;">&#x4F8B;&#x5B50;</h3>
-<pre><code class="lang-txt">www.test.com/path/to file:///Usr/test/ excludeFilter://*/path/to/abc/cgi-bin includeFilter://*/path/to/abc/
+<pre><code class="lang-txt">www.test.com/path/to file:///Usr/test/ excludeFilter://*/path/to/abc/cgi-bin includeFilter://*/path/to/abc/ includeFilter://b:test
 </code></pre>
 
                                 
@@ -1646,7 +1647,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"filter (excludeFilter | includeFilter)","level":"1.17.13","depth":2,"next":{"title":"ignore","level":"1.17.14","depth":2,"path":"rules/ignore.md","ref":"rules/ignore.md","articles":[]},"previous":{"title":"pac","level":"1.17.12","depth":2,"path":"rules/pac.md","ref":"rules/pac.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"rules/filter.md","mtime":"2020-04-24T11:12:45.186Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-10T09:43:05.154Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"filter (excludeFilter | includeFilter)","level":"1.17.13","depth":2,"next":{"title":"ignore","level":"1.17.14","depth":2,"path":"rules/ignore.md","ref":"rules/ignore.md","articles":[]},"previous":{"title":"pac","level":"1.17.12","depth":2,"path":"rules/pac.md","ref":"rules/pac.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"rules/filter.md","mtime":"2020-06-12T03:56:39.626Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-12T03:57:34.161Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
