@@ -1657,13 +1657,15 @@ pattern3 protocol://`{test.json}`
     &quot;url&quot;: &quot;${url}&quot;,
     &quot;port&quot;: &quot;${port}&quot;,
     &quot;version&quot;: &quot;${version}&quot;,
-    &quot;search&quot;: &quot;${url.search}&quot;,
-    &quot;query&quot;: &quot;${url.query}&quot;,
-    &quot;queryValue&quot;: &quot;${url.query.name}&quot;,
-    &quot;host&quot;: &quot;${url.host}&quot;,
-    &quot;hostname&quot;: &quot;${url.hostname}&quot;,
-    &quot;path&quot;: &quot;${url.path}&quot;,
-    &quot;pathname&quot;: &quot;${url.pathname}&quot;,
+    &quot;query&quot;: &quot;${query}&quot;, // &#x76F8;&#x5F53;&#x4E8E; location.search &#xFF0C;&#x5982;&#x679C; url &#x91CC;&#x9762;&#x6CA1;&#x6709; ? &#x5219;&#x4E3A;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;
+    &quot;search&quot;: &quot;${search}&quot;, // &#x76F8;&#x5F53;&#x4E8E; location.search &#xFF0C;&#x5982;&#x679C; url &#x91CC;&#x9762;&#x6CA1;&#x6709; ? &#x5219;&#x4E3A;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;
+    &quot;queryString&quot;: &quot;${queryString}&quot;,  // &#x76F8;&#x5F53;&#x4E8E; location.search &#xFF0C;&#x4F46;&#x5982;&#x679C; url &#x91CC;&#x9762;&#x6CA1;&#x6709; ? &#x5219;&#x4E3A; ?
+    &quot;searchString&quot;: &quot;${searchString}&quot;,  // &#x76F8;&#x5F53;&#x4E8E; location.search &#xFF0C;&#x4F46;&#x5982;&#x679C; url &#x91CC;&#x9762;&#x6CA1;&#x6709; ? &#x5219;&#x4E3A; ?
+    &quot;queryValue&quot;: &quot;${query.name}&quot;,
+    &quot;host&quot;: &quot;${host}&quot;,
+    &quot;hostname&quot;: &quot;${hostname}&quot;,
+    &quot;path&quot;: &quot;${path}&quot;,
+    &quot;pathname&quot;: &quot;${pathname}&quot;,
     &quot;reqId&quot;: &quot;${reqId}&quot;,
     &quot;now&quot;: ${now},
     &quot;method&quot;: &quot;${method}&quot;,
@@ -1713,7 +1715,14 @@ pattern3 protocol://`{test.json}`
 <p><code>v1.12.13</code> &#x7248;&#x672C;&#x5F00;&#x59CB;&#x652F;&#x6301; <code>replace(pattern,replacement)</code>&#x529F;&#x80FD;&#xFF0C;&#x5982;&#xFF1A;</p>
 <pre><code>protocol://`${search.replace(/course=([^&amp;]+)/ig,name=$1)}`
 protocol://`${search.replace(a,b)}`
+</code></pre><p><code>${query}</code> &#x548C; <code>${queryString}</code> &#x7684;&#x7528;&#x9014;&#xFF0C;&#x5982;&#x914D;&#x7F6E;<a href="rules/redirect.html">redirect</a> &#x91CD;&#x5B9A;&#x5411;&#xFF1A;</p>
+<pre><code class="lang-txt"># &#x4E0D;&#x9700;&#x8981;&#x8FFD;&#x52A0;&#x53C2;&#x6570;
+www.test.com/index.html redirect://`https://ke.qq.com/test${query}`
+
+# &#x9700;&#x8981;&#x8FFD;&#x52A0;&#x53C2;&#x6570;
+www.test.com/index.html redirect://`https://ke.qq.com/test${queryString}&amp;test=1`
 </code></pre>
+
                                 
                                 </section>
                             
@@ -1756,7 +1765,7 @@ protocol://`${search.replace(a,b)}`
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"操作值","level":"1.9","depth":1,"next":{"title":"匹配原则","level":"1.10","depth":1,"path":"principle.md","ref":"principle.md","articles":[]},"previous":{"title":"匹配模式","level":"1.8","depth":1,"path":"pattern.md","ref":"pattern.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"data.md","mtime":"2019-10-12T02:33:47.613Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-12T03:57:34.161Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"操作值","level":"1.9","depth":1,"next":{"title":"匹配原则","level":"1.10","depth":1,"path":"principle.md","ref":"principle.md","articles":[]},"previous":{"title":"匹配模式","level":"1.8","depth":1,"path":"pattern.md","ref":"pattern.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"data.md","mtime":"2020-07-02T01:57:48.788Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-02T01:59:23.467Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
