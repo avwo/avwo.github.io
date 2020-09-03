@@ -1623,11 +1623,11 @@ www.ifeng.com resType://text
 <pre><code>www.ifeng.com reqScript://{reqScript.js}
 </code></pre><p>reqScript.js:</p>
 <pre><code>if (/index\.html/i.test(url)) {
-    rules.push(&apos;/./ redirect://http://www.ifeng.com/?test.js&apos;);
+    rules.push(&apos;* redirect://http://www.ifeng.com/?test.js&apos;);
 }
 
 if (/html/.test(headers.accept)) {
-    rules.push(&apos;/./ resType://text&apos;);
+    rules.push(&apos;* resType://text&apos;);
 }
 // &#x5982;&#x679C;&#x8BF7;&#x6C42;&#x5185;&#x5BB9;&#x91CC;&#x9762;&#x6709;prefix&#x5B57;&#x6BB5;&#xFF0C;&#x5219;&#x4F5C;&#x4E3A;&#x65B0;url&#x7684;&#x524D;&#x7F00;
 if (/(?:^|&amp;)prefix=([^&amp;]+)/.test(body)) {
@@ -1636,7 +1636,7 @@ if (/(?:^|&amp;)prefix=([^&amp;]+)/.test(body)) {
     var schema = url.substring(0, index);
     var newUrl = schema + prefix + &apos;.&apos; + url.substring(index);
     rules.push(url + &apos; &apos; + newUrl);
-    // rules.push(&apos;/./ &apos; + newUrl);
+    // rules.push(&apos;* &apos; + newUrl);
 }
 
 #### &#x8FC7;&#x6EE4;&#x89C4;&#x5219;
@@ -1702,7 +1702,7 @@ pattern ignore://file|host
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"reqScript (reqRules)","level":"1.17.32","depth":2,"next":{"title":"resScript (resRules)","level":"1.17.33","depth":2,"path":"rules/resScript.md","ref":"rules/resScript.md","articles":[]},"previous":{"title":"resMerge","level":"1.17.31","depth":2,"path":"rules/resMerge.md","ref":"rules/resMerge.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"rules/reqScript.md","mtime":"2020-04-24T11:12:45.188Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-03T08:57:48.465Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"reqScript (reqRules)","level":"1.17.32","depth":2,"next":{"title":"resScript (resRules)","level":"1.17.33","depth":2,"path":"rules/resScript.md","ref":"rules/resScript.md","articles":[]},"previous":{"title":"resMerge","level":"1.17.31","depth":2,"path":"rules/resMerge.md","ref":"rules/resMerge.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"rules/reqScript.md","mtime":"2020-09-03T08:59:18.433Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-03T08:59:40.985Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
