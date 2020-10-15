@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>reqWrite · GitBook</title>
+        <title>cipher · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="resWrite.html" />
+    <link rel="next" href="../feedback.html" />
     
     
-    <link rel="prev" href="jsAppend.html" />
+    <link rel="prev" href="resWriteRaw.html" />
     
 
     </head>
@@ -1467,7 +1467,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.17.67" data-path="reqWrite.html">
+        <li class="chapter " data-level="1.17.67" data-path="reqWrite.html">
             
                 <a href="reqWrite.html">
             
@@ -1519,7 +1519,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.17.71" data-path="cipher.html">
+        <li class="chapter active" data-level="1.17.71" data-path="cipher.html">
             
                 <a href="cipher.html">
             
@@ -1580,7 +1580,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >reqWrite</a>
+        <a href=".." >cipher</a>
     </h1>
 </div>
 
@@ -1595,15 +1595,20 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="reqwrite">reqWrite</h1>
-<p>&#x5C06;&#x8BF7;&#x6C42;&#x7684;&#x5185;&#x5BB9;(&#x5982;&#x679C;&#x8BF7;&#x6C42;&#x65B9;&#x6CD5;&#x5141;&#x8BB8;&#x643A;&#x5E26;&#x5185;&#x5BB9;)&#x5199;&#x5165;&#x7684;&#x6307;&#x5B9A;&#x7684;&#x6587;&#x4EF6;&#x5939;&#x6216;&#x6587;&#x4EF6;&#xFF1B;whistle&#x4F1A;&#x6839;&#x636E;&#x8BF7;&#x6C42;&#x7684;url&#x548C;&#x914D;&#x7F6E;&#x81EA;&#x52A8;&#x62FC;&#x63A5;&#x6210;&#x8DEF;&#x5F84;&#xFF0C;&#x4E14;whistle&#x4E0D;&#x4F1A;&#x8986;&#x76D6;&#x5DF2;&#x5B58;&#x5728;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x914D;&#x7F6E;&#x65B9;&#x5F0F;&#xFF1A;</p>
-<pre><code>pattern reqWrite://filepath
-</code></pre><p>filepath&#x4E3A;&#x672C;&#x5730;&#x76EE;&#x5F55;&#x6216;&#x6587;&#x4EF6;&#xFF0C;pattern&#x53C2;&#x89C1;<a href="../pattern.html">&#x5339;&#x914D;&#x6A21;&#x5F0F;</a>&#xFF0C;&#x66F4;&#x591A;&#x6A21;&#x5F0F;&#x8BF7;&#x53C2;&#x8003;<a href="../mode.html">&#x914D;&#x7F6E;&#x65B9;&#x5F0F;</a>&#x3002;</p>
+                                <h1 id="cipher">cipher</h1>
+<blockquote>
+<p>&#x7248;&#x672C;&#x8981;&#x6C42;&#xFF1A;<code>v2.5.24+</code></p>
+</blockquote>
+<p>&#x81EA;&#x5B9A;&#x4E49;https&#x7684;&#x515C;&#x5E95;&#x52A0;&#x5BC6;&#x7B97;&#x6CD5;&#xFF0C;&#x67D0;&#x4E9B;&#x670D;&#x52A1;&#x4F1A;&#x51FA;&#x73B0;tls&#x7248;&#x672C;&#x548C;&#x52A0;&#x5BC6;&#x7B97;&#x6CD5;&#x4E0D;&#x5339;&#x914D;&#x5BFC;&#x81F4;Node&#x65E0;&#x6CD5;&#x6B63;&#x5E38;&#x8BF7;&#x6C42;&#xFF0C;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;whistle&#x4F1A;&#x81EA;&#x52A8;&#x91C7;&#x7528;&#x7528;&#x6237;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x515C;&#x5E95;&#x52A0;&#x5BC6;&#x7B97;&#x6CD5;&#xFF1A;</p>
+<pre><code>pattern cipher://cipherName
+</code></pre><p>&#x9ED8;&#x8BA4;&#x4E3A; <code>ECDHE-ECDSA-AES256-GCM-SHA384</code>&#xFF0C;&#x53EF;&#x4EE5;&#x9009;&#x7B97;&#x6CD5;&#x6709;&#xFF1A;<code>NULL-SHA256</code>, <code>AES128-SHA256</code>, <code>AES256-SHA256</code>, <code>AES128-GCM-SHA256</code>, <code>AES256-GCM-SHA384</code>, <code>DH-RSA-AES128-SHA256</code>, <code>DH-RSA-AES256-SHA256</code>, <code>DH-RSA-AES128-GCM-SHA256</code>, <code>DH-RSA-AES256-GCM-SHA384</code>, <code>DH-DSS-AES128-SHA256</code>, <code>DH-DSS-AES256-SHA256</code>, <code>DH-DSS-AES128-GCM-SHA256</code>, <code>DH-DSS-AES256-GCM-SHA384</code>, <code>DHE-RSA-AES128-SHA256</code>, <code>DHE-RSA-AES256-SHA256</code>, <code>DHE-RSA-AES128-GCM-SHA256</code>, <code>DHE-RSA-AES256-GCM-SHA384</code>, <code>DHE-DSS-AES128-SHA256</code>, <code>DHE-DSS-AES256-SHA256</code>, <code>DHE-DSS-AES128-GCM-SHA256</code>, <code>DHE-DSS-AES256-GCM-SHA384</code>, <code>ECDHE-RSA-AES128-SHA256</code>, <code>ECDHE-RSA-AES256-SHA384</code>, <code>ECDHE-RSA-AES128-GCM-SHA256</code>, <code>ECDHE-RSA-AES256-GCM-SHA384</code>, <code>ECDHE-ECDSA-AES128-SHA256</code>, <code>ECDHE-ECDSA-AES256-SHA384</code>, <code>ECDHE-ECDSA-AES128-GCM-SHA256</code>, <code>ECDHE-ECDSA-AES256-GCM-SHA384</code>, <code>ADH-AES128-SHA256</code>, <code>ADH-AES256-SHA256</code>, <code>ADH-AES128-GCM-SHA256</code>, <code>ADH-AES256-GCM-SHA384</code>, <code>AES128-CCM</code>, <code>AES256-CCM</code>, <code>DHE-RSA-AES128-CCM</code>, <code>DHE-RSA-AES256-CCM</code>, <code>AES128-CCM8</code>, <code>AES256-CCM8</code>, <code>DHE-RSA-AES128-CCM8</code>, <code>DHE-RSA-AES256-CCM8</code>, <code>ECDHE-ECDSA-AES128-CCM</code>, <code>ECDHE-ECDSA-AES256-CCM</code>, <code>ECDHE-ECDSA-AES128-CCM8</code>, <code>ECDHE-ECDSA-AES256-CCM8</code>&#xFF1B;pattern&#x53C2;&#x89C1;<a href="../pattern.html">&#x5339;&#x914D;&#x6A21;&#x5F0F;</a>&#xFF0C;&#x66F4;&#x591A;&#x6A21;&#x5F0F;&#x8BF7;&#x53C2;&#x8003;<a href="../mode.html">&#x914D;&#x7F6E;&#x65B9;&#x5F0F;</a>&#x3002;</p>
 <p>&#x4F8B;&#x5B50;&#xFF1A;</p>
-<pre><code># &#x5339;&#x914D;http://www.ifeng.com/&#xFF0C;&#x6307;&#x5B9A;&#x7279;&#x5B9A;&#x7684;&#x6587;&#x4EF6;
-/^http:\/\/www.ifeng.com\/$/ reqWrite:///User/test/index.html
-www.ifeng.com reqWrite:///User/test
-</code></pre><h4 id="&#x8FC7;&#x6EE4;&#x89C4;&#x5219;">&#x8FC7;&#x6EE4;&#x89C4;&#x5219;</h4>
+<pre><code>www.test.com cipher://DH-RSA-AES256-GCM-SHA384
+</code></pre><h4 id="&#x5982;&#x4F55;&#x9009;&#x62E9;&#x7B97;&#x6CD5;&#xFF0C;&#x4E0D;&#x7ECF;&#x8FC7;whistle&#x8BBF;&#x95EE;&#xFF0C;&#x901A;&#x8FC7;&#x6D4F;&#x89C8;&#x5668;&#x67E5;&#x770B;&#x4EE5;&#x4E0B;&#x4FE1;&#x606F;&#xFF1A;">&#x5982;&#x4F55;&#x9009;&#x62E9;&#x7B97;&#x6CD5;&#xFF0C;&#x4E0D;&#x7ECF;&#x8FC7;whistle&#x8BBF;&#x95EE;&#xFF0C;&#x901A;&#x8FC7;&#x6D4F;&#x89C8;&#x5668;&#x67E5;&#x770B;&#x4EE5;&#x4E0B;&#x4FE1;&#x606F;&#xFF1A;</h4>
+<pre><code class="lang-txt">&#x7B7E;&#x540D;&#x7B97;&#x6CD5;&#xFF1A;sha256RSA
+</code></pre>
+<p>&#x901A;&#x8FC7;&#x7B7E;&#x540D;&#x7B97;&#x6CD5;&#x627E;&#x5230;&#x5BF9;&#x5E94;&#x7684;&#x52A0;&#x5BC6;&#x7B97;&#x6CD5;&#xFF08;&#x5982;&#x4E0A;&#x52A0;&#x5BC6;&#x7B97;&#x6CD5;&#x5173;&#x952E;&#x5B57;&#x4E3A; <code>RSA</code>&#xFF09;&#x3002;</p>
+<h4 id="&#x8FC7;&#x6EE4;&#x89C4;&#x5219;">&#x8FC7;&#x6EE4;&#x89C4;&#x5219;</h4>
 <p>&#x9700;&#x8981;&#x786E;&#x4FDD;whistle&#x662F;&#x6700;&#x65B0;&#x7248;&#x672C;&#xFF1A;<a href="../update.html">&#x66F4;&#x65B0;whistle</a></p>
 <p>&#x5982;&#x679C;&#x8981;&#x8FC7;&#x6EE4;&#x6307;&#x5B9A;&#x8BF7;&#x6C42;&#x6216;&#x6307;&#x5B9A;&#x534F;&#x8BAE;&#x7684;&#x89C4;&#x5219;&#x5339;&#x914D;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x5982;&#x4E0B;&#x534F;&#x8BAE;&#xFF1A;</p>
 <ol>
@@ -1650,12 +1655,12 @@ pattern ignore://file|host
 
             
                 
-                <a href="jsAppend.html" class="navigation navigation-prev " aria-label="Previous page: jsAppend">
+                <a href="resWriteRaw.html" class="navigation navigation-prev " aria-label="Previous page: resWriteRaw">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="resWrite.html" class="navigation navigation-next " aria-label="Next page: resWrite">
+                <a href="../feedback.html" class="navigation navigation-next " aria-label="Next page: 用户反馈">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1666,7 +1671,7 @@ pattern ignore://file|host
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"reqWrite","level":"1.17.67","depth":2,"next":{"title":"resWrite","level":"1.17.68","depth":2,"path":"rules/resWrite.md","ref":"rules/resWrite.md","articles":[]},"previous":{"title":"jsAppend","level":"1.17.66","depth":2,"path":"rules/jsAppend.md","ref":"rules/jsAppend.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"rules/reqWrite.md","mtime":"2019-10-12T02:33:47.738Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-10-13T04:13:45.060Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"cipher","level":"1.17.71","depth":2,"next":{"title":"用户反馈","level":"1.18","depth":1,"path":"feedback.md","ref":"feedback.md","articles":[]},"previous":{"title":"resWriteRaw","level":"1.17.70","depth":2,"path":"rules/resWriteRaw.md","ref":"rules/resWriteRaw.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"rules/cipher.md","mtime":"2020-10-13T04:13:23.414Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-10-13T04:13:45.060Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
