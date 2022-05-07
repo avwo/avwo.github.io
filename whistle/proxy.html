@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>安装启动 · GitBook</title>
+        <title>设置代理 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="proxy.html" />
+    <link rel="next" href="options.html" />
     
     
-    <link rel="prev" href="./" />
+    <link rel="prev" href="install.html" />
     
 
     </head>
@@ -102,7 +102,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2" data-path="install.html">
+        <li class="chapter " data-level="1.2" data-path="install.html">
             
                 <a href="install.html">
             
@@ -115,7 +115,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" data-path="proxy.html">
+        <li class="chapter active" data-level="1.3" data-path="proxy.html">
             
                 <a href="proxy.html">
             
@@ -1607,7 +1607,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >安装启动</a>
+        <a href="." >设置代理</a>
     </h1>
 </div>
 
@@ -1622,161 +1622,19 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x5B89;&#x88C5;&#x542F;&#x52A8;">&#x5B89;&#x88C5;&#x542F;&#x52A8;</h1>
-<p>whistle&#x5B89;&#x88C5;&#x8FC7;&#x7A0B;&#x9700;&#x8981;&#x4EE5;&#x4E0B;&#x6B65;&#x9AA4;(&#x7F3A;&#x4E00;&#x4E0D;&#x53EF;)&#xFF1A;</p>
-<ol>
-<li><strong>&#x5B89;&#x88C5;Node</strong></li>
-<li><strong>&#x5B89;&#x88C5;whistle</strong></li>
-<li><strong>&#x542F;&#x52A8;whistle</strong></li>
-<li><strong>&#x914D;&#x7F6E;&#x4EE3;&#x7406;</strong></li>
-<li><strong>&#x5B89;&#x88C5;&#x6839;&#x8BC1;&#x4E66;</strong></li>
-</ol>
-<h3 id="1-&#x5B89;&#x88C5;node">1. &#x5B89;&#x88C5;Node</h3>
-<p>whistle&#x652F;&#x6301;<code>v0.10.0</code>&#x4EE5;&#x4E0A;&#x7248;&#x672C;&#x7684;Node&#xFF0C;&#x4E3A;&#x83B7;&#x53D6;&#x66F4;&#x597D;&#x7684;&#x6027;&#x80FD;&#xFF0C;&#x63A8;&#x8350;&#x5B89;&#x88C5;&#x6700;&#x65B0;&#x7248;&#x672C;&#x7684;Node&#x3002;</p>
-<p>&#x5982;&#x679C;&#x4F60;&#x7684;&#x7CFB;&#x7EDF;&#x5DF2;&#x7ECF;&#x5B89;&#x88C5;&#x4E86;<code>v0.10.0</code>&#x4EE5;&#x4E0A;&#x7248;&#x672C;&#x7684;Node&#xFF0C;&#x53EF;&#x4EE5;&#x5FFD;&#x7565;&#x6B64;&#x6B65;&#x9AA4;&#xFF0C;&#x76F4;&#x63A5;&#x8FDB;&#x5165;&#x5B89;&#x88C5;whistle&#x7684;&#x6B65;&#x9AA4;&#xFF0C;&#x5426;&#x5219;&#xFF1A;</p>
-<ol>
-<li>Windows&#x6216;Mac&#x7CFB;&#x7EDF;&#xFF0C;&#x8BBF;&#x95EE;<a href="https://nodejs.org/" target="_blank">https://nodejs.org/</a>&#xFF0C;&#x5B89;&#x88C5;<strong>LTS</strong>&#x7248;&#x672C;&#x7684;Node&#xFF0C;&#x9ED8;&#x8BA4;&#x5B89;&#x88C5;&#x5373;&#x53EF;&#x3002;</li>
-<li>Linux&#x4E0B;&#x63A8;&#x8350;&#x4F7F;&#x7528;&#x6E90;&#x7801;&#x5B89;&#x88C5;: &#x4ECE;<a href="https://nodejs.org/en/download/" target="_blank">Node&#x5B98;&#x7F51;</a>&#x4E0B;&#x8F7D;&#x6700;&#x65B0;&#x7248;&#x7684;<strong>Source Code</strong>(&#x6216;&#x8005;&#x7528;<code>wget</code>&#x547D;&#x4EE4;&#x4E0B;&#x8F7D;)&#xFF0C;&#x89E3;&#x538B;&#x6587;&#x4EF6;(<code>tar -xzvf node-vx.y.z.tar.gz</code>)&#x540E;&#x8FDB;&#x5165;&#x89E3;&#x538B;&#x540E;&#x7684;&#x6839;&#x76EE;&#x5F55;(<code>node-vx.y.z</code>)&#xFF0C;&#x4F9D;&#x6B21;&#x6267;&#x884C;<code>./configure</code>&#x3001;<code>./make</code>&#x548C;<code>./make install</code>&#x3002;</li>
-</ol>
-<p>&#x5B89;&#x88C5;&#x5B8C;Node&#x540E;&#xFF0C;&#x6267;&#x884C;&#x4E0B;&#x9762;&#x547D;&#x4EE4;&#xFF0C;&#x67E5;&#x770B;&#x5F53;&#x524D;Node&#x7248;&#x672C;</p>
-<pre><code class="lang-sh">$ node -v
-v4.4.0
-</code></pre>
-<p>&#x5982;&#x679C;&#x80FD;&#x6B63;&#x5E38;&#x8F93;&#x51FA;Node&#x7684;&#x7248;&#x672C;&#x53F7;&#xFF0C;&#x8868;&#x793A;Node&#x5DF2;&#x5B89;&#x88C5;&#x6210;&#x529F;(Windows&#x7CFB;&#x7EDF;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x91CD;&#x65B0;&#x6253;&#x5F00;cmd)&#x3002;</p>
-<h3 id="2-&#x5B89;&#x88C5;whistle">2. &#x5B89;&#x88C5;whistle</h3>
-<p>Node&#x5B89;&#x88C5;&#x6210;&#x529F;&#x540E;&#xFF0C;&#x6267;&#x884C;&#x5982;&#x4E0B;npm&#x547D;&#x4EE4;&#x5B89;&#x88C5;whistle &#xFF08;<strong>Mac&#x6216;Linux&#x7684;&#x975E;root&#x7528;&#x6237;&#x9700;&#x8981;&#x5728;&#x547D;&#x4EE4;&#x884C;&#x524D;&#x9762;&#x52A0;<code>sudo</code>&#xFF0C;&#x5982;&#xFF1A;<code>sudo npm install -g whistle</code></strong>&#xFF09;</p>
-<pre><code class="lang-sh">$ npm install -g whistle
-</code></pre>
-<p>npm&#x9ED8;&#x8BA4;&#x955C;&#x50CF;&#x662F;&#x5728;&#x56FD;&#x5916;&#xFF0C;&#x6709;&#x65F6;&#x5019;&#x5B89;&#x88C5;&#x901F;&#x5EA6;&#x5F88;&#x6162;&#x6216;&#x8005;&#x51FA;&#x73B0;&#x5B89;&#x88C5;&#x4E0D;&#x4E86;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x5982;&#x679C;&#x65E0;&#x6CD5;&#x5B89;&#x88C5;&#x6216;&#x8005;&#x5B89;&#x88C5;&#x5F88;&#x6162;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;taobao&#x7684;&#x955C;&#x50CF;&#x5B89;&#x88C5;&#xFF1A;</p>
-<pre><code class="lang-sh">$ npm install cnpm -g --registry=https://registry.npmmirror.com
-$ cnpm install -g whistle
-
-&#x6216;&#x8005;&#x76F4;&#x63A5;&#x6307;&#x5B9A;&#x955C;&#x50CF;&#x5B89;&#x88C5;&#xFF1A;
-$ npm install whistle -g --registry=https://registry.npmmirror.com
-</code></pre>
-<p>whistle&#x5B89;&#x88C5;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x6267;&#x884C;&#x547D;&#x4EE4; <code>whistle help</code> &#x6216; <code>w2 help</code>&#xFF0C;&#x67E5;&#x770B;whistle&#x7684;&#x5E2E;&#x52A9;&#x4FE1;&#x606F;</p>
-<pre><code>$ w2 help
-
-  Usage: whistle &lt;command&gt; [options]
-
-  Commands:
-
-  status              Show the running status of whistle
-  use/add [filepath]  Set rules from a specified js file (.whistle.js by default)
-  run                 Start a front service
-  start               Start a background service
-  stop                Stop current background service
-  restart             Restart current background service
-  help                Display help information
-
-  Options:
-
-  -h, --help                                      output usage information
-  -D, --baseDir [baseDir]                         set the configured storage root path
-  -z, --certDir [directory]                       set custom certificate store directory
-  -l, --localUIHost [hostname]                    set the domain for the web ui of whistle (local.whistlejs.com by default)
-  -L, --pluginHost [hostname]                     set the domain for the web ui of plugin  (as: &quot;script=a.b.com&amp;vase=x.y.com&quot;)
-  -n, --username [username]                       set the username to access the web ui of whistle
-  -w, --password [password]                       set the password to access the web ui of whistle
-  -N, --guestName [username]                      set the the guest name to access the web ui of whistle (can only view the data)
-  -W, --guestPassword [password]                  set the guest password to access the web ui of whistle (can only view the data)
-  -s, --sockets [number]                          set the max number of cached long connection on each domain (60 by default)
-  -S, --storage [newStorageDir]                   set the configured storage directory
-  -C, --copy [storageDir]                         copy the configuration of the specified directory to a new directory
-  -c, --dnsCache [time]                           set the cache time of DNS (30000ms by default)
-  -H, --host [boundHost]                          set the bound host of whistle (INADDR_ANY by default)
-  -p, --port [proxyPort]                          set the proxy port of whistle (8899 by default)
-  -P, --uiport [uiport]                           set the listening port of whistle webui
-  -m, --middlewares [script path or module name]  set the express middlewares loaded at startup (as: xx,yy/zz.js)
-  -M, --mode [mode]                               set the way of starting the whistle mode (as: pureProxy|debug|multiEnv)
-  -t, --timeout [ms]                              set the request timeout (66000ms by default)
-  -e, --extra [extraData]                         set the extra parameters for plugin
-  -f, --secureFilter [secureFilter]               set the path of secure filter
-  -R, --reqCacheSize [reqCacheSize]               set the cache size of request data (600 by default)
-  -F, --frameCacheSize [frameCacheSize]           set the cache size of webSocket and socket&apos;s frames (512 by default)
-  -A, --addon [pluginPaths]                       add custom plugin paths
-  --httpPort [httpPort]                           set the http server port of whistle
-  --httpsPort [httpsPort]                         set the https server port of whistle
-  --no-global-plugins                             do not load any globally installed plugins
-  --no-prev-options                               do not reuse the previous options when restarting
-  -V, --version                                   output the version number
-</code></pre><p>&#x5982;&#x679C;&#x80FD;&#x6B63;&#x5E38;&#x8F93;&#x51FA;whistle&#x7684;&#x5E2E;&#x52A9;&#x4FE1;&#x606F;&#xFF0C;&#x8868;&#x793A;whistle&#x5DF2;&#x5B89;&#x88C5;&#x6210;&#x529F;&#x3002;</p>
-<blockquote>
-<p>&#x6709;&#x5173;&#x547D;&#x4EE4;&#x884C;&#x53C2;&#x6570;&#x53C2;&#x89C1;&#xFF1A;<a href="options.html">&#x547D;&#x4EE4;&#x884C;&#x53C2;&#x6570;</a></p>
-</blockquote>
-<h3 id="3-&#x542F;&#x52A8;whistle">3. &#x542F;&#x52A8;whistle</h3>
-<blockquote>
-<p>&#x6700;&#x65B0;&#x7248;&#x672C;&#x7684;whistle&#x652F;&#x6301;&#x4E09;&#x79CD;&#x7B49;&#x4EF7;&#x7684;&#x547D;&#x4EE4;<code>whistle</code>&#x3001;<code>w2</code>&#x3001;<code>wproxy</code></p>
-</blockquote>
-<p>&#x542F;&#x52A8;whistle:</p>
-<pre><code class="lang-sh">$ w2 start
-</code></pre>
-<p><em>Note: &#x5982;&#x679C;&#x8981;&#x9632;&#x6B62;&#x5176;&#x4ED6;&#x4EBA;&#x8BBF;&#x95EE;&#x914D;&#x7F6E;&#x9875;&#x9762;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x542F;&#x52A8;&#x65F6;&#x52A0;&#x4E0A;&#x767B;&#x5F55;&#x7528;&#x6237;&#x540D;&#x548C;&#x5BC6;&#x7801; <code>-n yourusername -w yourpassword</code>&#x3002;</em></p>
-<p>&#x91CD;&#x542F;whsitle:</p>
-<pre><code class="lang-sh">$ w2 restart
-</code></pre>
-<p>&#x505C;&#x6B62;whistle:</p>
-<pre><code class="lang-sh">$ w2 stop
-</code></pre>
-<p>&#x8C03;&#x8BD5;&#x6A21;&#x5F0F;&#x542F;&#x52A8;whistle(&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x67E5;&#x770B;whistle&#x7684;&#x5F02;&#x5E38;&#x53CA;&#x63D2;&#x4EF6;&#x5F00;&#x53D1;):</p>
-<pre><code class="lang-sh">$ w2 run
-</code></pre>
-<p>&#x542F;&#x52A8;&#x5B8C;whistle&#x540E;&#xFF0C;&#x6700;&#x540E;&#x4E00;&#x6B65;&#x9700;&#x8981;&#x914D;&#x7F6E;&#x4EE3;&#x7406;&#x3002;</p>
-<h3 id="4-&#x914D;&#x7F6E;&#x4EE3;&#x7406;">4. &#x914D;&#x7F6E;&#x4EE3;&#x7406;</h3>
-<h5 id="&#x914D;&#x7F6E;&#x4FE1;&#x606F;">&#x914D;&#x7F6E;&#x4FE1;&#x606F;</h5>
-<ol>
-<li>&#x4EE3;&#x7406;&#x670D;&#x52A1;&#x5668;&#xFF1A;127.0.0.1 (&#x5982;&#x679C;&#x90E8;&#x7F72;&#x5728;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5668;&#x6216;&#x865A;&#x62DF;&#x673A;&#x4E0A;&#xFF0C;&#x6539;&#x6210;&#x5BF9;&#x5E94;&#x670D;&#x52A1;&#x5668;&#x6216;&#x865A;&#x62DF;&#x673A;&#x7684;ip&#x5373;&#x53EF;)</li>
-<li>&#x9ED8;&#x8BA4;&#x7AEF;&#x53E3;&#xFF1A;8899 (&#x5982;&#x679C;&#x7AEF;&#x53E3;&#x88AB;&#x5360;&#x7528;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x542F;&#x52A8;&#x65F6;&#x901A;&#x8FC7; <code>-p</code> &#x6765;&#x6307;&#x5B9A;&#x65B0;&#x7684;&#x7AEF;&#x53E3;&#xFF0C;&#x66F4;&#x591A;&#x4FE1;&#x606F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x6267;&#x884C;&#x547D;&#x4EE4;&#x884C; <code>w2 help</code> (<code>v0.7.0</code>&#x53CA;&#x4EE5;&#x4E0A;&#x7248;&#x672C;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>w2 help</code>) &#x67E5;&#x770B;)</li>
-</ol>
-<blockquote>
-<p>&#x52FE;&#x9009;&#x4E0A; <strong>&#x5BF9;&#x6240;&#x6709;&#x534F;&#x8BAE;&#x5747;&#x4F7F;&#x7528;&#x76F8;&#x540C;&#x7684;&#x4EE3;&#x7406;&#x670D;&#x52A1;&#x5668;</strong></p>
-</blockquote>
-<h5 id="&#x4EE3;&#x7406;&#x914D;&#x7F6E;&#x65B9;&#x5F0F;&#x628A;&#x4E0A;&#x9762;&#x914D;&#x7F6E;&#x4FE1;&#x606F;&#x914D;&#x7F6E;&#x4E0A;&#x5373;&#x53EF;">&#x4EE3;&#x7406;&#x914D;&#x7F6E;&#x65B9;&#x5F0F;(&#x628A;&#x4E0A;&#x9762;&#x914D;&#x7F6E;&#x4FE1;&#x606F;&#x914D;&#x7F6E;&#x4E0A;&#x5373;&#x53EF;)</h5>
-<ol>
-<li><p>&#x5168;&#x5C40;&#x4EE3;&#x7406; (<strong>&#x63A8;&#x8350;</strong>)&#xFF0C;<strong>&#x53EF;&#x901A;&#x8FC7;&#x547D;&#x4EE4;&#x884C;&#x8BBE;&#x7F6E;&#x53C2;&#x8003;<a href="proxy.html">&#x8BBE;&#x7F6E;&#x4EE3;&#x7406;</a></strong>&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x624B;&#x52A8;&#x914D;&#x7F6E;&#xFF1A;</p>
+                                <h1 id="&#x8BBE;&#x7F6E;&#x4EE3;&#x7406;">&#x8BBE;&#x7F6E;&#x4EE3;&#x7406;</h1>
+<p>Whistle v2.9.14 &#x7248;&#x672C;&#x5F00;&#x59CB;&#x652F;&#x6301;&#x901A;&#x8FC7;&#x547D;&#x4EE4;&#x884C; <code>w2 proxy ...</code> &#x8BBE;&#x7F6E;&#x7CFB;&#x7EDF;&#x7684;&#x5168;&#x5C40;&#x4EE3;&#x7406;&#xFF08;&#x76EE;&#x524D;&#x652F;&#x6301;&#x652F;&#x6301; Windows &#x548C; Mac &#x5E73;&#x53F0;&#xFF09;</p>
+<h1 id="&#x7528;&#x6CD5;">&#x7528;&#x6CD5;</h1>
 <ul>
-<li><a href="http://jingyan.baidu.com/article/0aa22375866c8988cc0d648c.html" target="_blank">Windows</a> </li>
-<li><a href="http://jingyan.baidu.com/article/a378c960849144b3282830dc.html" target="_blank">Mac</a>: System Preferences &gt; Network &gt; Advanced &gt; Proxies &gt; HTTP or HTTPS<div>
- <img src="img/mac-proxy-1.jpg" width="48%">
- <img src="img/mac-proxy-2.jpg" width="48%">
-</div></li>
-<li><p>Linux: Settings &gt; Network &gt; VPN &gt; Network Proxy &gt; Manual</p>
-<div>
- <img src="img/linux-proxy-1.jpg" width="48%">
- <img src="img/linux-proxy-2.jpg" width="48%">
-</div>
-</li>
+<li><code>w2 proxy</code>: &#x8BBE;&#x7F6E;&#x5168;&#x5C40;&#x4EE3;&#x7406; <code>127.0.0.1:port</code>&#xFF0C;port &#x4E3A;&#x8FD0;&#x884C;&#x7684;&#x9ED8;&#x8BA4;&#x5B9E;&#x4F8B;&#x7684;&#x7AEF;&#x53E3;&#xFF08;<code>storage</code> &#x4E3A;&#x7A7A;&#xFF09;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x9ED8;&#x8BA4;&#x5B9E;&#x4F8B;&#x5219;&#x4E3A; <code>8899</code></li>
+<li><code>w2 proxy -x &quot;&lt;local&gt;, domain1, domain2&quot;</code>: &#x8BBE;&#x7F6E;&#x5168;&#x5C40;&#x4EE3;&#x7406; <code>127.0.0.1:port</code>&#xFF0C;port &#x4E3A;&#x8FD0;&#x884C;&#x7684;&#x9ED8;&#x8BA4;&#x5B9E;&#x4F8B;&#x7684;&#x7AEF;&#x53E3;&#xFF08;<code>storage</code> &#x4E3A;&#x7A7A;&#xFF09;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x9ED8;&#x8BA4;&#x5B9E;&#x4F8B;&#x5219;&#x4E3A; <code>8899</code>&#xFF0C;<strong>&#x5E76;&#x8BBE;&#x7F6E;&#x4E0D;&#x4EE3;&#x7406;&#x57DF;&#x540D;&#x767D;&#x540D;&#x5355;</strong></li>
+<li><code>w2 proxy 8899</code>: &#x8BBE;&#x7F6E;&#x6307;&#x5B9A;&#x7AEF;&#x53E3;&#x7684;&#x4EE3;&#x7406;&#xFF0C;host &#x9ED8;&#x8BA4;&#x4E3A; <code>127.0.0.1</code></li>
+<li><code>w2 proxy www.test.com:8080</code> &#x6216; <code>w2 proxy www.test.com:auto</code>: &#x6307;&#x5B9A;&#x4EE3;&#x7406;&#x7684; host &#x548C; port</li>
+<li><code>w2 proxy www.test.com:8080 -x &quot;&lt;local&gt;, domain1, domain2&quot;</code>: &#x7EC4;&#x5408;&#x5E94;&#x7528;</li>
+<li><code>w2 proxy off</code>: &#x5173;&#x95ED;&#x5168;&#x5C40;&#x4EE3;&#x7406;</li>
 </ul>
-</li>
-<li><p>&#x6D4F;&#x89C8;&#x5668;&#x4EE3;&#x7406; (<strong>&#x63A8;&#x8350;</strong>)&#xFF1A;&#x5B89;&#x88C5;&#x6D4F;&#x89C8;&#x5668;&#x4EE3;&#x7406;&#x63D2;&#x4EF6;</p>
-<ul>
-<li><p>&#x5B89;&#x88C5;Chrome&#x4EE3;&#x7406;&#x63D2;&#x4EF6;&#xFF1A;&#x63A8;&#x8350;&#x5B89;&#x88C5;<a href="https://chrome.google.com/webstore/detail/padekgcemlokbadohgkifijomclgjgif" target="_blank">SwitchyOmega</a></p>
-<div><img src="img/switchyomega.jpg"></div></li>
-<li><p>Firefox: &#x5730;&#x5740;&#x680F;&#x8F93;&#x5165;&#x8BBF;&#x95EE; <code>about:preferences</code>&#xFF0C;&#x627E;&#x5230; <code>Network Proxy</code>&#xFF0C;&#x9009;&#x62E9; <code>&#x624B;&#x52A8;&#x4EE3;&#x7406;&#x914D;&#x7F6E;(Manual proxy configuration)</code>&#xFF0C;&#x8F93;&#x5165;&#x4EE3;&#x7406;&#x670D;&#x52A1;&#x5668;&#x5730;&#x5740;&#x3001;&#x7AEF;&#x53E3;&#xFF0C;&#x4FDD;&#x5B58;</p>
-<div>
-<img src="img/firefox-proxy-1.jpg" width="48%">
-<img src="img/firefox-proxy-2.jpg" width="48%">
-</div>
-</li>
-</ul>
-</li>
-<li><p>&#x79FB;&#x52A8;&#x7AEF;&#x9700;&#x8981;&#x5728;<code>&#x8BBE;&#x7F6E;</code>&#x4E2D;&#x914D;&#x7F6E;&#x5F53;&#x524D;Wi-Fi&#x7684;&#x4EE3;&#x7406;&#xFF0C;&#x4EE5; iOS &#x4E3A;&#x4F8B;&#xFF1A;</p>
-<div><img src="img/iOS-proxy-all.jpg"></div>
-
-
-</li>
-</ol>
-<p>PS: &#x5982;&#x679C;&#x914D;&#x7F6E;&#x5B8C;&#x4EE3;&#x7406;&#xFF0C;&#x624B;&#x673A;&#x65E0;&#x6CD5;&#x8BBF;&#x95EE;&#xFF0C;&#x53EF;&#x80FD;&#x662F;whistle&#x6240;&#x5728;&#x7684;&#x7535;&#x8111;&#x9632;&#x706B;&#x5899;&#x9650;&#x5236;&#x4E86;&#x8FDC;&#x7A0B;&#x8BBF;&#x95EE;whistle&#x7684;&#x7AEF;&#x53E3;&#xFF0C;&#x5173;&#x95ED;&#x9632;&#x706B;&#x5899;&#x6216;&#x8005;&#x8BBE;&#x7F6E;&#x767D;&#x540D;&#x5355;&#xFF1A;<a href="http://jingyan.baidu.com/article/870c6fc317cae7b03ee4be48.html" target="_blank">http://jingyan.baidu.com/article/870c6fc317cae7b03ee4be48.html</a></p>
-<h3 id="&#x8BBF;&#x95EE;&#x914D;&#x7F6E;&#x9875;&#x9762;">&#x8BBF;&#x95EE;&#x914D;&#x7F6E;&#x9875;&#x9762;</h3>
-<p>&#x542F;&#x52A8;whistle&#x53CA;&#x914D;&#x7F6E;&#x5B8C;&#x4EE3;&#x7406;&#x540E;&#xFF0C;&#x7528;<strong>Chrome&#x6D4F;&#x89C8;&#x5668;(&#x7531;&#x4E8E;css&#x517C;&#x5BB9;&#x6027;&#x95EE;&#x9898;&#x754C;&#x9762;&#x53EA;&#x652F;&#x6301;Chrome&#x6D4F;&#x89C8;&#x5668;)</strong>&#x8BBF;&#x95EE;&#x914D;&#x7F6E;&#x9875;&#x9762;&#xFF0C;&#x5982;&#x679C;&#x80FD;&#x6B63;&#x5E38;&#x6253;&#x5F00;&#x9875;&#x9762;&#xFF0C;whistle&#x5B89;&#x88C5;&#x542F;&#x52A8;&#x5B8C;&#x6BD5;&#xFF0C;&#x53EF;&#x4EE5;&#x5F00;&#x59CB;&#x4F7F;&#x7528;&#x3002;</p>
-<p>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4EE5;&#x4E0B;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#x6765;&#x8BBF;&#x95EE;&#x914D;&#x7F6E;&#x9875;&#x9762;&#xFF1A;</p>
-<ul>
-<li>&#x65B9;&#x5F0F;1&#xFF1A;&#x57DF;&#x540D;&#x8BBF;&#x95EE; <a href="http://local.whistlejs.com/" target="_blank">http://local.whistlejs.com/</a></li>
-<li>&#x65B9;&#x5F0F;2&#xFF1A;&#x901A;&#x8FC7;ip+&#x7AEF;&#x53E3;&#x6765;&#x8BBF;&#x95EE;&#xFF0C;&#x5F62;&#x5F0F;&#x5982; <code>http://whistleServerIP:whistlePort/</code> e.g. <a href="http://127.0.0.1:8899" target="_blank">http://127.0.0.1:8899</a></li>
-<li>&#x65B9;&#x5F0F;2&#xFF1A;&#x901A;&#x8FC7;&#x547D;&#x4EE4;&#x884C;&#x53C2;&#x6570; <code>-P xxxx</code> &#x81EA;&#x5B9A;&#x4E49;webui&#x7684;&#x7AEF;&#x53E3;(<code>xxxx</code>&#x8868;&#x793A;&#x8981;&#x8BBE;&#x7F6E;&#x7684;&#x7AEF;&#x53E3;&#x53F7;)&#xFF0C;&#x81EA;&#x5B9A;&#x4E49;&#x7AEF;&#x53E3;&#x652F;&#x6301;&#x4E0A;&#x8FF0;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#x8BBF;&#x95EE;&#xFF0C;&#x4E5F;&#x652F;&#x6301; <a href="http://127.0.0.1:xxxx" target="_blank">http://127.0.0.1:xxxx</a></li>
-</ul>
-<h3 id="5-&#x5B89;&#x88C5;&#x6839;&#x8BC1;&#x4E66;">5. &#x5B89;&#x88C5;&#x6839;&#x8BC1;&#x4E66;</h3>
-<p>&#x5B89;&#x88C5;&#x8BC1;&#x4E66;&#x8BF7;&#x53C2;&#x8003;&#x6587;&#x6863;: <a href="http://wproxy.org/whistle/webui/https.html" target="_blank">http://wproxy.org/whistle/webui/https.html</a></p>
+<p><strong>&#x4E00;&#x822C;&#x6267;&#x884C; <code>w2 proxy</code> &#x5373;&#x53EF;&#xFF0C;Mac &#x5E73;&#x53F0;&#x4E0A;&#x53EF;&#x80FD;&#x8981;&#x8F93;&#x51FA;&#x5F00;&#x673A;&#x5BC6;&#x7801;</strong></p>
+<p>&#x5982;&#x679C;&#x5927;&#x5BB6;&#x77E5;&#x9053;&#x5176;&#x5B83;&#x5E73;&#x53F0;&#x7684;&#x8BBE;&#x7F6E;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x63D0; PR &#x5B8C;&#x5584;&#x529F;&#x80FD;&#xFF1A;<a href="https://github.com/avwo/whistle/tree/master/bin/proxy" target="_blank">https://github.com/avwo/whistle/tree/master/bin/proxy</a></p>
 
                                 
                                 </section>
@@ -1804,12 +1662,12 @@ $ npm install whistle -g --registry=https://registry.npmmirror.com
 
             
                 
-                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 关于whistle">
+                <a href="install.html" class="navigation navigation-prev " aria-label="Previous page: 安装启动">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="proxy.html" class="navigation navigation-next " aria-label="Next page: 设置代理">
+                <a href="options.html" class="navigation navigation-next " aria-label="Next page: 命令行参数">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1820,7 +1678,7 @@ $ npm install whistle -g --registry=https://registry.npmmirror.com
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"安装启动","level":"1.2","depth":1,"next":{"title":"设置代理","level":"1.3","depth":1,"path":"proxy.md","ref":"proxy.md","articles":[]},"previous":{"title":"关于whistle","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["icp"],"pluginsConfig":{"icp":{"link":"https://beian.miit.gov.cn/","style":{},"number":"浙ICP备15019507号-2"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"install.md","mtime":"2022-05-07T14:49:09.752Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-05-07T14:50:17.814Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"设置代理","level":"1.3","depth":1,"next":{"title":"命令行参数","level":"1.4","depth":1,"path":"options.md","ref":"options.md","articles":[]},"previous":{"title":"安装启动","level":"1.2","depth":1,"path":"install.md","ref":"install.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["icp"],"pluginsConfig":{"icp":{"link":"https://beian.miit.gov.cn/","style":{},"number":"浙ICP备15019507号-2"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"proxy.md","mtime":"2022-05-07T14:49:09.752Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-05-07T14:50:17.814Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
