@@ -1799,13 +1799,13 @@ pattern3 protocol://`{test.json}`
 <pre><code>protocol://`${search.replace(/course=([^&amp;]+)/ig,name=$1)}`
 protocol://`${search.replace(a,b)}`
 </code></pre><p><code>${query}</code> &#x548C; <code>${queryString}</code> &#x7684;&#x7528;&#x9014;&#xFF0C;&#x5982;&#x914D;&#x7F6E;<a href="rules/redirect.html">redirect</a> &#x91CD;&#x5B9A;&#x5411;&#xFF1A;</p>
-<pre><code class="lang-txt"># &#x4E0D;&#x9700;&#x8981;&#x8FFD;&#x52A0;&#x53C2;&#x6570;
+<pre><code class="lang-txt"># &#x4E0D;&#x9700;&#x8981;&#x8FFD;&#x52A0;&#x65B0;&#x53C2;&#x6570;&#xFF08;query &#x53EF;&#x80FD;&#x4E3A;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;&#xFF09;
 www.test.com/index.html redirect://`https://ke.qq.com/test${query}`
 
-# &#x9700;&#x8981;&#x8FFD;&#x52A0;&#x53C2;&#x6570;
+# &#x9700;&#x8981;&#x8FFD;&#x52A0;&#x53C2;&#x6570;&#xFF08;queryString &#x76F8;&#x5F53;&#x4E8E; query || &apos;?&apos;&#xFF09;
 www.test.com/index.html redirect://`https://ke.qq.com/test${queryString}&amp;test=1`
 
-# &#x8FFD;&#x52A0;&#x53C2;&#x6570;
+# &#x8FFD;&#x52A0; pathname + query
 www.test.com redirect://`https://ke.qq.com${url.path}`
 
 # &#x4FEE;&#x6539;&#x4E3A; 301
@@ -1856,7 +1856,7 @@ www.test.com redirect://`https://ke.qq.com${url.path}` replaceStatus://301
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"操作值","level":"1.10","depth":1,"next":{"title":"匹配原则","level":"1.11","depth":1,"path":"principle.md","ref":"principle.md","articles":[]},"previous":{"title":"匹配方式","level":"1.9","depth":1,"path":"pattern.md","ref":"pattern.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["icp"],"pluginsConfig":{"icp":{"link":"https://beian.miit.gov.cn/","style":{},"label":"","number":"浙ICP备15019507号-2"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"data.md","mtime":"2024-08-23T05:35:00.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-09-04T11:57:01.116Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"操作值","level":"1.10","depth":1,"next":{"title":"匹配原则","level":"1.11","depth":1,"path":"principle.md","ref":"principle.md","articles":[]},"previous":{"title":"匹配方式","level":"1.9","depth":1,"path":"pattern.md","ref":"pattern.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["icp"],"pluginsConfig":{"icp":{"link":"https://beian.miit.gov.cn/","style":{},"label":"","number":"浙ICP备15019507号-2"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"data.md","mtime":"2024-11-15T15:28:49.345Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-11-15T15:57:40.747Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
