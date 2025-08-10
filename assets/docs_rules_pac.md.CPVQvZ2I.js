@@ -1,0 +1,17 @@
+import{_ as s,c as t,o as n,ae as e}from"./chunks/framework.Dgg8-8ov.js";const u=JSON.parse('{"title":"pac","description":"","frontmatter":{},"headers":[],"relativePath":"docs/rules/pac.md","filePath":"docs/rules/pac.md"}'),p={name:"docs/rules/pac.md"};function l(c,a,o,i,r,d){return n(),t("div",null,a[0]||(a[0]=[e(`<h1 id="pac" tabindex="-1">pac <a class="header-anchor" href="#pac" aria-label="Permalink to &quot;pac&quot;">​</a></h1><p>PAC（Proxy Auto-Config）是一种通过 JavaScript 脚本自动决定请求代理规则的机制，允许您基于 URL、域名、IP 等条件动态选择代理或直连。</p><h2 id="规则语法" tabindex="-1">规则语法 <a class="header-anchor" href="#规则语法" aria-label="Permalink to &quot;规则语法&quot;">​</a></h2><div class="language-txt vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">txt</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>pattern pac://value [filters...]</span></span></code></pre></div><table tabindex="0"><thead><tr><th>参数</th><th>描述</th><th>详细文档</th></tr></thead><tbody><tr><td>pattern</td><td>匹配请求 URL 的表达式</td><td><a href="./pattern.html">匹配模式文档</a></td></tr><tr><td>value</td><td>操作内容，支持以下类型：<br>• 目录/文件路径<br>• 远程 URL<br>• 内联/内嵌/Values内容</td><td><a href="./operation.html">操作指令文档</a></td></tr><tr><td>filters</td><td>可选过滤器，支持匹配：<br>• 请求URL/方法/头部/内容<br>• 响应状态码/头部</td><td><a href="./filters.html">过滤器文档</a></td></tr></tbody></table><h2 id="配置示例" tabindex="-1">配置示例 <a class="header-anchor" href="#配置示例" aria-label="Permalink to &quot;配置示例&quot;">​</a></h2><div class="language-txt vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">txt</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span># 内嵌 PAC 脚本</span></span>
+<span class="line"><span>\`\`\` test.pac</span></span>
+<span class="line"><span>function FindProxyForURL(url, host) {</span></span>
+<span class="line"><span>  // ...</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span>\`\`\`</span></span>
+<span class="line"><span>www.example.com/path pac://{test.pac}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># Values</span></span>
+<span class="line"><span>www.example.com/path1 pac://{test2.pac}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 本地文件</span></span>
+<span class="line"><span>www.example.com/path3 pac:///User/xxx/test.pac</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 远程 PAC 脚本</span></span>
+<span class="line"><span>* pac://https://raw.githubusercontent.com/imweb/node-pac/master/test/scripts/normal.pac</span></span></code></pre></div><h2 id="高级用法" tabindex="-1">高级用法 <a class="header-anchor" href="#高级用法" aria-label="Permalink to &quot;高级用法&quot;">​</a></h2><p>将请求代理到上游代理后，默认情况下上游代理会根据请求的域名通过 DNS 获取服务器 IP 再继续请求，如果想让上游代理根据指定 IP及端口继续请求，可以这么处理：</p><div class="language-txt vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">txt</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>www.example.com pac://https://xxx/path/normal.pac 1.1.1.1 enable://proxyHost</span></span>
+<span class="line"><span>www.example.com pac:///User/xxx/test.pac 1.1.1.1:8080 enable://proxyHost</span></span></code></pre></div><blockquote><p><code>1.1.1.1</code> 等价于 <code>host://1.1.1.1</code></p></blockquote>`,11)]))}const b=s(p,[["render",l]]);export{u as __pageData,b as default};
