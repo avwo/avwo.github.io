@@ -1,0 +1,45 @@
+import{_ as e,c as s,o as n,ae as l}from"./chunks/framework.Dgg8-8ov.js";const b=JSON.parse('{"title":"disable","description":"","frontmatter":{},"headers":[],"relativePath":"docs/rules/disable.md","filePath":"docs/rules/disable.md"}'),p={name:"docs/rules/disable.md"};function t(i,a,o,c,d,r){return n(),s("div",null,a[0]||(a[0]=[l(`<h1 id="disable" tabindex="-1">disable <a class="header-anchor" href="#disable" aria-label="Permalink to &quot;disable&quot;">​</a></h1><p>通过规则禁用 HTTPS、隐藏请求、终止请求等功能。</p><h2 id="规则语法" tabindex="-1">规则语法 <a class="header-anchor" href="#规则语法" aria-label="Permalink to &quot;规则语法&quot;">​</a></h2><div class="language-txt vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">txt</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>pattern disable://action1|action2|... [filters...]</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 等效于：</span></span>
+<span class="line"><span>pattern disable://action1 disable://action2 ... [filters...]</span></span></code></pre></div><table tabindex="0"><thead><tr><th>参数</th><th>描述</th><th>详细文档</th></tr></thead><tbody><tr><td>pattern</td><td>匹配请求 URL 的表达式</td><td><a href="./pattern.html">匹配模式文档</a></td></tr><tr><td>action</td><td>具体动作，详见下面的说明</td><td></td></tr><tr><td>filters</td><td>可选过滤器，支持匹配：<br>• 请求URL/方法/头部/内容<br>• 响应状态码/头部</td><td><a href="./filters.html">过滤器文档</a></td></tr></tbody></table><ul><li><code>capture</code> 或 <code>https</code>：禁用 <code>Enable HTTPS</code></li><li><code>authCapture</code>：禁用 <code>authCapture</code> 功能，详见：<a href="./enable.html">enable</a></li><li><code>abort</code>：禁用 abort 功能，详见：<a href="./enable.html">enable</a></li><li><code>abortReq</code>：禁用 abortReq 功能，详见：<a href="./enable.html">enable</a></li><li><code>abortRes</code>：禁用 abortRes 功能，详见：<a href="./enable.html">enable</a></li><li><code>gzip</code>：禁止压缩响应内容</li><li><code>proxyHost</code>：禁用 proxyHost 功能，详见：<a href="./enable.html">enable</a></li><li><code>proxyTunnel</code>：禁用 proxyTunnel 功能，详见：<a href="./enable.html">enable</a></li><li><code>proxyFirst</code>：禁用优先使用 <a href="./proxy.html">proxy</a> 规则</li><li><code>http2</code>：禁用 http2 功能，详见：<a href="./enable.html">enable</a><blockquote><p>禁用：浏览器 -xx-&gt; Whistle 代理 -xx-&gt; 服务器全部启用 HTTP2</p></blockquote></li><li><code>h2</code>：禁用 h2 功能，详见：<a href="./enable.html">enable</a><blockquote><p>禁用：Whistle 代理 -xx-&gt; 服务器启用 HTTP2</p></blockquote></li><li><code>httpH2</code>：禁用 httpH2 功能，详见：<a href="./enable.html">enable</a><blockquote><p>禁用：Whistle 代理 -xx-&gt; 服务器的 HTTP 请求启用 HTTP2</p></blockquote></li><li><code>safeHtml</code>：禁用 safeHtml 功能，详见：<a href="./enable.html">enable</a></li><li><code>strictHtml</code>：禁用 strictHtml 功能，详见：<a href="./enable.html">enable</a></li><li><code>clientIp</code>：删除请求头 x-forwarded-for</li><li><code>bigData</code>：禁用 bigData 功能，详见：<a href="./enable.html">enable</a></li><li><code>forceReqWrite</code>：禁用 forceReqWrite 功能，详见：<a href="./enable.html">enable</a></li><li><code>forceResWrite</code>： 禁用 forceResWrite 功能，详见：<a href="./enable.html">enable</a></li><li><code>auto2http</code>：禁用 auto2http 功能，详见：<a href="./enable.html">enable</a></li><li><code>hide</code>：禁用 hide 功能，详见：<a href="./enable.html">enable</a></li><li><code>useLocalHost</code>：禁用 useLocalHost 功能，详见：<a href="./enable.html">enable</a></li><li><code>useSafePort</code>：禁用 useSafePort 功能，详见：<a href="./enable.html">enable</a></li><li><code>cookies</code>: 禁用请求和响应的 cookie</li><li><code>reqCookies</code>: 禁用请求的 cookie</li><li><code>resCookies</code>: 禁用响应的 cookie</li><li><code>ua</code>: 禁用 <code>user-agent</code></li><li><code>referer</code>: 禁用 <code>referer</code></li><li><code>csp</code>: 禁用 CSP</li><li><code>cache</code>: 禁用缓存</li><li><code>301</code>: 禁止 301 跳转，301 强制转 302</li><li><code>dnsCache</code>: 禁止 DNS 缓存</li><li><code>ajax</code>: 删除请求头 <code>x-requested-with</code></li><li><code>keepAlive</code>: 禁止缓存请求连接</li><li><code>timeout</code>：禁用请求超时设置</li><li><code>autoCors</code>：使用 <a href="./file.html">file</a> 协议替换请求时，如果 Whistle 检测到该请求属于跨域请求，会自动添加必要的 CORS (跨域资源共享) 头信息，可以通过 <code>disable://autoCors</code> 禁用</li><li><code>userLogin</code>：禁用设置 <a href="./statusCode.html">statusCode://401</a> 时显示登录框</li></ul><h2 id="配置示例" tabindex="-1">配置示例 <a class="header-anchor" href="#配置示例" aria-label="Permalink to &quot;配置示例&quot;">​</a></h2><div class="language-txt vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">txt</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span># 禁用请求的缓存，同时删除请求和响应头的缓存字段</span></span>
+<span class="line"><span># 跟 cache 协议的区别是，cache 只是用来设置响应的缓存头</span></span>
+<span class="line"><span>wwww.example.com/path disable://cache</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 禁用请求和响应的 cookies</span></span>
+<span class="line"><span>wwww.example.com/path disable://cookies</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 只禁用请求的 cookies</span></span>
+<span class="line"><span>wwww.example.com/path disable://reqCookies</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 只禁用响应的 cookies</span></span>
+<span class="line"><span>wwww.example.com/path disable://resCookies</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 删除 user-agent</span></span>
+<span class="line"><span>wwww.example.com/path disable://ua</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 删除 referer</span></span>
+<span class="line"><span>wwww.test.com/path disable://referer</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 删除csp策略</span></span>
+<span class="line"><span>wwww.test.com/path disable://csp</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 禁用 timeout，默认情况下 Whistle 对每个请求如果 36s 内没有发生数据传输，会认为请求超时</span></span>
+<span class="line"><span>wwww.test.com/path disable://timeout</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 把 301 转成 302，防止 cache</span></span>
+<span class="line"><span>wwww.test.com/path disable://301</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 禁用 HTTPS 拦截</span></span>
+<span class="line"><span>wwww.test.com/path disable://capture</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 不缓存 DNS 结果</span></span>
+<span class="line"><span>wwww.test.com/path disable://dnsCache</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 禁用代理服务器请求链接复用</span></span>
+<span class="line"><span>wwww.test.com/path disable://keepAlive</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 删除请求头 \`x-requested-with\`</span></span>
+<span class="line"><span>wwww.test.com/path disable://ajax</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 也可以同时禁用多个</span></span>
+<span class="line"><span>www.example.com/path disable://cache|cookies|ua|referer|csp|timeout|301|intercept|dnsCache|keepAlive|autoCors</span></span></code></pre></div><p>关联操作：<a href="./enable.html">enable</a></p>`,9)]))}const m=e(p,[["render",t]]);export{b as __pageData,m as default};
