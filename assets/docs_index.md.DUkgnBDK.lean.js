@@ -1,1 +1,0 @@
-import{_ as a,c as t,o as i,ae as o}from"./chunks/framework.Dgg8-8ov.js";const u=JSON.parse('{"title":"安装","description":"","frontmatter":{},"headers":[],"relativePath":"docs/index.md","filePath":"docs/index.md"}'),r={name:"docs/index.md"};function l(n,e,s,h,c,d){return i(),t("div",null,e[0]||(e[0]=[o("",6)]))}const m=a(r,[["render",l]]);export{u as __pageData,m as default};
