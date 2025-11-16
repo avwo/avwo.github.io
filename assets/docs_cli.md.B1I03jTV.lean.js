@@ -1,1 +1,0 @@
-import{_ as i,c as a,o as t,ag as l}from"./chunks/framework.Bw-5EFTY.js";const o=JSON.parse('{"title":"命令行操作","description":"","frontmatter":{},"headers":[],"relativePath":"docs/cli.md","filePath":"docs/cli.md"}'),n={name:"docs/cli.md"};function h(e,s,k,p,r,d){return t(),a("div",null,s[0]||(s[0]=[l("",39)]))}const g=i(n,[["render",h]]);export{o as __pageData,g as default};
