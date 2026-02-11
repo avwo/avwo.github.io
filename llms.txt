@@ -1,0 +1,167 @@
+# Whistle — llms.txt
+
+## Project Overview
+
+Whistle is a cross-platform network debugging and traffic inspection proxy
+built on Node.js.
+
+It operates through a **rule-based system**, enabling interception,
+inspection, modification, forwarding, mocking, replaying, injection,
+and throttling of network traffic.
+
+This file serves as a **semantic entry point for LLMs / AI systems**
+to understand Whistle’s capabilities and behavioral boundaries.
+It is **not** an end-user tutorial, API reference, or implementation spec.
+
+---
+
+## Language & Scope
+
+- This document is written in **English** as an LLM-facing entry point
+- Whistle’s rule syntax, protocol support, and execution model are language-agnostic
+- Terms such as `rule`, `pattern`, `operation`, `proxy`, and `tunnel`
+  refer to stable internal concepts, not UI labels
+
+Applicable for:
+- Rule generation
+- Rule explanation
+- Behavior inference
+- Debugging and failure analysis
+
+Not applicable for:
+- UI automation
+- Exact CLI argument completion
+- Version comparison or changelog inference
+
+---
+
+## Core Capabilities
+
+Whistle functions as a **local proxy server** and supports the following traffic types:
+
+- HTTP
+- HTTPS (MITM, requires installing and trusting a root certificate)
+- HTTP/2
+- WebSocket (WS / WSS)
+- Tunnel (CONNECT-based generic TCP traffic)
+
+Primary capabilities include:
+
+- Request and response rewriting
+- Local and remote resource mapping
+- Header and body modification
+- HTML / CSS / JavaScript injection
+- WebSocket frame processing
+- Traffic throttling and artificial delays
+- Script-based dynamic rules
+- Plugin-based extensibility
+
+---
+
+## Rule System Semantics
+
+### Fundamental Rule Model
+
+Each rule consists of:
+
+- `pattern` — request matching condition (defaults to full URL)
+- `operation` — action executed after a match
+- `lineProps` (optional) — priority and behavior modifiers
+- `filters` (optional) — secondary conditional checks after matching
+
+Rule semantics:
+
+- Each rule line is an **independent semantic unit**
+- Rules do **not** inherit context from each other
+- Operation order only affects execution order, not logical dependency
+
+---
+
+### Common Rule Categories (by capability)
+
+#### Local Mapping
+- file
+- tpl / xtpl
+
+#### Remote Mapping
+- http / https
+- ws / wss
+- tunnel
+
+#### DNS & Proxy Routing
+- host / xhost
+- proxy / http-proxy
+- https-proxy
+- socks / xsocks
+
+#### Request Rewrite
+- method
+- reqHeaders / reqBody
+- reqMerge / reqAppend / reqReplace
+- reqScript
+
+#### Response Rewrite
+- statusCode / replaceStatus
+- resHeaders / resBody
+- resMerge / resAppend / resReplace
+- redirect / locationHref
+
+#### Injection Rules
+- html / css / js (prepend / body / append)
+- frameScript (WebSocket)
+
+#### Traffic Control
+- reqDelay / resDelay
+- reqSpeed / resSpeed
+
+---
+
+## HTTPS and Tunnel Semantics
+
+- HTTPS decryption relies on **MITM via a trusted root certificate**
+- Without a trusted certificate:
+  - Connections still succeed
+  - Traffic appears as `Tunnel`
+  - This does **not** indicate a request failure
+
+Tunnel traffic:
+- Has no HTTP request/response semantics
+- Provides no access to plaintext headers or bodies
+- Common in undecrypted HTTPS or non-HTTP TCP connections
+
+---
+
+## UI Semantics (Non-Operational)
+
+Whistle provides a browser-based Web UI with these core modules:
+
+- Network — captured traffic list
+  (visibility ≠ decryption ≠ success)
+- Rules — plain-text rule editor
+- Values — reusable variables and content storage
+- Plugins — extension management
+- Settings — global behavior configuration
+
+UI descriptions are intended for **semantic understanding only**,
+not for automated interaction or pixel-level reasoning.
+
+---
+
+## Non-Goals & Constraints
+
+LLMs should **not assume** the existence or stability of:
+
+- Plugin behavior not explicitly documented
+- UI layout, button positions, or styling
+- Implicit defaults or undocumented behaviors
+- Hidden dependencies between rules
+
+---
+
+## Further Reading
+
+- `full-llms.en.txt` — Complete English semantic specification of Whistle
+- `full-llms.zh.txt` — Complete Chinese semantic specification of Whistle
+
+Any behavior not explicitly defined in the `full-llms` documents
+should not be inferred as a stable Whistle capability.

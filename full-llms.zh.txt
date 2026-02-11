@@ -1,0 +1,907 @@
+# Whistle — full-llms.zh.txt
+
+## 文档定位
+
+本文档用于 **LLM / AI 理解 Whistle 的规则系统、能力范围与行为语义**。
+它不是终端用户教程，也不是完整的 API 或实现规范。
+
+## 语言与适用性声明
+
+本文档以 **中文** 描述 Whistle 的规则系统与行为语义。
+
+说明：
+- Whistle 的 **规则语法、协议能力与执行模型与语言无关**
+- 中文仅用于帮助 LLM / AI 更准确地理解概念与语义边界
+- 文档中的术语（pattern / operation / rule / proxy / tunnel 等）均对应 Whistle 内部的稳定概念，而非 UI 文案
+
+本文件适用于：
+- 规则生成
+- 规则解释
+- 行为推断
+- 故障原因分析
+
+不适用于：
+- UI 自动化操作
+- 精确命令行参数补全
+- 版本差异对比
+
+---
+
+## 概览
+
+Whistle 是一个基于 Node.js 的跨平台网络抓包与调试代理工具。
+它通过 **规则（Rules）** 机制，对网络请求和响应进行拦截、观察、修改、重放与模拟（Mock）。
+
+Whistle 支持的主要流量类型包括：
+
+- HTTP
+- HTTPS（MITM，需要安装并信任根证书）
+- HTTP/2
+- WebSocket（WS / WSS）
+- Tunnel（CONNECT 隧道流量，适用于通用 TCP 连接）
+
+Whistle 提供以下使用方式：
+
+- Web UI（基于浏览器的管理界面）
+- 命令行工具（CLI）
+- 插件扩展机制（Plugin System）
+- 客户端（系统或应用代理）
+
+---
+
+## 核心概念
+
+### 代理请求（Proxy）
+
+Whistle 本质上是一个 **本地代理服务器**。
+
+客户端将网络请求发送给 Whistle，
+Whistle 根据当前启用的规则决定：
+
+- 是否修改请求或响应
+- 是否将请求转发到目标服务器
+- 是否直接返回本地或动态生成的响应
+
+---
+
+### 操作规则（Rules）
+
+**规则（Rules）是 Whistle 的核心抽象单位。**
+
+一条规则用于描述：
+
+- 哪些请求会被匹配
+- 请求或响应在匹配后要执行哪些操作
+
+一条规则通常由以下部分组成：
+
+- `pattern`：匹配条件（是否命中）
+- `operation`：执行操作（如何处理）
+- `lineProps`（可选）：规则属性（影响行为或优先级）
+- `filters`（可选）：附加过滤条件（命中后的二次判断）
+
+---
+
+## 规则语法（Rules Syntax）
+
+通用规则格式如下：
+
+```txt
+pattern operation [lineProps...] [filters...]
+```
+> pattern 默认匹配请求的完整 URL（scheme + host + path + query），不包含 fragment
+
+说明：
+
+-   一条规则可以包含多个 operation
+-   operation 按书写顺序生效
+-   operation 的顺序仅影响执行顺序，不构成规则间依赖关系
+-   filters 在 pattern 命中后生效
+-   规则之间 **不存在隐式继承或上下文共享**
+-   每一行规则均为独立语义单元
+
+---
+
+### 匹配模式（pattern）
+
+pattern 用于匹配请求的 URL。
+
+支持的形式包括：
+
+- 域名
+- 路径
+- 通配符
+- 正则表达式
+
+pattern 通常针对 **完整请求 URL** 进行匹配。
+
+---
+
+### 执行的操作（operation）
+
+operation 定义请求或响应在匹配后如何被处理。
+
+常见操作类型包括：
+
+- 请求转发（Mapping / Proxy）
+- 内容替换（Body / Header）
+- Header 修改
+- 脚本或资源注入
+- 限速与延迟
+
+### 规则属性（lineProps）
+
+lineProps 用于增强规则能力或影响规则优先级，不直接改变匹配逻辑。
+
+优先级与行为控制
+- `important`：类似 CSS 的 !important，提升规则优先级
+- `weakRule`：在 file 等协议存在时，提升 proxy 规则的生效优先级
+
+HTML / 注入安全控制
+- `safeHtml`：仅在响应内容首个非空字符不是 { 或 [ 时才执行注入
+- `strictHtml`：仅在响应内容首个非空字符为 < 时才执行注入
+
+CORS 与登录行为
+- `disableAutoCors`：禁用 file 协议自动添加 CORS 头
+- `disableUserLogin`：statusCode://401 时不显示登录框
+- `enableUserLogin`：恢复 401 登录框行为
+
+内部请求与代理链路
+- `internal`：规则同时作用于 Whistle 内部请求
+- `internalOnly`：规则仅作用于 Whistle 内部请求
+- `internalProxy`：构建代理链，允许明文 HTTPS 在上游代理中传输
+
+代理优先级控制
+- `proxyFirst`：proxy 优先于 host
+- `proxyHost`：proxy 与 host 同时生效
+- `proxyHostOnly`：未匹配 host 时 proxy 自动失效
+- `proxyTunnel`：与 proxyHost 配合使用，重新构建隧道代理
+
+大数据处理
+- `enableBigData`：支持 reqMerge / resMerge 处理大体积数据
+
+---
+
+### 过滤器（filters）
+
+filters 用于在 Pattern 命中后进行 **二次条件判断**。
+
+filters 可基于以下信息：
+
+- 请求 Header
+- 响应 Header
+- HTTP 状态码
+- URL 参数
+- 请求 Body
+  （⚠️ 不支持基于响应 Body 过滤）
+
+---
+
+## Map Local Rules
+
+### file
+
+用途:
+
+直接使用本地文件、文件夹、远程资源、内联文本或预定义 Values 中的内容作为响应内容返回，常用于接口 Mock 或静态资源替换。
+
+语法:
+
+```txt
+pattern file://local-path|remote-url|(inline-content)|{key}
+```
+
+行为:
+
+-   完全替换原始响应
+-   常用于接口 mock 或静态资源替换
+
+示例:
+
+```txt
+# 使用本地文件夹映射请求路径
+# 请求 `https://example.com/api/module/get.json` 将返回 `/User/xx/mock/module/get.json`
+example.com/api file:///User/xx/mock/
+
+# Windows 路径可混用 `/` 与 `\`
+example.com/api file://D:\xx\mock\
+
+# 直接返回内联文本 "ok"
+example.com/test file://(ok)
+
+# 返回 Values 中 key 为 "htmlContent" 的内容
+example.com/page file://{htmlContent}
+
+# 转发并返回远程资源内容
+example.com/logo file://https://assets.example.com/logo.png
+```
+
+---
+
+### tpl / xtpl
+
+语法:
+
+```txt
+pattern tpl://local-path|remote-url|(inline-content)|{key}
+```
+
+用途:
+返回支持动态变量替换的模板内容。
+
+行为:
+
+-   支持变量替换
+-   可读取请求信息与 Values 中定义的变量
+-   常用于 Mock JSONP 接口或其他需要根据请求信息动态生成响应体的场景
+-   tpl 与 xtpl 的区别：
+    - tpl：仅渲染本地模板文件。
+    - xtpl：若本地模板文件不存在，会自动转发请求至服务器。
+
+示例：
+
+```` txt
+# 映射本地模板目录
+# 将根据请求路径映射到本地模板文件路径：https://example.com/jsonp/user/info -> /User/xxx/templates/jsonp/user/info
+example.com/jsonp tpl:///User/xxx/templates/jsonp
+
+# 内联模板（直接写在规则中）
+# 请求 https://example.com/inline?name=World 返回 "Hello,World!"
+example.com/inline tpl://(Hello,{{query.name}}!)
+
+# 使用 Values 中定义的模板
+# 调用 Values 里 key 为 "jsonpTemplate" 的模板内容进行渲染
+example.com/api/data tpl://{jsonpTemplate}
+
+# 远程模板（从指定 URL 获取模板内容并渲染）
+example.com/proxy tpl://https://raw.example.com/template.txt
+````
+
+---
+
+## Map Remote Rules
+
+### http / https
+> 该规则不会影响 DNS 解析或代理链路，仅重写请求目标 URL。
+
+用途:
+将请求转发到指定的 HTTP / HTTPS 地址。
+
+语法:
+
+```txt
+pattern https://target-host/path
+```
+
+行为:
+
+-   请求 URL 被重写
+-   客户端无感知
+
+---
+
+### ws / wss
+
+用途:
+转发 WebSocket 请求。
+
+行为:
+
+-   仅对 WebSocket 生效
+-   不支持将普通 HTTP 请求升级为 WS
+-   不支持修改 WebSocket 帧内容
+
+---
+
+### tunnel
+
+用途:
+转发原始 CONNECT 隧道流量。
+
+行为:
+
+-   常见于 HTTPS 未解密场景
+-   Whistle 无法获取明文内容
+
+说明:
+- tunnel 流量在未解密情况下不具备请求/响应语义
+
+---
+
+## DNS and Proxy Routing Rules
+
+### host / xhost
+
+用途:
+将请求解析到指定 IP。
+
+语法:
+
+```txt
+pattern host://ip[:port]
+```
+
+行为:
+
+-   仅影响 DNS 解析
+-   默认不修改 Host Header
+
+示例：
+
+``` txt
+# 如果只是 IP 或端口可以省略 `host://`
+example.com/test0 127.0.0.1   # 不改端口，沿用请求 URL 的原始端口
+example.com/test1 127.0.0.1:5173
+
+# CNAME 功能
+example.com/test2 host://www.test.com
+example.com/test3 host://www.test.com:8080
+```
+
+---
+
+### proxy / http-proxy
+
+用途:
+通过指定的 HTTP 代理转发请求。
+
+语法:
+
+```txt
+pattern proxy://host[:port]
+```
+
+行为:
+
+-   默认情况下 host 规则优先级高于 proxy
+-   可通过 enable://proxyFirst 改变优先级
+
+示例：
+
+``` txt
+# 将请求代理到 HTTP PROXY: `127.0.0.1:80`
+www.example.com/path proxy://127.0.0.1 # 默认端口 80
+
+# 将当前域名的所有请求代理到 HTTP PROXY: `127.0.0.1:8080`
+www.example.com proxy://127.0.0.1:8080
+
+# 也可以用域名
+www.example.com/path proxy://test.proxy.com # 默认端口 80
+www.example.com proxy://test.proxy.com:8080
+```
+
+---
+
+### https-proxy
+
+用途:
+通过 HTTPS 连接上游代理服务器。
+
+---
+
+### socks / xsocks
+
+用途:
+通过 SOCKS 代理转发流量。
+
+行为:
+
+-   常用于 TCP 或非 HTTP 场景
+-   通常为 SOCKS5
+
+---
+
+## Request Rewrite Rules
+
+### method
+
+用途:
+修改 HTTP 请求方法。
+
+---
+
+### reqHeaders / delete://reqHeaders.xxx
+
+用途:
+添加、修改或删除请求头。
+
+示例：
+
+``` txt
+# 添加请求头
+example.com/path reqHeaders://({"x-client":"whistle})
+
+# 删除请求头
+example.com/path delete://reqHeaders.user-agent
+```
+
+---
+
+### ua
+
+用途:
+修改 User-Agent。
+
+---
+
+### referer
+
+用途:
+修改 Referer Header。
+
+---
+
+### reqCors
+
+用途:
+修改请求的 CORS header。
+
+---
+
+### reqBody
+
+用途:
+替换请求体内容。
+
+---
+
+### reqMerge / reqPrepend / reqAppend / reqReplace
+
+用途:
+以不同方式修改请求体内容。
+
+---
+
+### reqWrite
+
+用途:
+将请求体保存到本地文件。
+
+---
+
+### reqWriteRaw
+
+用途:
+保存完整原始请求（包含请求行、Header 与 Body）。
+
+---
+
+### reqScript / resScript
+
+用途:
+- reqScript：在请求阶段使用 JavaScript 动态生成规则。
+- resScript：在响应阶段使用 JavaScript 动态生成规则。
+
+行为:
+
+-   脚本可访问请求上下文
+-   可在运行时返回新的规则
+
+
+### Script 类规则的语义边界
+
+reqScript / resScript 属于 **运行期规则生成或注入能力**。
+
+语义约束：
+- Script 规则不会改变 Whistle 的基础匹配流程
+- Script 的执行结果仍需符合普通规则的语义约束
+- Script 失败不应被解释为网络错误
+
+说明：
+- Script 类规则适合高级用户或插件场景
+- 不适合用于描述 Whistle 的基础能力模型
+
+
+### frameScript
+
+用途:
+通过JavaScript脚本动态处理 WebSocket 通信帧数据，实现对通信内容的实时修改与调控。
+
+行为:
+
+-   脚本可访问请求上下文
+-   实时读取、修改、重写通信帧数据
+-   支持条件化处理逻辑（基于上下文动态决策）
+-   可插入自定义处理逻辑（如加密、压缩、格式转换）
+-   向客户端发送定制化帧数据
+-   向服务端转发/注入帧数据
+-   支持流量拦截与阻断
+
+说明：
+- frameScript 只对 WebSocket 请求有效
+
+---
+
+## Response Rewrite Rules
+
+### statusCode
+
+用途:
+直接响应状态码，请求不会经过后台。
+
+---
+
+### replaceStatus
+
+用途:
+在请求返回阶段替换响应状态码。
+
+---
+
+### redirect
+
+用途:
+重定向客户端请求。
+
+---
+
+### locationHref
+
+用途:
+自动在 HTML / JS 页面注入 JS 通过 `location.href` 重定向到指定页面。
+
+---
+
+### resHeaders
+
+用途:
+修改响应头。
+
+---
+
+### resCors
+
+用途:
+修改响应的 CORS header。
+
+---
+
+### resBody
+
+用途:
+替换响应体内容。
+
+---
+
+### resMerge / resPrepend / resAppend / resReplace
+
+用途:
+以不同方式修改响应内容。
+
+---
+
+### html / css / js Inject Rules
+
+通用语义约束：
+
+- 注入类规则仅在 **响应内容可被解析为对应类型** 时生效
+- 若响应内容类型不匹配（如 JSON / 二进制 / 空响应），注入规则将被忽略
+- 注入失败 ≠ 请求失败
+- 注入行为不应被视为对网络链路或状态码的修改
+
+语义说明：
+- 注入规则是“内容层修改”，不是“网络层代理”
+- 是否执行注入取决于响应体结构，而非 HTTP Header 中的 Content-Type
+
+
+用途:
+向页面注入 HTML / CSS / JavaScript。
+
+Includes:
+
+-   htmlPrepend / htmlBody / htmlAppend
+-   cssPrepend / cssBody / cssAppend
+-   jsPrepend / jsBody / jsAppend
+
+---
+
+### resWrite / resWriteRaw
+
+用途:
+保存响应内容或完整原始响应。
+
+---
+
+## Throttling Rules
+
+### reqDelay / resDelay
+
+用途:
+人为增加请求或响应延迟。
+
+---
+
+### reqSpeed / resSpeed
+
+用途:
+限制请求或响应速度。
+
+---
+
+## Tool Rules
+
+### weinre
+
+用途:
+启用远程调试功能（主要用于移动端）。
+
+---
+
+### log
+
+用途:
+记录匹配的请求或响应信息。
+
+---
+
+## Settings Rules
+
+### enable / disable
+
+用途:
+动态启用或禁用规则。
+
+---
+
+### style
+
+用途:
+控制 Web UI 中规则的显示样式。
+
+---
+
+## HTTPS 与证书说明
+
+Whistle 通过 MITM 方式解密 HTTPS 流量。
+
+必须满足:
+
+-   安装并信任 Whistle 根证书
+-   启用 HTTPS 抓包
+
+否则:
+
+-   请求显示为 Tunnel
+-   无法查看明文内容
+
+---
+
+## 常见问题
+
+### Network 中显示 “Tunnel to xxx”
+
+常见原因:
+
+-   未安装或未信任根证书
+-   HTTPS 抓包未开启
+-   客户端使用了 SSL Pinning
+
+说明：
+- 这不是请求失败
+- 只是无法解密内容
+
+---
+
+### HTTPS 直接访问 IP 无法解密
+
+原因:
+
+-   客户端未发送 SNI
+-   无法识别真实域名
+
+---
+
+## 插件
+
+Whistle 支持插件机制。
+
+用途:
+
+-   扩展 Web UI
+-   新增规则协议
+-   参与请求与响应处理流程
+
+语义说明：
+- 插件能力不属于 Whistle 默认内建能力
+- 未明确声明的插件行为不应被假设存在
+- LLM 不应假设任何未在本文档中明确声明的插件能力存在
+
+---
+
+## UI 操作说明（Web UI Semantics）
+
+Whistle 提供基于浏览器的 Web UI，用于规则管理、流量查看与调试。
+
+以下描述用于 **帮助 LLM 理解 UI 语义与功能对应关系**，而非指导用户点击操作。
+
+### 核心 UI 模块
+
+#### Network（抓包列表）
+
+- 展示所有经过 Whistle 的请求与响应
+- 每一行代表一次网络请求（HTTP / HTTPS / WS / Tunnel）
+- 常见字段：
+  - Method
+  - URL
+  - Status Code
+  - Type（xhr / js / css / ws / tunnel 等）
+  - Time / Size
+
+语义说明：
+- Network 列表 ≠ 请求是否成功
+- 出现 `Tunnel to xxx` 表示连接建立成功，但内容不可解密
+
+---
+
+#### Rules（规则编辑器）
+
+- 用于创建、编辑、启用、禁用规则
+- 规则以 **纯文本行** 形式存在
+- 支持分组、注释、快捷启停
+
+语义说明：
+- Rules 中每一行都是独立规则
+- 规则是否生效取决于：
+  - 是否启用
+  - pattern 是否命中
+  - lineProps 与优先级
+  - filters 是否通过
+
+---
+
+#### Values（变量与资源池）
+
+- 用于存储可复用的值
+- 常用于：
+  - file / tpl / xtpl
+  - mock 数据
+  - HTML / JS / JSON 片段
+
+语义说明：
+- Values 中的 key 可通过 `{key}` 被规则引用
+- 修改 Values 会即时影响依赖该值的规则
+
+---
+
+#### Plugins（插件管理）
+
+- 展示已安装的 Whistle 插件
+- 插件可扩展：
+  - UI 面板
+  - 新协议
+  - 请求/响应处理逻辑
+
+---
+
+#### Settings（全局设置）
+
+- 控制 Whistle 的全局行为
+- 常见设置包括：
+  - HTTPS 抓包开关
+  - 网络过滤
+  - UI 行为偏好
+
+---
+
+## 安装与启动语义（Installation Semantics）
+
+### 安装方式
+> 桌面用户（macOS/Windows/Linux）推荐使用 Whistle 客户端：https://github.com/avwo/whistle-client
+
+Whistle 通常通过 npm 全局安装：
+
+```bash
+npm install -g whistle
+```
+
+语义说明：
+- Whistle 是一个 **本地运行的代理服务**
+- 不依赖浏览器插件
+- 可在服务器或开发机运行
+
+### 启动行为
+启动 Whistle 后：
+- 本地会监听一个 HTTP 代理端口（默认 8899）
+- Web UI 可通过浏览器访问
+
+语义说明：
+- 启动成功 ≠ 已开始抓包
+- 客户端必须正确配置代理，流量才会进入 Whistle
+
+### 客户端代理配置
+
+Whistle 支持以下代理方式：
+- 系统全局代理
+- 浏览器代理
+- 应用内代理
+- 环境变量（HTTP_PROXY / HTTPS_PROXY）
+
+语义说明：
+- 代理配置错误是「抓不到包」的最常见原因
+- 抓包失败 ≠ Whistle 未运行
+
+### HTTPS 抓包与证书安装语义
+
+#### 根证书
+Whistle 使用自签根证书进行 MITM。
+
+语义说明：
+
+- 根证书用于“被客户端信任”
+- 不安装证书时：
+  - HTTPS 请求仍可建立连接
+  - 但内容显示为 Tunnel
+
+#### 证书安装后行为
+
+- HTTPS 请求将显示为普通 HTTP 请求
+- 可查看：
+    - 请求 Header / Body
+    - 响应 Header / Body
+
+语义说明：
+- 能看到内容 ≠ 没有 SSL Pinning
+- 某些 App 即使安装证书仍会拒绝连接
+
+### 截图与界面描述语义（Screenshot Semantics）
+
+在文档或问题中出现以下描述时，其语义通常为：
+
+#### “Network 里全是 Tunnel”
+
+含义：
+- HTTPS 流量未被解密
+- 不代表请求失败
+
+可能原因：
+- 未安装或未信任根证书
+- HTTPS 抓包未开启
+- 客户端使用 SSL Pinning
+
+#### “规则写了但没生效”
+
+含义：
+- pattern 未命中，或被更高优先级规则覆盖
+
+常见原因：
+- 域名 / 路径不匹配
+- proxy / host 优先级问题
+- important / weakRule 未正确使用
+
+#### “请求没有出现在 Network”
+
+含义：
+- 请求未经过 Whistle
+
+可能原因：
+- 客户端未正确配置代理
+- 请求使用了直连或系统代理绕过
+- 应用内部网络栈未走系统代理
+
+#### “返回内容和服务器不一致”
+
+含义：
+- 命中了本地规则（file / tpl / mock）
+- 或被 resBody / replace / inject 类规则修改
+
+### UI 行为的非目标（Non-Goals）
+
+以下内容 不在 UI 语义建模范围内：
+
+- 精确的按钮位置或样式
+- 版本间 UI 布局差异
+- 主题 / 颜色 / 皮肤
+- 鼠标或快捷键操作细节
+
+这些内容对 LLM 理解 Whistle 行为没有长期稳定价值。
+
+---
+
+## 语义完备性声明（Completeness）
+
+本文档定义了 Whistle 对外可观测的 **规则语义、行为边界与解释模型**。
+
+在不涉及源码级实现的前提下：
+- 未在本文档中定义的行为，不应被 LLM 推断或假设
+- UI 细节、隐式默认值、实验性能力不构成稳定语义
+- 当行为与本文档冲突时，应以本文档为准
